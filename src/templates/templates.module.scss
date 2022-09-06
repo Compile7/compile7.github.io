@@ -1,0 +1,101 @@
+.author-page {
+  .author {
+    flex-direction: column;
+    align-items: center;
+    .author-image {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+    .about-author {
+      align-items: center;
+      max-width: 768px;
+      margin: 0 auto;
+      padding: 0 24px;
+      text-align: center;
+    }
+    .author-social-icon {
+      ul {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        li {
+          padding: 0 20px;
+          a {
+            display: block;
+            svg {
+              width: 30px;
+              height: 30px;
+              color: #000;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.post-container {
+  padding: 8vmin 0;
+  .header {
+    padding: 0 3vw 8vmin;
+    color: #231f20;
+    &-container {
+      position: relative;
+      display: flex;
+      align-items: center;
+      padding-bottom: 8vmin;
+      border-bottom: 1px solid #e0e0e0;
+    }
+    &-content {
+      flex: 1 1 45%;
+      .post-breadcrumb {
+        display: flex;
+        align-items: center;
+        margin: 0 0 1rem;
+        font-size: 0.75rem;
+        line-height: 1.5em;
+        letter-spacing: 0.5px;
+        a {
+          display: inline-block;
+          padding: 5px 0;
+          text-decoration: none;
+          color: #636363;
+          font-weight: 600;
+        }
+        svg {
+          height: 8px;
+          width: 8px;
+          margin: 0 5px;
+          stroke: #636363;
+        }
+      }
+    }
+    &-meta {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      margin: 20px 0 0;
+      font-size: 0.75rem;
+      color: #636363;
+      letter-spacing: 0.3px;
+      * {
+        margin-right: 2vmin;
+      }
+    }
+    &-image {
+      flex: 1 1 50%;
+      margin: 0 0 0 6vmin;
+      img {
+        width: 100%;
+        max-height: 450px;
+        -o-object-fit: cover;
+        object-fit: cover;
+        overflow: hidden;
+      }
+    }
+  }
+  .canvas {
+    max-width: 720px;
+    margin: auto;
+  }
+}

@@ -1,0 +1,27 @@
+@import "../../styles/variables.scss";
+
+.nav-wrapper {
+  position: relative;
+  border-bottom: 1px solid #e0e0e0;
+  &-scroll {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    a {
+      display: inline-block;
+      flex: 0 0 auto;
+      padding: 15px 0;
+      margin-right: 5vmin;
+      color: #636363;
+      text-decoration: none;
+      font-size: 1rem;
+      line-height: 1;
+      letter-spacing: 0.3px;
+    }
+
+    .active {
+      color: #231f20 !important;
+      box-shadow: inset 0 -2px 0 #2c4bff !important;
+    }
+  }
+}
