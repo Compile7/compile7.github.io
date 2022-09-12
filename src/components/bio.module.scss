@@ -1,0 +1,18 @@
+@import "../styles/variables.scss";
+
+.bio {
+  margin: 1em 0;
+  font-size: 16px;
+  display: flex;
+  &.pinned {
+    a {
+      color: $blue-bright;
+      font-weight: 500;
+    }
+  }
+  p {
+    font-size: 16px;
+    margin-bottom: 0;
+    color: $gray-dark;
+  }
+}

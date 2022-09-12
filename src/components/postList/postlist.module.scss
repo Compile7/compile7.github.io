@@ -1,0 +1,18 @@
+.post-list {
+  display: grid;
+  justify-content: space-between;
+  grid-gap: 4vmin;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 3vmin 0 8vmin;
+}
+
+.header {
+  display: flex;
+  h3 {
+    max-width: 80%;
+  }
+  p {
+    margin: 0 0 0 auto;
+    font-size: 14px;
+  }
+}
