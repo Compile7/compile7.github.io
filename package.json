@@ -63,6 +63,6 @@
     "serve": "gatsby serve --prefix-paths",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
-    "deploy": "gatsby build --prefix-paths && gh-pages -d public -b main -r https://$GH_TOKEN@github.com/compile7/decompile.git"
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public -b main"
   }
 }
