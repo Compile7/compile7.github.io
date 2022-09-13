@@ -1,7 +1,7 @@
 ---
 title: "RPA: Robotic Process Automation"
 date: "2020-06-29T16:51:00.000Z"
-category: "Mail7"
+category: "RPA"
 tags:
   - "RPA"
   - "Automation"
