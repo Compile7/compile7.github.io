@@ -4,6 +4,7 @@ import Bio from "../bio"
 import styles from "./postlist.module.scss"
 
 import kebabCase from "lodash/kebabCase"
+import { BLOG_PATH } from "../../utils/typography"
 
 const PostList = ({ posts, hideBio }) => {
   return (
@@ -40,14 +41,14 @@ const PostList = ({ posts, hideBio }) => {
                 </svg>
                 <Link
                   class="breadcrumb-link"
-                  to={`/category/${kebabCase(node.frontmatter.category)}/`}
+                  to={`${BLOG_PATH}/category/${kebabCase(node.frontmatter.category)}/`}
                 >
                   <strong>{node.frontmatter.category}</strong>
                 </Link>
               </div>
 
               <div class="card-content">
-                <Link to={node.fields.slug} class="bf-post-link">
+                <Link to={BLOG_PATH + node.fields.slug} class="bf-post-link">
                   <h3 class="card-title">{title}</h3>
                 </Link>
                 <div class="card-meta">
@@ -104,7 +105,7 @@ const PostList = ({ posts, hideBio }) => {
                     </Link>
                   )}
                 </div>
-                <Link to={node.fields.slug} class="bf-post-link">
+                <Link to={BLOG_PATH + node.fields.slug} class="bf-post-link">
                   <p>{node.frontmatter.description || node.excerpt}</p>
                 </Link>
               </div>

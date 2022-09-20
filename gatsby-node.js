@@ -3,6 +3,7 @@ const { createFilePath } = require(`gatsby-source-filesystem`)
 
 // Utilities
 const kebabCase = require("lodash/kebabCase")
+const BLOG_PATH = "/decompile"
 
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
@@ -50,7 +51,7 @@ exports.createPages = async ({ graphql, actions }) => {
     const next = index === 0 ? null : posts[index - 1].node
 
     createPage({
-      path: post.node.fields.slug,
+      path: `${BLOG_PATH}${post.node.fields.slug}`,
       component: blogPost,
       context: {
         slug: post.node.fields.slug,
@@ -65,7 +66,7 @@ exports.createPages = async ({ graphql, actions }) => {
   // Make tag pages
   categories.forEach(category => {
     createPage({
-      path: `/category/${kebabCase(category.fieldValue)}/`,
+      path: `${BLOG_PATH}/category/${kebabCase(category.fieldValue)}/`,
       component: categoryTmpl,
       context: {
         category: category.fieldValue,
@@ -85,7 +86,7 @@ exports.createPages = async ({ graphql, actions }) => {
   const authorList = Array.from(authorSet)
   authorList.forEach(author => {
     createPage({
-      path: `/author/${kebabCase(author)}/`,
+      path: `${BLOG_PATH}/author/${kebabCase(author)}/`,
       component: authorTmpl,
       context: {
         authorId: author,

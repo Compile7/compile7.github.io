@@ -7,6 +7,7 @@ import kebabCase from "lodash/kebabCase"
 import styles from "./pinnedcard.module.scss"
 
 import Bio from "../bio"
+import { BLOG_PATH } from "../../utils/typography"
 
 const PinnedCard = () => {
   return (
@@ -53,7 +54,7 @@ const PinnedCard = () => {
         return (
           <section className={`${styles.pinnedwrap} py-80`}>
             <div className={styles.blogContentPinned}>
-              <Link to={node.fields.slug} className="bs-md">
+              <Link to={BLOG_PATH + node.fields.slug} className="bs-md">
                 <img src={"https://picsum.photos/600/300"} alt="default-img" />
               </Link>
 
@@ -75,7 +76,7 @@ const PinnedCard = () => {
                     ></path>
                   </svg>
                   <Link
-                    to={`/category/${kebabCase(node.frontmatter.category)}`}
+                    to={`${BLOG_PATH}/category/${kebabCase(node.frontmatter.category)}`}
                   >
                     <strong>{node.frontmatter.category}</strong>{" "}
                   </Link>
