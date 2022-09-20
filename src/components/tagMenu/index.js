@@ -4,6 +4,7 @@ import styles from "./tagmenu.module.scss"
 
 // Utilities
 import kebabCase from "lodash/kebabCase"
+import { BLOG_PATH } from "../../utils/typography"
 
 const TagMenu = () => {
   return (
@@ -25,13 +26,13 @@ const TagMenu = () => {
         return (
           <div className={styles.navWrapper}>
             <nav class={styles.navWrapperScroll}>
-              <Link to={`/#posts`} getProps={props => setActive(props, "")}>
+              <Link to={`${BLOG_PATH}/#posts`} getProps={props => setActive(props, "")}>
                 {"Latest Updates"}
               </Link>
               {group.slice(0, 10).map((item, index) => (
                 <Link
                   key={`cat_${index}`}
-                  to={`/category/${kebabCase(item.category)}/#posts`}
+                  to={`${BLOG_PATH}/category/${kebabCase(item.category)}/#posts`}
                   getProps={props => setActive(props, item.category)}
                 >
                   {item.category}

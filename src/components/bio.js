@@ -5,19 +5,18 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React from "react"
 import Image from "gatsby-image"
+import React from "react"
 
-import styles from "./bio.module.scss"
 
-import { rhythm } from "../utils/typography"
+import { BLOG_PATH } from "../utils/typography"
 
-import kebabCase from "lodash/kebabCase"
 import { Link } from "gatsby"
+import kebabCase from "lodash/kebabCase"
 
 const Bio = ({ author }) => {
   return (
-    <Link class="card-author" to={`/author/${kebabCase(author.id)}/`}>
+    <Link class="card-author" to={`${BLOG_PATH}/author/${kebabCase(author.id)}/`}>
       <div class="card-author-image-wrap">
         <Image
           fixed={author.image.childImageSharp.fixed}

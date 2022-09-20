@@ -1,5 +1,6 @@
 import { Link } from "gatsby"
 import React from "react"
+import { BLOG_PATH } from "../../utils/typography"
 import "./header.scss"
 
 export interface HeaderProps {}
@@ -17,7 +18,7 @@ class Header extends React.Component<HeaderProps, HeaderState> {
                 Compile7
               </a>
               <span>|</span>
-              <Link to="/" className="head-blog-name">
+              <Link to={BLOG_PATH} className="head-blog-name">
                 Blog
               </Link>
             </div>
