@@ -1,3 +1,15 @@
+---
+title: "Complete Guide to Strict and Optional Cookies with Cookie Consent Law"
+date: "2022-09-29"
+category: "cookies"
+coverImage: Strict-cookies-and-essential-cookies.png
+tags:
+  - "cookies"
+  - "cookie law"
+  - "GDPR"
+description: "Every thing you need to know about strict and optional cookes including the cookie laws and general GDPR cookie banner mistakes."
+author: "Archna Yadav"
+---
 # Complete Guide to Strict and Optional Cookies with Cookie Consent Law
 
 ## What are Cookies?
