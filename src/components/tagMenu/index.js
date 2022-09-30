@@ -1,6 +1,6 @@
-import React, { useState } from "react"
-import { Link, StaticQuery } from "gatsby"
-import styles from "./tagmenu.module.scss"
+import { graphql, Link, StaticQuery } from "gatsby"
+import React from "react"
+import * as styles from "./tagmenu.module.scss"
 
 // Utilities
 import kebabCase from "lodash/kebabCase"

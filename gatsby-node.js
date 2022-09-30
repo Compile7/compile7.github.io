@@ -3,16 +3,10 @@ const { createFilePath } = require(`gatsby-source-filesystem`)
 
 // Utilities
 const kebabCase = require("lodash/kebabCase")
-const BLOG_PATH = "/decompile"
+const BLOG_PATH = "/decompile/"
 
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
-
-  // Templates
-  const blogPost = path.resolve(`./src/templates/blog-post.js`)
-  const categoryTmpl = path.resolve(`./src/templates/category.js`)
-  const authorTmpl = path.resolve(`./src/templates/author.js`)
-
   const result = await graphql(
     `
       {
@@ -20,15 +14,10 @@ exports.createPages = async ({ graphql, actions }) => {
           sort: { fields: [frontmatter___date], order: DESC }
           limit: 1000
         ) {
+          totalCount
           edges {
             node {
-              fields {
-                slug
-                authorId
-              }
-              frontmatter {
-                title
-              }
+              id
             }
           }
           group(field: frontmatter___category) {
@@ -44,55 +33,47 @@ exports.createPages = async ({ graphql, actions }) => {
   }
 
   // Create blog posts pages.
-  const posts = result.data.allMarkdownRemark.edges
-
-  posts.forEach((post, index) => {
-    const previous = index === posts.length - 1 ? null : posts[index + 1].node
-    const next = index === 0 ? null : posts[index - 1].node
-
+  const postsPerPage = 6
+  const total = result.data.allMarkdownRemark.totalCount
+  const numPages = Math.ceil(total / postsPerPage)
+  Array.from({ length: numPages }).forEach((_, i) => {
     createPage({
-      path: `${BLOG_PATH}${post.node.fields.slug}`,
-      component: blogPost,
+      path: i === 0 ? `${BLOG_PATH}` : `${BLOG_PATH}${i + 1}`,
+      component: path.resolve(`./src/templates/post-list.js`),
       context: {
-        slug: post.node.fields.slug,
-        previous,
-        next,
+        limit: postsPerPage,
+        skip: i * postsPerPage,
+        currentPage: i + 1,
+        numPages: numPages,
       },
     })
   })
-
   // Extract tag data from query
   const categories = result.data.allMarkdownRemark.group
   // Make tag pages
   categories.forEach(category => {
     createPage({
-      path: `${BLOG_PATH}/category/${kebabCase(category.fieldValue)}/`,
-      component: categoryTmpl,
+      path: `${BLOG_PATH}category/${kebabCase(category.fieldValue)}/`,
+      component: path.resolve(`./src/templates/category.js`),
       context: {
         category: category.fieldValue,
       },
     })
   })
+}
 
-  // resolves from the query from 👆
-  const authorSet = new Set()
-  result.data.allMarkdownRemark.edges.forEach(edge => {
-    if (edge.node.fields.authorId) {
-      authorSet.add(edge.node.fields.authorId)
+exports.createSchemaCustomization = ({ actions }) => {
+  const { createTypes } = actions
+  const typeDefs = `
+    type MarkdownRemark implements Node {
+      frontmatter: Frontmatter
     }
-  })
-
-  // create author's pages inside export.createPages:
-  const authorList = Array.from(authorSet)
-  authorList.forEach(author => {
-    createPage({
-      path: `${BLOG_PATH}/author/${kebabCase(author)}/`,
-      component: authorTmpl,
-      context: {
-        authorId: author,
-      },
-    })
-  })
+    type Frontmatter {
+      coverImage: File @fileByRelativePath
+      author: AuthorJson @link(by: "jsonId")
+    }
+  `
+  createTypes(typeDefs)
 }
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
@@ -105,13 +86,5 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       node,
       value,
     })
-
-    if (Object.prototype.hasOwnProperty.call(node.frontmatter, "author")) {
-      createNodeField({
-        node,
-        name: "authorId",
-        value: node.frontmatter.author,
-      })
-    }
   }
 }

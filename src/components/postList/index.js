@@ -1,10 +1,12 @@
 import { Link } from "gatsby"
 import React from "react"
 import Bio from "../bio"
-import styles from "./postlist.module.scss"
+import * as styles from "./postlist.module.scss"
 
+import { GatsbyImage } from "gatsby-plugin-image"
 import kebabCase from "lodash/kebabCase"
 import { BLOG_PATH } from "../../utils/typography"
+import { DefaultImg } from "../defaultImg"
 
 const PostList = ({ posts, hideBio }) => {
   return (
@@ -15,13 +17,19 @@ const PostList = ({ posts, hideBio }) => {
         return (
           <article class="card post">
             <div class="card-link">
-              <Link to={node.fields.slug} class="bf-post-link">
-                <img
-                  class="card-image"
-                  src={`https://picsum.photos/600/300?random=${index + 1}`}
-                  loading="lazy"
-                  alt="Shareholder Update: Q2 2020 and July"
-                />
+              <Link
+                to={BLOG_PATH + node.fields.slug.toLowerCase()}
+                class="bf-post-link"
+              >
+                {node.frontmatter.coverImage ? (
+                  <GatsbyImage
+                    image={node.frontmatter.coverImage.childImageSharp.gatsbyImageData}
+                    alt={node.frontmatter.title}
+                    loading="lazy"
+                  />
+                ) : (
+                  <DefaultImg />
+                )}
               </Link>
 
               <div class="card-breadcrumb">
@@ -41,14 +49,19 @@ const PostList = ({ posts, hideBio }) => {
                 </svg>
                 <Link
                   class="breadcrumb-link"
-                  to={`${BLOG_PATH}/category/${kebabCase(node.frontmatter.category)}/`}
+                  to={`${BLOG_PATH}/category/${kebabCase(
+                    node.frontmatter.category
+                  )}/`}
                 >
                   <strong>{node.frontmatter.category}</strong>
                 </Link>
               </div>
 
               <div class="card-content">
-                <Link to={BLOG_PATH + node.fields.slug} class="bf-post-link">
+                <Link
+                  to={BLOG_PATH + node.fields.slug.toLowerCase()}
+                  class="bf-post-link"
+                >
                   <h3 class="card-title">{title}</h3>
                 </Link>
                 <div class="card-meta">
@@ -96,7 +109,7 @@ const PostList = ({ posts, hideBio }) => {
                         stroke-linecap="round"
                       ></circle>
                     </svg>{" "}
-                    {node.fields.readingTime.text}
+                    {5}
                   </span>
 
                   {node.frontmatter.tags && (

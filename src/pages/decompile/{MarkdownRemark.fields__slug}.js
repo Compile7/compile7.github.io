@@ -1,12 +1,14 @@
+import { graphql, Link } from "gatsby"
 import React from "react"
-import { Link, graphql } from "gatsby"
 
-import Bio from "../components/bio"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import { rhythm, scale } from "../utils/typography"
+import Bio from "../../components/bio"
+import Layout from "../../components/layout"
+import SEO from "../../components/seo"
+import { rhythm } from "../../utils/typography"
 
-import styles from "./templates.module.scss"
+import * as styles from "../../templates/templates.module.scss"
+import { DefaultImg } from "../../components/defaultImg"
+import { GatsbyImage } from "gatsby-plugin-image"
 
 const BlogPostTemplate = ({ data, pageContext, location }) => {
   const post = data.markdownRemark
@@ -96,7 +98,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
                       stroke-linecap="round"
                     ></circle>
                   </svg>
-                  {post.fields.readingTime.text}
+                  {"2"}
                 </span>
                 <a href="/resources/reports/" class="badge badge-reports">
                   {post.frontmatter.tags[0]}
@@ -107,10 +109,15 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
             </div>
 
             <div class={styles.headerImage}>
-              <img
-                src="https://picsum.photos/600/400"
-                alt={post.frontmatter.title}
-              />
+              {post.frontmatter.coverImage ? (
+                <GatsbyImage
+                  image={post.frontmatter.coverImage.childImageSharp.gatsbyImageData}
+                  alt={post.frontmatter.title}
+                  loading="lazy"
+                />
+              ) : (
+                <DefaultImg />
+              )}
             </div>
           </div>
         </header>
@@ -124,33 +131,6 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
           }}
         />
       </article>
-
-      <nav>
-        <ul
-          style={{
-            display: `flex`,
-            flexWrap: `wrap`,
-            justifyContent: `space-between`,
-            listStyle: `none`,
-            padding: 0,
-          }}
-        >
-          <li>
-            {previous && (
-              <Link to={previous.fields.slug} rel="prev">
-                ← {previous.frontmatter.title}
-              </Link>
-            )}
-          </li>
-          <li>
-            {next && (
-              <Link to={next.fields.slug} rel="next">
-                {next.frontmatter.title} →
-              </Link>
-            )}
-          </li>
-        </ul>
-      </nav>
     </Layout>
   )
 }
@@ -158,33 +138,31 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
 export default BlogPostTemplate
 
 export const pageQuery = graphql`
-  query BlogPostBySlug($slug: String!) {
+  query BlogPostBySlug($id: String!) {
     site {
       siteMetadata {
         title
       }
     }
-    markdownRemark(fields: { slug: { eq: $slug } }) {
+    markdownRemark(id: { eq: $id }) {
       id
       excerpt(pruneLength: 160)
       html
-      fields {
-        readingTime {
-          text
-        }
-      }
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        coverImage {
+          childImageSharp {
+            gatsbyImageData(width: 600, placeholder: BLURRED)
+          }
+        }
         author {
-          id
+          jsonId
           bio
           image {
             childImageSharp {
-              fixed(width: 50, height: 50) {
-                ...GatsbyImageSharpFixed
-              }
+              gatsbyImageData(width: 50, height: 50, layout: FIXED)
             }
           }
         }

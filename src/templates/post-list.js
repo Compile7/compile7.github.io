@@ -1,9 +1,9 @@
 import { graphql } from "gatsby"
 import React from "react"
-import Layout from "../../components/layout"
-import PostList from "../../components/postList"
-import SEO from "../../components/seo"
-import TagMenu from "../../components/tagMenu"
+import Layout from "../components/layout"
+import PostList from "../components/postList"
+import SEO from "../components/seo"
+import TagMenu from "../components/tagMenu"
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title
@@ -21,21 +21,22 @@ const BlogIndex = ({ data, location }) => {
 export default BlogIndex
 
 export const pageQuery = graphql`
-  query {
+  query blogListQuery($skip: Int!, $limit: Int!) {
     site {
       siteMetadata {
         title
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(
+      sort: { fields: [frontmatter___date], order: DESC }
+      limit: $limit
+      skip: $skip
+    ) {
       edges {
         node {
           excerpt
           fields {
             slug
-            readingTime {
-              text
-            }
           }
           frontmatter {
             date(formatString: "MMM DD, YYYY")
@@ -43,13 +44,16 @@ export const pageQuery = graphql`
             description
             category
             tags
+            coverImage {
+              childImageSharp {
+                gatsbyImageData(width: 600, placeholder: BLURRED)
+              }
+            }
             author {
-              id
+              jsonId
               image {
                 childImageSharp {
-                  fixed(width: 35, height: 35) {
-                    ...GatsbyImageSharpFixed
-                  }
+                  gatsbyImageData(width: 50, height: 50, layout: FIXED)
                 }
               }
             }

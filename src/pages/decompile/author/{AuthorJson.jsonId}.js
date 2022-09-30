@@ -1,18 +1,19 @@
 import React from "react"
-import Layout from "../components/layout"
+import Layout from "../../../components/layout"
 
-import styles from "./templates.module.scss"
+import * as styles from "../../../templates/templates.module.scss"
 
-import SEO from "../components/seo"
+import SEO from "../../../components/seo"
 
-import PostList from "../components/postList"
-import { rhythm } from "../utils/typography"
+import PostList from "../../../components/postList"
+import { rhythm } from "../../../utils/typography"
 
-import Image from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image"
+import { graphql } from "gatsby"
 
 export default ({
   data: {
-    authorYaml: { id, bio, image },
+    authorJson: { jsonId, bio, image },
     allMarkdownRemark: { edges: postNodes },
     site: {
       siteMetadata: { title },
@@ -21,15 +22,15 @@ export default ({
   location,
 }) => (
   <Layout location={location} title={title}>
-    <SEO title={id} />
+    <SEO title={jsonId} />
     <main>
       <section>
         <div class={`${styles.authorPage} pb-80`}>
           <div class={`${styles.author} d-flex`}>
             <div class={styles.authorImage}>
-              <Image
-                fixed={image.childImageSharp.fixed}
-                alt={id}
+              <GatsbyImage
+                image={image.childImageSharp.gatsbyImageData}
+                alt={jsonId}
                 style={{
                   marginRight: rhythm(1 / 2),
                   marginBottom: 0,
@@ -42,7 +43,7 @@ export default ({
               />
             </div>
             <div class={styles.aboutAuthor}>
-              <h3>{id}</h3>
+              <h3>{jsonId}</h3>
               <p>{bio}</p>
             </div>
           </div>
@@ -54,27 +55,30 @@ export default ({
 )
 
 export const pageQuery = graphql`
-  query PostsByAuthorId($authorId: String!) {
+  query PostsByAuthorId($id: String!) {
     site {
       siteMetadata {
         title
       }
     }
     allMarkdownRemark(
-      filter: { fields: { authorId: { eq: $authorId } } }
+      filter: { frontmatter: { author: { id: { eq: $id } } } }
       sort: { fields: [frontmatter___date], order: DESC }
     ) {
       edges {
         node {
+          id
           excerpt
           fields {
             slug
-            readingTime {
-              text
-            }
           }
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
+            coverImage {
+              childImageSharp {
+                gatsbyImageData(width: 600, placeholder: BLURRED)
+              }
+            }
             title
             description
             category
@@ -83,14 +87,12 @@ export const pageQuery = graphql`
         }
       }
     }
-    authorYaml(id: { eq: $authorId }) {
-      id
+    authorJson(id: { eq: $id }) {
+      jsonId
       bio
       image {
         childImageSharp {
-          fixed(width: 100, height: 100) {
-            ...GatsbyImageSharpFixed
-          }
+          gatsbyImageData(width: 100, height: 100, layout: FIXED)
         }
       }
     }
