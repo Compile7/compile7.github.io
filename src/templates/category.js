@@ -3,6 +3,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import TagMenu from "../components/tagMenu"
 import PostList from "../components/postList"
+import { graphql } from "gatsby"
 
 const CategoryTemplate = ({ pageContext, data, location }) => {
   const siteTitle = data.site.siteMetadata.title
@@ -36,21 +37,21 @@ export const pageQuery = graphql`
           excerpt
           fields {
             slug
-            readingTime {
-              text
-            }
           }
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
             title
             description
+            coverImage {
+              childImageSharp {
+                gatsbyImageData(width: 600, placeholder: BLURRED)
+              }
+            }
             author {
-              id
+              jsonId
               image {
                 childImageSharp {
-                  fixed(width: 50, height: 50) {
-                    ...GatsbyImageSharpFixed
-                  }
+                  gatsbyImageData(width: 50, height: 50, layout: FIXED)
                 }
               }
             }

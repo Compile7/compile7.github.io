@@ -4,16 +4,18 @@ import { graphql, Link, StaticQuery } from "gatsby"
 
 import kebabCase from "lodash/kebabCase"
 
-import styles from "./pinnedcard.module.scss"
+import * as styles from "./pinnedcard.module.scss"
 
-import Bio from "../bio"
+import { GatsbyImage } from "gatsby-plugin-image"
 import { BLOG_PATH } from "../../utils/typography"
+import Bio from "../bio"
+import { DefaultImg } from "../defaultImg"
 
 const PinnedCard = () => {
   return (
     <StaticQuery
       query={graphql`
-        query {
+        {
           allMarkdownRemark(
             sort: { fields: [frontmatter___date], order: DESC }
             limit: 1
@@ -25,13 +27,16 @@ const PinnedCard = () => {
                   tags
                   description
                   date(formatString: "MMM DD, YYYY")
+                  coverImage {
+                    childImageSharp {
+                      gatsbyImageData(width: 600, placeholder: BLURRED)
+                    }
+                  }
                   author {
-                    id
+                    jsonId
                     image {
                       childImageSharp {
-                        fixed(width: 50, height: 50) {
-                          ...GatsbyImageSharpFixed
-                        }
+                        gatsbyImageData(width: 50, height: 50, layout: FIXED)
                       }
                     }
                   }
@@ -39,9 +44,6 @@ const PinnedCard = () => {
                 }
                 fields {
                   slug
-                  readingTime {
-                    text
-                  }
                 }
               }
             }
@@ -50,12 +52,25 @@ const PinnedCard = () => {
       `}
       render={data => {
         const node = data.allMarkdownRemark.edges[0].node
-        const tags = node.frontmatter.tags || []
         return (
           <section className={`${styles.pinnedwrap} py-80`}>
             <div className={styles.blogContentPinned}>
-              <Link to={BLOG_PATH + node.fields.slug} className="bs-md">
-                <img src={"https://picsum.photos/600/300"} alt="default-img" />
+              <Link
+                to={BLOG_PATH + node.fields.slug.toLowerCase()}
+                className="bs-md"
+              >
+                {node.frontmatter.coverImage ? (
+                  <GatsbyImage
+                    image={
+                      node.frontmatter.coverImage.childImageSharp
+                        .gatsbyImageData
+                    }
+                    alt={node.frontmatter.title}
+                    loading="lazy"
+                  />
+                ) : (
+                  <DefaultImg />
+                )}
               </Link>
 
               <div className={styles.descriptionPinned}>
@@ -76,13 +91,15 @@ const PinnedCard = () => {
                     ></path>
                   </svg>
                   <Link
-                    to={`${BLOG_PATH}/category/${kebabCase(node.frontmatter.category)}`}
+                    to={`${BLOG_PATH}/category/${kebabCase(
+                      node.frontmatter.category
+                    )}`}
                   >
                     <strong>{node.frontmatter.category}</strong>{" "}
                   </Link>
                 </div>
                 <h1>
-                  <Link to={node.fields.slug}>
+                  <Link to={BLOG_PATH + node.fields.slug.toLowerCase()}>
                     {node.frontmatter.title || node.fields.slug}
                   </Link>
                 </h1>
@@ -137,7 +154,7 @@ const PinnedCard = () => {
                         stroke-linecap="round"
                       ></circle>
                     </svg>
-                    {node.fields.readingTime.text}
+                    {5}
                   </span>
                   <Link to="#" className="badge badge-analytics">
                     {node.frontmatter.tags[0]}

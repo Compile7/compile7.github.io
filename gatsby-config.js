@@ -7,6 +7,7 @@ module.exports = {
     siteUrl: `https://www.compile7.com`,
   },
   plugins: [
+    `gatsby-transformer-json`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -24,28 +25,21 @@ module.exports = {
               maxWidth: 590,
             },
           },
-          {
-            resolve: `gatsby-remark-responsive-iframe`,
-            options: {
-              wrapperStyle: `margin-bottom: 1.0725rem`,
-            },
-          },
           `gatsby-remark-prismjs`,
-          `gatsby-remark-copy-linked-files`,
           `gatsby-remark-smartypants`,
-          `gatsby-remark-reading-time`,
         ],
       },
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-image`,
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: config.GA_TACKING_ID,
+        trackingId: config.GA_TACKING_ID || "123",
       },
     },
-    `gatsby-plugin-feed`,
+    { resolve: `gatsby-plugin-feed`, options: { feeds: [] } },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -65,14 +59,10 @@ module.exports = {
         pathToConfigModule: `src/utils/typography`,
       },
     },
-    `gatsby-transformer-yaml`,
     `gatsby-plugin-sass`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
   ],
-  mapping: {
-    "MarkdownRemark.frontmatter.author": `AuthorYaml`,
-  },
   pathPrefix: `/decompile/blog`,
 }

@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 
-import styles from "./layout.module.scss"
+import * as styles from "./layout.module.scss"
 import Header from "../header"
 import PinnedCard from "../pinnedCard"
 
