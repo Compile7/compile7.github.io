@@ -1,4 +1,4 @@
-const config = require("./config")
+require("dotenv").config({ path: `${__dirname}/.env` })
 
 module.exports = {
   siteMetadata: {
@@ -34,9 +34,14 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-plugin-image`,
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: `gatsby-plugin-google-gtag`,
       options: {
-        trackingId: config.GA_TACKING_ID || "123",
+        trackingIds: [
+          process.env.GA_TRACKING_ID, // Google Analytics / GA
+        ],
+        pluginConfig: {
+          head: true,
+        },
       },
     },
     { resolve: `gatsby-plugin-feed`, options: { feeds: [] } },

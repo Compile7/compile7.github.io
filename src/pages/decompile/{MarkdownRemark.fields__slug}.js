@@ -1,19 +1,19 @@
 import { graphql, Link } from "gatsby"
 import React from "react"
 
+import kebabCase from "lodash/kebabCase"
 import Bio from "../../components/bio"
 import Layout from "../../components/layout"
 import SEO from "../../components/seo"
-import { rhythm } from "../../utils/typography"
+import { BLOG_PATH, rhythm } from "../../utils/typography"
 
-import * as styles from "../../templates/templates.module.scss"
-import { DefaultImg } from "../../components/defaultImg"
 import { GatsbyImage } from "gatsby-plugin-image"
+import { DefaultImg } from "../../components/defaultImg"
+import * as styles from "../../templates/templates.module.scss"
 
-const BlogPostTemplate = ({ data, pageContext, location }) => {
+const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata.title
-  const { previous, next } = pageContext
 
   return (
     <Layout location={location} title={siteTitle}>
