@@ -26,10 +26,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
           <div class={`${styles.headerContainer} container`}>
             <div class={styles.headerContent}>
               <div class={styles.postBreadcrumb}>
-                <a
-                  class="breadcrumb-link"
-                  href="https://buffer.com/resources/publications/"
-                >
+                <a class="breadcrumb-link" href="#">
                   Products
                 </a>
 
@@ -44,13 +41,16 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
                     stroke-linejoin="round"
                   ></path>
                 </svg>
-
-                <a
-                  class="breadcrumb-link"
-                  href="https://buffer.com/resources/open/"
+                <Link
+                  to={`${BLOG_PATH}/category/${kebabCase(
+                    post.frontmatter.category
+                  )}/#posts`}
+                  className={"breadcrumb-link"}
                 >
                   <strong>{post.frontmatter.category}</strong>
-                </a>
+                </Link>
+
+                <a class="breadcrumb-link" href=""></a>
               </div>
 
               <h1 class={styles.title}>{post.frontmatter.title}</h1>
@@ -111,7 +111,9 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
             <div class={styles.headerImage}>
               {post.frontmatter.coverImage ? (
                 <GatsbyImage
-                  image={post.frontmatter.coverImage.childImageSharp.gatsbyImageData}
+                  image={
+                    post.frontmatter.coverImage.childImageSharp.gatsbyImageData
+                  }
                   alt={post.frontmatter.title}
                   loading="lazy"
                 />
