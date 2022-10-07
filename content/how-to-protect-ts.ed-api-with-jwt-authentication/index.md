@@ -1,6 +1,6 @@
 ---
 title: "How to protect Ts.Ed API with JWT Authentication"
-date: "2022-09-12"
+date: "2022-10-07"
 author: "Ekekenta Odionyenfe Clinton"
 description: "In this tutorial, you'll learn how to protect your Ts.ED API using JWT Authentication."
 ---
