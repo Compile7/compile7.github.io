@@ -23,7 +23,7 @@ Here are the guidelines that you shall follow for writing a blog post for LoginR
 8. If your blog post contains a code snippet, don't forget to syntax highlighting it. You can also specify the programming language for which you want syntax highlighting.
   **For example:** in Markdown, typing ```js will give you JavaScript syntax highlighting.
 
-9. If your blog contains demo code, or if you want to include demo code in a repo for easier reference, then [add your demo code in this repo](ADD REPO LINK HERE) by raising a separate pull request.
+9. If your blog contains demo code, or if you want to include demo code in a repo for easier reference, then [add your demo code in this repo](https://github.com/Compile7/compile7-blog-samples) by raising a separate pull request.
 
 10. Use images/screenshots in your blog post to explain things better. Any stock images you use shall be free for commercial use without requiring attribution.
 
