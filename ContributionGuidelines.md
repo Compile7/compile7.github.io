@@ -109,6 +109,6 @@ Your blog post will undergo three review phases:
 
 **Phase 3:** We'll check your content once again, verify any sample code included, and request a final set of changes if any.
 
-After completing the three phases, we'll merge your pull request and subsequently publish it on our publication:  https://www.loginradius.com/blog/engineering
+After completing the three phases, we'll merge your pull request and subsequently publish it on our publication: https://compile7.org/decompile
 
 Note that we may reject your pull request if it doesn't meet our guidelines or quality standards.
