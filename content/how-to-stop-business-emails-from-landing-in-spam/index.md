@@ -2,6 +2,7 @@
 title: "Business Emails Marked as Spam? Here's What to Do"
 date: "2022-10-14"
 coverImage: improve-email-delivery.png
+category: Deliverability
 tags:
   - "Spam"
   - "Email Delivery"
