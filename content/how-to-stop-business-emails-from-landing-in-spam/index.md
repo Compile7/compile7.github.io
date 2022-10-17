@@ -1,5 +1,5 @@
 ---
-title: "Business Emails Marked as Spam? Here's What to Do"
+title: "How Developers Can Avoid Sending Spam Emails?"
 date: "2022-10-14"
 coverImage: improve-email-delivery.png
 category: Deliverability
