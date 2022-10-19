@@ -25,34 +25,6 @@ const BlogPostTemplate = ({ data, location }) => {
         <header className={styles.header}>
           <div class={`${styles.headerContainer} container`}>
             <div class={styles.headerContent}>
-              <div class={styles.postBreadcrumb}>
-                <a class="breadcrumb-link" href="#">
-                  Products
-                </a>
-
-                <svg viewBox="0 0 18 27" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M2.397 25.426l13.143-11.5-13.143-11.5"
-                    stroke-width="3"
-                    stroke="currentColor"
-                    fill="none"
-                    fill-rule="evenodd"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></path>
-                </svg>
-                <Link
-                  to={`${BLOG_PATH}/category/${kebabCase(
-                    post.frontmatter.category
-                  )}/#posts`}
-                  className={"breadcrumb-link"}
-                >
-                  <strong>{post.frontmatter.category}</strong>
-                </Link>
-
-                <a class="breadcrumb-link" href=""></a>
-              </div>
-
               <h1 class={styles.title}>{post.frontmatter.title}</h1>
 
               <div class={styles.headerMeta}>
@@ -168,7 +140,6 @@ export const pageQuery = graphql`
             }
           }
         }
-        category
         tags
       }
     }

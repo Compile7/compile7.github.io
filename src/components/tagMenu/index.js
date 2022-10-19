@@ -12,7 +12,7 @@ const TagMenu = () => {
       query={graphql`
         query {
           allMarkdownRemark {
-            group(field: frontmatter___category) {
+            group(field: frontmatter___tags) {
               category: fieldValue
               totalCount
             }
@@ -32,7 +32,7 @@ const TagMenu = () => {
               {group.slice(0, 10).map((item, index) => (
                 <Link
                   key={`cat_${index}`}
-                  to={`${BLOG_PATH}/category/${kebabCase(item.category)}/#posts`}
+                  to={`${BLOG_PATH}/tags/${kebabCase(item.category)}/#posts`}
                   getProps={props => setActive(props, item.category)}
                 >
                   {item.category}
