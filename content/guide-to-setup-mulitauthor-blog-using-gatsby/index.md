@@ -1,7 +1,6 @@
 ---
 title: "A Guide to Setup Multi-Author Blog using Gatsby"
 date: "2020-09-21"
-category: "Gatsby"
 tags:
   - "gatsby"
   - "yaml"

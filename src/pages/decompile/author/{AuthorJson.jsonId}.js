@@ -81,7 +81,6 @@ export const pageQuery = graphql`
             }
             title
             description
-            category
             tags
           }
         }
