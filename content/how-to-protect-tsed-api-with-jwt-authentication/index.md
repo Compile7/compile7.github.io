@@ -1,5 +1,5 @@
 ---
-title: "How to protect Ts.Ed API with JWT Authentication"
+title: "How to Protect Ts.Ed API with JWT Authentication"
 date: "2022-10-19"
 coverImage: tsed-api-authentication-with-jwt.png
 tags:
