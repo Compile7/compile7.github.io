@@ -16,3 +16,13 @@
     color: $gray-dark;
   }
 }
+.card-author-image {
+  display: block;
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 100%;
+  overflow: hidden;
+}
+.card-author {
+  width: fit-content;
+}

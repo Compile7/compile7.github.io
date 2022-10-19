@@ -23,34 +23,32 @@ export default ({
 }) => (
   <Layout location={location} title={title}>
     <SEO title={jsonId} />
-    <main>
-      <section>
-        <div class={`${styles.authorPage} pb-80`}>
-          <div class={`${styles.author} d-flex`}>
-            <div class={styles.authorImage}>
-              <GatsbyImage
-                image={image.childImageSharp.gatsbyImageData}
-                alt={jsonId}
-                style={{
-                  marginRight: rhythm(1 / 2),
-                  marginBottom: 0,
-                  minWidth: 50,
-                  borderRadius: `100%`,
-                }}
-                imgStyle={{
-                  borderRadius: `50%`,
-                }}
-              />
-            </div>
-            <div class={styles.aboutAuthor}>
-              <h3>{jsonId}</h3>
-              <p>{bio}</p>
-            </div>
+    <section>
+      <div class={`${styles.authorPage} pb-80`}>
+        <div class={`${styles.author} d-flex`}>
+          <div class={styles.authorImage}>
+            <GatsbyImage
+              image={image.childImageSharp.gatsbyImageData}
+              alt={jsonId}
+              style={{
+                marginRight: rhythm(1 / 2),
+                marginBottom: 0,
+                minWidth: 50,
+                borderRadius: `100%`,
+              }}
+              imgStyle={{
+                borderRadius: `50%`,
+              }}
+            />
+          </div>
+          <div class={styles.aboutAuthor}>
+            <h3>{jsonId}</h3>
+            <p>{bio}</p>
           </div>
         </div>
-      </section>
-      <PostList posts={postNodes} hideBio />
-    </main>
+      </div>
+    </section>
+    <PostList posts={postNodes} hideBio />
   </Layout>
 )
 
