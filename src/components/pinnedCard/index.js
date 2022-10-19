@@ -56,7 +56,7 @@ const PinnedCard = () => {
             <div className={styles.blogContentPinned}>
               <Link
                 to={BLOG_PATH + node.fields.slug.toLowerCase()}
-                className="bs-md"
+                className="br-8"
               >
                 {node.frontmatter.coverImage ? (
                   <GatsbyImage
