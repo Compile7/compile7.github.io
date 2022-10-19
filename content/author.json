@@ -1,5 +1,10 @@
 [
   {
+    "id": "Ekekenta Odionyenfe Clinton",
+    "bio": "He is a full-stack web application developer, software engineer, and technical writer, currently living in Nigeria, Portharcourt. He has an HND in Computer Science from Federal Polytechnic Nekede. His primary focus and inspiration for his studies is web development. In his free time, he studies human psychology and writes technical tutorials.",
+    "image": "assets/authors/EkekentaOdionyenfeClinton.png"
+  },
+  {
     "id": "Deepak Gupta",
     "bio": "Deepak is the CTO and co-founder of LoginRadius, a rapidly-expanding Customer Identity Management provider. He's dedicated to innovating the LoginRadius platform. He loves foosball and winning poker games!",
     "image": "assets/authors/DeepakGupta.png"
