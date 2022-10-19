@@ -63,7 +63,7 @@ Once you've gone through the prompts, the command will create a new project dire
 With the project created, let's install the required dependencies to run the application.
 
 ```
-npm install passport, passport-jwt, @types/passport-jwt @types/jsonwebtoken express-session @types/express-session mongoose @tsed/mongoose @types/passport-local
+npm install passport passport-jwt @types/passport-jwt @types/jsonwebtoken express-session @types/express-session mongoose @tsed/mongoose @types/passport-local
 ```
 
 The above command will install the following Node.js dependencies.
