@@ -1,7 +1,6 @@
 ---
 title: "Complete Guide to Strict and Optional Cookies with Cookie Consent Law"
 date: "2022-09-29"
-category: "cookies"
 coverImage: Strict-cookies-and-essential-cookies.png
 tags:
   - "cookies"

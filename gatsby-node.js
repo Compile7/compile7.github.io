@@ -20,7 +20,7 @@ exports.createPages = async ({ graphql, actions }) => {
               id
             }
           }
-          group(field: frontmatter___category) {
+          group(field: frontmatter___tags) {
             fieldValue
           }
         }
@@ -53,7 +53,7 @@ exports.createPages = async ({ graphql, actions }) => {
   // Make tag pages
   categories.forEach(category => {
     createPage({
-      path: `${BLOG_PATH}category/${kebabCase(category.fieldValue)}/`,
+      path: `${BLOG_PATH}tags/${kebabCase(category.fieldValue)}/`,
       component: path.resolve(`./src/templates/category.js`),
       context: {
         category: category.fieldValue,

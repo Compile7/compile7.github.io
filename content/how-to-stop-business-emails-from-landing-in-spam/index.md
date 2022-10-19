@@ -2,7 +2,6 @@
 title: "Email Delivery 101 for Developers"
 date: "2022-10-18"
 coverImage: improve-email-delivery.png
-category: Deliverability
 tags:
   - "Spam"
   - "Email Delivery"

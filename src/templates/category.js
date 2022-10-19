@@ -13,7 +13,7 @@ const CategoryTemplate = ({ pageContext, data, location }) => {
   return (
     <Layout location={location} title={siteTitle} showPinned>
       <SEO title={`Posts for ${category}`} />
-      <TagMenu />
+      <TagMenu group={data.allMarkdownRemark.group} />
       <PostList posts={posts} />
     </Layout>
   )
@@ -30,7 +30,7 @@ export const pageQuery = graphql`
     }
     allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { category: { in: [$category] } } }
+      filter: { frontmatter: { tags: { in: [$category] } } }
     ) {
       edges {
         node {
@@ -55,7 +55,6 @@ export const pageQuery = graphql`
                 }
               }
             }
-            category
             tags
           }
         }
