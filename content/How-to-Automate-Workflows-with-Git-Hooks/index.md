@@ -47,11 +47,11 @@ This subdirectory already has some example scripts to initiate.
 
 **`Git hooks can be used for client-side and server-side automation.`**
 
-
+There is no difference in Client and Server hooks setup except events rest is same.
 
 ### **Client Side**
 
-Hooks that are present on developer machines that can be used for pre commit, rebase,checkout etc.
+Hooks that are present on developer machines that can be used for pre commit, pre push, pre rebase, pre recieve, checkout etc.
 hooks do not create while checkout, that has to do explicitly or can use any third party module if wanted to use in a repository.
 
 
@@ -76,7 +76,20 @@ if any changes push to server can be accepted or rejected based on certain condi
     update.sample
 ```
 
+for eg: `commit-msg.sample`
+```
+
+we can use this for COMMIT EVENT This example catches duplicate Signed-off-by lines.
+
+test "" = "$(grep '^Signed-off-by: ' "$1" |
+	 sort | uniq -c | sed -e '/^[ 	]*1[ 	]/d')" || {
+	echo >&2 Duplicate Signed-off-by lines.
+	exit 1
+}
+```
+
 Default script written in PERL but still you can use any language (as long as it is allowed to be executed)
+Mostly people use  Shell, Ruby, Perl and Python. 
 
 
 ## **Get start**
