@@ -73,13 +73,20 @@ const PinnedCard = () => {
               </Link>
 
               <div className={styles.descriptionPinned}>
-                <ul>
-                  <li>
-                    <Link to="#" className="badge badge-analytics">
-                      {node.frontmatter.tags[0]}
-                    </Link>
-                  </li>
-                </ul>
+                {node.frontmatter.tags && (
+                  <ul>
+                    {node.frontmatter.tags.map(t => (
+                      <li>
+                        <Link
+                          to={`${BLOG_PATH}/tags/${kebabCase(t)}/#posts`}
+                          className="badge badge-analytics"
+                        >
+                          {t}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                )}
                 <h1>
                   <Link to={BLOG_PATH + node.fields.slug.toLowerCase()}>
                     {node.frontmatter.title || node.fields.slug}
