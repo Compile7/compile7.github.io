@@ -471,4 +471,4 @@ Lastly, get the users by sending a GET request to the endpoint `localhost:8083/r
 ## Conclusion
 In this tutorial, you've built a Ts.ED API and protected the routes with JSON Web Token (JWT). In detail, you've created a Ts.ED project, connected it to MongoDB, implemented JWT authentication, and created and authenticated CRUD routes in your Ts.ED application.
 
-The code for this tutorial is available [here on Github](https://github.com/icode247/TsED_JWT_Auth). Feel free to clone and extend the features of the application.
+[The code for this tutorial is available on Github](https://github.com/Compile7/compile7-blog-samples/tree/main/TsED_JWT_Auth). Feel free to clone and extend the features of the application.
