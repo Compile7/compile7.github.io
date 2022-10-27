@@ -5,9 +5,7 @@ import * as styles from "./layout.module.scss"
 import Header from "../header"
 import PinnedCard from "../pinnedCard"
 import { BLOG_PATH } from "../../utils/typography"
-const Layout = ({ location, title, children, showPinned }) => {
-  // const rootPath = `${__PATH_PREFIX__}/`
-
+const Layout = ({ children, showPinned }) => {
   return (
     <>
       <Header />

@@ -22,7 +22,12 @@ export default ({
   location,
 }) => (
   <Layout location={location} title={title}>
-    <SEO title={jsonId} />
+     <SEO
+      title={`${jsonId} - Author | Decompile`}
+      description={`${jsonId} - ${bio}`}
+      image={image.childImageSharp.gatsbyImageData.images.fallback.src}
+      pathname={location.pathname}
+    />
     <section>
       <div class={`${styles.authorPage} pb-80`}>
         <div class={`${styles.author} d-flex`}>

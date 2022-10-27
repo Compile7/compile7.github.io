@@ -38,11 +38,16 @@ const PostList = ({ posts, hideBio }) => {
               <div className={styles.cardContent}>
                 {node.frontmatter.tags && (
                   <ul class={styles.badgeWrap}>
-                    <li>
-                      <Link class={styles.bfBadge} to="#">
-                        {node.frontmatter.tags[0]}
-                      </Link>
-                    </li>
+                    {node.frontmatter.tags.map(t => (
+                      <li>
+                        <Link
+                          to={`${BLOG_PATH}/tags/${kebabCase(t)}/#posts`}
+                          class={styles.bfBadge}
+                        >
+                          {t}
+                        </Link>
+                      </li>
+                    ))}
                   </ul>
                 )}
                 <Link
