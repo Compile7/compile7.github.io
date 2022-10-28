@@ -1,6 +1,5 @@
 .head {
   position: relative;
-  padding: 24px 0;
   background: inherit;
   transition: all 0.3s ease;
   box-shadow: none;
@@ -9,6 +8,15 @@
     padding: 0 4vmin;
     max-width: 1248px;
     margin: 0 auto;
+    position: relative;
+    display: flex;
+    min-height: 96px;
+    @media (max-width: 768px) {
+      min-height: 90px;
+    }
+    @media (max-width: 480px) {
+      min-height: 64px;
+    }
   }
   &-inner {
     max-width: 1400px;
@@ -20,9 +28,6 @@
     grid-column-start: 1;
     display: flex;
     align-items: center;
-    max-width: 220px;
-    text-align: center;
-    word-break: break-all;
   }
   &-blog-name {
     font-size: 1rem;
