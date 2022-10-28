@@ -1,10 +1,10 @@
-import React from "react"
 import { Link } from "gatsby"
+import React from "react"
 
-import * as styles from "./layout.module.scss"
+import { BLOG_PATH } from "../../utils/typography"
 import Header from "../header"
 import PinnedCard from "../pinnedCard"
-import { BLOG_PATH } from "../../utils/typography"
+import * as styles from "./layout.module.scss"
 const Layout = ({ children, showPinned }) => {
   return (
     <>
