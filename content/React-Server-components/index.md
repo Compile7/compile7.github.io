@@ -5,21 +5,22 @@ category: "React"
 coverImage: react-server-component.png
 tags:
   - "react"
-  - "server components"
-description: "Overview about the React Server Components"
+  - "server component"
+description: "Overview about the React Server Component"
 author: "Versha Gupta"
 ---
 
 
 
-# React Server Components
+# React Server Component
 
 React Server Components allow developers to write the react component in a way so that it gets rendered on the server side, and the main purpose of server-side rendering is to improve the react application performance.
-It allows some components of React on the server, in the browser, or on the server using SSR using server-side rendering.
 
-React server components improve the user experience by using server-side rendering and could result in the smaller size of client-side javascript bundles. The time to interact with the page is decreased due to less bundle size leading to improve performance. Server components enable developers to better to look into server infrastructure.
+This helps some componenets of a React application to be rendered on the server, in the browser, or on the server using server-side rendering. 
 
-React Server  Components is still in the development and research phase, but we can catch some of its core concepts by looking at [the demo](https://youtu.be/TQQPAU21ZUw?t=1500).
+By using server-side rendering (SSR), React Server components enhance the user experience while potentially reducing the size of client-side JavaScript bundles. The time to interact with the page is decreased due to less bundle size leading to improve performance. Server components enable developers to better to look into server infrastructure.
+
+Although React Server Components is still in the research and development stage, we may grasp some of its fundamental ideas by looking at [the demo](https://youtu.be/TQQPAU21ZUw?t=1500).
 
 ## Component Types
 |  Type|Description  |FileName Extension|
@@ -33,25 +34,25 @@ React Server  Components is still in the development and research phase, but we 
 
 ## Benefit of React Server Component?
 - React Server components are not merged with the javascript bundle, which means it is never downloaded by the browser.
-- Keep the interactive state on the cline side components and move static and render-only components to the server side, which reduces the bundle size also.
+- Moving static and render-only components to the server while keeping interactive state on the client side minimises bundle size and boosts performance.
 - Server components can access server-side resources like databases and filesystem 
 - Server components can also read GraphQL queries.
 
 
-## React Server Components limitations
+## Limitations of React Server Component
 
-React Server components are rendered on the server side, so they have certain limitations:
+React Server components g=have some limitations because it render on the server side:
 
--   Server components need more resources and can be expensive since all the processing is done on the server.
--   For complex applications, the high number of server requests can slow down the site.
+-   Server components require more resources and can be costly as all processing is done on the server.
+-   A site may take longer to load when there are more server queries due to complicated applications.
 -   Setting up server components can be complicated and tedious
 
 ## How is That Different from Server Side Rendering?
 
-When using SSR in React applications, you send HTML to the client and then load up all the React application javascript. The user can do nothing with your application until Javascript is downloaded.
+When using SSR in React applications, you send HTML to the client and then load up all the React application javascript. While Javascript is downloading, the user cannot interact with your application.
 In SSR, all of the components are still on the client side. SSR is only used once for the initial rendering.
 
-React Server components are not rendered as HTML but as specially formatted that streamed to the client. They fetch some data from the backend and render these components after binding the fetched data. Whenever these components need to be rerendered, they are fetched from the server and merged into the existing one. At this time, the Client state is preserved even we are fetching parts of the view from the server
+React Server components aren't displayed as HTML, but rather as specifically structured content that streams to the client. They fetch some data from the backend and render these components after binding the fetched data. Whenever these components need to be rerendered, they are fetched from the server and merged into the existing one. At this time, the Client state is preserved even we are fetching parts of the view from the server
 
 ## Conclusion
 React Server components is a very exciting feature that may change the way of writing React application as they enable to import of packages without impacting the client's bundle size.
