@@ -22,6 +22,7 @@ const PinnedCard = () => {
           ) {
             edges {
               node {
+                timeToRead
                 frontmatter {
                   title
                   tags
@@ -102,7 +103,7 @@ const PinnedCard = () => {
                   <time datetime={node.frontmatter.date}>
                     {node.frontmatter.date}
                   </time>
-                  <span className={styles.readingTime}>{5} min read</span>
+                  <span className={styles.readingTime}>{node.timeToRead} min read</span>
                 </div>
                 {node.frontmatter.author && (
                   <Bio

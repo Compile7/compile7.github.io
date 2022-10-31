@@ -34,6 +34,7 @@ export const pageQuery = graphql`
     ) {
       edges {
         node {
+          timeToRead
           excerpt
           fields {
             slug

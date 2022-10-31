@@ -48,7 +48,7 @@ const BlogPostTemplate = ({ data, location }) => {
                 <time datetime={post.frontmatter.date}>
                   {post.frontmatter.date}
                 </time>
-                <span className={styles.readingTime}>{2} min read</span>
+                <span className={styles.readingTime}>{post.timeToRead} min read</span>
               </div>
               <Bio author={post.frontmatter.author} />
             </div>
@@ -83,6 +83,7 @@ export const pageQuery = graphql`
   query BlogPostBySlug($id: String!) {
     markdownRemark(id: { eq: $id }) {
       id
+      timeToRead
       excerpt(pruneLength: 160)
       html
       fields {
