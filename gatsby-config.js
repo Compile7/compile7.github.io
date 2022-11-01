@@ -4,7 +4,7 @@ module.exports = {
   siteMetadata: {
     title: `Compile7 Blog`,
     description: `Compile7 is a developer platform by developers.`,
-    siteUrl: `https://www.compile7.com`,
+    siteUrl: `https://compile7.org`,
     keywords: `Compile7, Decompile, Developers, Blog for developers, Learn, Contribute, Opensource, Community, Programming, Technology, Free learning, Engineering, Free for developers, Learn to code, Learn for free, Learn new things, Find,Connect, Build, Join a developer community today, software development, rails, javascript, ruby`,
   },
   plugins: [
@@ -83,6 +83,7 @@ module.exports = {
         },
       },
     },
+    `gatsby-plugin-sitemap`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
