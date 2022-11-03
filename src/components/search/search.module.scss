@@ -345,6 +345,7 @@
     span {
       font-size: 18px;
       font-weight: 500;
+      padding: 0;
     }
     a {
       padding: 12px $gutter;
@@ -358,10 +359,10 @@
       }
     }
     &.noresult {
-      padding: $gutter;
+      padding: 12px $gutter;
       display: block;
       font-weight: 700 !important;
-      color: $white !important;
+      color: $black !important;
       font-size: 18px;
     }
   }
