@@ -70,8 +70,13 @@
     "image": "assets/authors/ArchnaYadav.jpg"
   },
   {
+    "id": "Versha Gupta",
+    "bio": "She is a software enthusiast, avid contributor, and regular blog writer. She loves to cook, savours street food, and enjoys music.",
+    "image": "assets/authors/versha.png"
+   },
+   {
     "id": "Abhimanyu Singh Rathore",
     "bio": "Technical/Logical person who believe in god not in religions, live in materialistic world but believe in minimilism, Love to cook but not to waste, want to sit alone but need everyone around, he is right but wrong too.",
     "image": "assets/authors/AbhimanyuSinghRathore.jpg"
-  }
+   }
 ]
