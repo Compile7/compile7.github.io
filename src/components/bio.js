@@ -2,7 +2,7 @@ import { GatsbyImage } from "gatsby-plugin-image"
 import React from "react"
 
 import { BLOG_PATH } from "../utils/typography"
-
+import * as styles from "./bio.module.scss"
 import { Link } from "gatsby"
 import kebabCase from "lodash/kebabCase"
 
@@ -16,7 +16,7 @@ const Bio = ({ author }) => {
         <GatsbyImage
           image={author.image.childImageSharp.gatsbyImageData}
           alt={author.jsonId}
-          className="card-author-image"
+          className={styles.cardAuthorImage}
           loading="lazy"
         />
       </div>

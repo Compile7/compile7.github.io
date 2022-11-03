@@ -9,11 +9,17 @@ const CategoryTemplate = ({ pageContext, data, location }) => {
   const siteTitle = data.site.siteMetadata.title
   const posts = data.allMarkdownRemark.edges
   const { category } = pageContext
+  const img = data.allMarkdownRemark.edges[0].node.frontmatter.coverImage
 
   return (
     <Layout location={location} title={siteTitle} showPinned>
-      <SEO title={`Posts for ${category}`} />
-      <TagMenu />
+      <SEO
+        title={`${category} - Tag | Decompile`}
+        description={`Posts related to ${category}`}
+        image={img ? img.childImageSharp.gatsbyImageData.images.fallback.src : ""}
+        pathname={location.pathname}
+      />
+      <TagMenu group={data.allMarkdownRemark.group} />
       <PostList posts={posts} />
     </Layout>
   )
@@ -30,7 +36,7 @@ export const pageQuery = graphql`
     }
     allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { category: { in: [$category] } } }
+      filter: { frontmatter: { tags: { in: [$category] } } }
     ) {
       edges {
         node {
@@ -55,7 +61,6 @@ export const pageQuery = graphql`
                 }
               }
             }
-            category
             tags
           }
         }
