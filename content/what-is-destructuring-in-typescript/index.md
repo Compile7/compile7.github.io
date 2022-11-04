@@ -1,16 +1,15 @@
 ---
-title: "What is Destructuring in Typescript"
-date: "2022-11-01"
+title: "What is Destructuring in Typescript?"
+date: "2022-11-04"
+coverImage: destructuring.png
 tags:
   - "TypeScript"
   - "Destructuring"
-description: "Everything you need to know about Destructuring in typescript, How destructring the object and array can be done using typescript"
+description: "Everything you need to know about Destructuring in TypeScript. How to destructure an object and an array in TypeScript"
 author: "Mohammed Modi"
 ---
 
-# Destructuring in Typescript
-
-The literal meaning of Destructuring is de-structuring i.e breaking up the structure. Destructuring in typescript is very similar to the concept of destructing in javascript.
+The literal meaning of Destructuring is de-structuring i.e., breaking up the structure. Destructuring in typescript is very similar to the concept of destructing in JavaScript.
 
 Destructuring allows one to easily access the data from the cumbersome nested object. 
 
@@ -21,11 +20,11 @@ interface Foo {
     }
 }
 ```
-TypeScript provides a great way to handle this kind of nested data by creating a typed interface, destructuring is a very convenient way to easily access the data from a such nested object.
+TypeScript provides a great way to handle this kind of nested data by creating a typed interface. Destructuring is a very convenient way to easily access the data from a such nested object.
 
-## Object Destructuring in Typescript
+## Object Destructuring in TypeScript
 
-To understand the Object Descturing let us consider the below use case
+To understand Object Destructuring, consider the following use case:
 
 ```typescript
 interface Person {
@@ -38,14 +37,14 @@ interface Person {
 let person:Person = { Name: "John", Id: "john123", City: "NY", State: "US" };
 ```
 
-So in the above example instead of referencing each property using `person.` and so on we can simply destructure in the following way
+In the above example, instead of referencing each property using `person`. and so on, you can simply destructure in the following way:
 
 ```typescript
 const = { Name, Id, City, State } = person;
 console.log(Name, Id, City, State) // John john123 NY US
 ```
 
-Additionally, if we consider the above-nested example we can access the value of `Car` something like this
+Additionally, if you consider the nested example above, you can access the value of `Car` as follows:
 
 ```typescript
 const fooObj: Foo = { Bar: { Car: "abc123" } }
@@ -55,14 +54,14 @@ console.log(Car) // abc123
 
 ### Object Destructuring with the `spread` operator
 
-In the `Person` interface if we only need to `Name` we can use the below syntax to do so
+In the `Person` interface if you only need to `Name`, you can use the following syntax.
 
 ```typescript
 const { Name, ...rest } = person
 console.log(name, rest) // John { Id: "john123", City: "NY", State: "US" }
 ```
 
-One of the common use cases for the rest operator is to ignore one value from the object. Which can be easily achieved using the `spread` operator. 
+One of the common use cases for the `rest` operator is to ignore one value from the object. It can be easily achieved using the `spread` operator. 
 
 ```typescript
 const { Id, ...personDetails} = person
@@ -71,13 +70,13 @@ console.log(personDetails) // { Name: "John", City: "NY", State: "US" }
 
 ## Array Destructuring in TypeScript
 
-To destructure the array in typescript we use square brackets `[]` to store the variable name.
+To destructure an array in TypeScript, you use square brackets `[]` to store the variable name.
 
 ```typescript
 const [var1, var2, ...] = arrayName
 ```
 
-Another use case of array destructuring would be using variables to assing the values of an array, like the below example
+Another use case of array destructuring would be using variables to assign the values of an array, as follows.
 
 ```typescript
 const colorArray: string[] = ["red", "yellow", "blue", "green", "white", "black"]
@@ -87,7 +86,7 @@ console.log(rColor, yColor) // red yellow
 
 ```
 
-In the above example if you want to ignore certain elements in an array you can do it this way:
+In the above example, if you want to ignore certain elements in an array, you can do it as follows:
 
 ```typescript
 
@@ -96,9 +95,9 @@ console.log(rColor, bColor) // red blue
 
 ```
 
-Swapping Variables with Destructing
+## Swapping Variables with Destructing
 
-This is the common interview question generally asked, "How to swap two variable values without using a third variable". The answer to this is using destructuring
+This is the common interview question generally asked, "How to swap two variable values without using a third variable?". The answer to this is using destructuring.
 
 ```typescript
 
@@ -109,9 +108,9 @@ console.log(a, b) // two one
 
 ```
 
-## Destructuring in functional arguments
+## Destructuring in Functional Arguments
 
-There is a use case where we need to destructure the typed functional argument which can be done using the below example:
+There is a use case where you need to destructure the typed functional argument, which you can do as follows:
 
 ```typescript
 interface ParseResult{
@@ -126,9 +125,9 @@ const para:ParseResult= {
 testder(para)
 ```
 
-## Destructuring return types
+## Destructuring Return Types
 
-There might a case where one needs to destructure the return types which can be done using the below example:
+There might be a case where you need to destructure the return types. You do this as follows:
 
 ```typescript
 function print(): [number, string] {
@@ -141,6 +140,6 @@ console.log(num, my) // 1 my
 
 ## Wrapping Up
 
-Destructuring will allow you to make your code more readable and cleaner compare to the older fashion. Array destructing allows you to use the elements of an array as a tuple. 
+Destructuring allows making your code more readable and cleaner compared to the older fashion. Array destructing allows you to use the elements of an array as a tuple. 
 
 So what next? Try practising and take your destructuring abilities to next level.
