@@ -14,7 +14,7 @@ const CategoryTemplate = ({ pageContext, data, location }) => {
   return (
     <Layout location={location} title={siteTitle} showPinned>
       <SEO
-        title={`${category} - Tag | Decompile`}
+        title={`${category} - Tag | C7 Blog`}
         description={`Posts related to ${category}`}
         image={img ? img.childImageSharp.gatsbyImageData.images.fallback.src : ""}
         pathname={location.pathname}

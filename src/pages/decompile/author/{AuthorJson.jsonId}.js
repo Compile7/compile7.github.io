@@ -23,7 +23,7 @@ export default ({
 }) => (
   <Layout location={location} title={title}>
      <SEO
-      title={`${jsonId} - Author | Decompile`}
+      title={`${jsonId} - Author | C7 Blog`}
       description={`${jsonId} - ${bio}`}
       image={image.childImageSharp.gatsbyImageData.images.fallback.src}
       pathname={location.pathname}

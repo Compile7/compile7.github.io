@@ -17,7 +17,7 @@ const BlogPostTemplate = ({ data, location }) => {
   return (
     <Layout location={location}>
       <SEO
-        title={`${post.frontmatter.title} | Decompile`}
+        title={`${post.frontmatter.title} | C7 Blog`}
         description={post.frontmatter.description}
         image={
           img ? img.childImageSharp.gatsbyImageData.images.fallback.src : ""
