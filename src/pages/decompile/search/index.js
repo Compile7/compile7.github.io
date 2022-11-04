@@ -4,6 +4,7 @@ import { Index } from "elasticlunr"
 import Layout from "../../../components/layout"
 import * as styles from "./searchpage.module.scss"
 import { BLOG_PATH } from "../../../utils/typography"
+import SEO from "../../../components/seo"
 
 const SearchPage = ({ data, location }) => {
   const [query, setQuery] = useState("")
@@ -42,6 +43,11 @@ const SearchPage = ({ data, location }) => {
 
   return (
     <Layout>
+      <SEO
+        title={`Search Results for - ${query} | Decompile`}
+        description={`Search Results for - ${query}`}
+        pathname={location.pathname}
+      />
       {results.length ? (
         <section className="py-96">
           <div className={styles.searchContent}>
