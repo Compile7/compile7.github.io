@@ -61,6 +61,7 @@ export const pageQuery = graphql`
                   gatsbyImageData(width: 50, height: 50, layout: FIXED)
                 }
               }
+              github
             }
             tags
           }

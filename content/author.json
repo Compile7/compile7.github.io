@@ -2,7 +2,7 @@
   {
     "id": "Ekekenta Odionyenfe Clinton",
     "bio": "He is a full-stack web application developer, software engineer, and technical writer, currently living in Nigeria, Portharcourt. He has an HND in Computer Science from Federal Polytechnic Nekede. His primary focus and inspiration for his studies is web development. In his free time, he studies human psychology and writes technical tutorials.",
-    "image": "assets/authors/EkekentaOdionyenfeClinton.png"
+    "github": "icode247"
   },
   {
     "id": "Deepak Gupta",
@@ -10,59 +10,9 @@
     "image": "assets/authors/DeepakGupta.png"
   },
   {
-    "id": "Kuldeep Chhipa",
-    "bio": "Quality Assurance Specialist currently runs the QA squad as a team Contributor, and loves Automation. I help business owners to grow their businesses online.",
-    "image": "assets/authors/KuldeepChhipa.jpg"
-  },
-  {
-    "id": "Kailash Soni",
-    "bio": "I'm presently expanding my solid experience as a Developer. I focus on using my interpersonal skills to build good development and create a strong interest in my employers. I hope to develop skills in hare-core development language and my knowledge of the Web, and become an honest asset to the business.",
-    "image": "assets/authors/kailashsoni.jpg"
-  },
-  {
-    "id": "Gaurav Bewal",
-    "bio": "I am an Automation Engineer and having working experience of 1.7 years in the IT Industry. I have a keen interest in test automation primarily because of the wide range of challenging problems inherited in this field.",
-    "image": "assets/authors/GauravBewal.jpg"
-  },
-  {
-    "id": "Himanshi Sharma",
-    "bio": "I am Full Stack Automation Engineer, working since 7 years in IT Industry. I have keen interest in test automation primarily because of the wide range of challenging problems inherited in this field.",
-    "image": "assets/authors/HimanshiSharma.jpg"
-  },
-  {
-    "id": "Chhavi Gupta",
-    "bio": "I am working as an Automation Engineer. I like to learn about new technologies and grow.",
-    "image": "assets/authors/ChhaviGupta.jpg"
-  },
-  {
-    "id": "Shubha Kumari",
-    "bio": "I am a Quality supporter who loves facing challenges and welcomes new learning. A fun lover who keeps exploring new things.",
-    "image": "assets/authors/shubhaJaiswal.jpg"
-  },
-  {
-    "id": "Arpita Garg",
-    "bio": "Testing Junkie with nature to pick up or spot things, whether in the software industry or outside, loves gardening, enjoys long walks, foodie and people say an awesome cook!",
-    "image": "assets/authors/ArpitaGarg.jpg"
-  },
-  {
-    "id": "Neha Vyas",
-    "bio": "From the Pink City, working as a Quality Assurance Executive, Software testing is life ! I love to travel, music, food & living life at its best.",
-    "image": "assets/authors/NehaVyas.jpg"
-  },
-  {
-    "id": "Surendranath Reddy",
-    "bio": "I am an Automation Engineer, Who loves to develop, design, and configure systems that automate software processes and has working experience in technologies like Selenium, Mongo DB, Elastic Search, gRPC, Java, and Node Js. Interested in DevOps",
-    "image": "assets/authors/Surendranath.jpg"
-  },
-  {
-    "id": "Pawan Dixit",
-    "bio": "I am working as a Lead Quality Assurance. I like to play cricket,watching web series and travel.",
-    "image": "assets/authors/PawanDixit.jpg"
-  },
-  {
     "id": "Mohammed Modi",
     "bio": "Working in LoginRadius as a Developer Advocate, Passionate about coding. I grab every chance I get to travel, learn and create.",
-    "image": "assets/authors/MohammedModi.jpg"
+    "github": "mohammed786"
   },
   {
     "id": "Archna Yadav",
