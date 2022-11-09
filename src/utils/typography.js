@@ -27,4 +27,4 @@ export default typography
 export const rhythm = typography.rhythm
 export const scale = typography.scale
 
-export const BLOG_PATH = ""
+export const BLOG_PATH = "/decompile"
