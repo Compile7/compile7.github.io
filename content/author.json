@@ -1,5 +1,10 @@
 [
   {
+    "id": "Vijay Singh Shekhawat",
+    "bio": "He is the Lead Product Architect @LoginRadius. He loves working with technology and building something new. He is also a breakthrough thinker, DevOps guy, and cybersecurity enthusiast.",
+    "image": "assets/authors/VijaySingh.png"
+  },
+  {
     "id": "Ekekenta Odionyenfe Clinton",
     "bio": "He is a full-stack web application developer, software engineer, and technical writer, currently living in Nigeria, Portharcourt. He has an HND in Computer Science from Federal Polytechnic Nekede. His primary focus and inspiration for his studies is web development. In his free time, he studies human psychology and writes technical tutorials.",
     "github": "icode247"
