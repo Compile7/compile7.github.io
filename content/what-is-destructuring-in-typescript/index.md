@@ -61,7 +61,7 @@ const { Name, ...rest } = person
 console.log(name, rest) // John { Id: "john123", City: "NY", State: "US" }
 ```
 
-One of the common use cases for the `rest` operator is to ignore one value from the object. It can be easily achieved using the `spread` operator. 
+One of the common use cases is to ignore one value from the object. It can be easily achieved using the `spread` operator. 
 
 ```typescript
 const { Id, ...personDetails} = person

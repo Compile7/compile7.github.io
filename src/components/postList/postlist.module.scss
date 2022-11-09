@@ -1,7 +1,7 @@
 .post-list {
   display: grid;
   justify-content: space-between;
-  grid-gap: 4vmin;
+  grid-gap: 6vmin 4vmin;
   @media (min-width: 769px) {
     grid-template-columns: 1fr 1fr 1fr;
   }

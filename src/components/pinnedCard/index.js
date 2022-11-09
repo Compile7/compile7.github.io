@@ -40,6 +40,7 @@ const PinnedCard = () => {
                         gatsbyImageData(width: 50, height: 50, layout: FIXED)
                       }
                     }
+                    github
                   }
                 }
                 fields {

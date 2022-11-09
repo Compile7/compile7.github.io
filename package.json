@@ -8,6 +8,7 @@
     "url": "https://github.com/gatsbyjs/gatsby/issues"
   },
   "dependencies": {
+    "@fontsource/lato": "^4.5.10",
     "@gatsby-contrib/gatsby-plugin-elasticlunr-search": "^3.0.2",
     "gatsby": "^4.24.0",
     "gatsby-plugin-feed": "^4.24.0",
@@ -27,6 +28,7 @@
     "gatsby-transformer-remark": "^5.24.0",
     "gatsby-transformer-sharp": "^4.24.0",
     "node-sass": "^7.0.3",
+    "prism-themes": "^1.9.0",
     "prismjs": "^1.29.0",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",

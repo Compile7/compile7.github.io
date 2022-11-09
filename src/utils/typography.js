@@ -2,8 +2,8 @@ import Typography from "typography"
 
 const typography = new Typography({
   baseFontSize: "18px",
-  headerFontFamily: ["Nunito", "Helvetica", "Arial", "sans-serif"],
-  bodyFontFamily: ["Nunito", "Helvetica", "Arial", "sans-serif"],
+  headerFontFamily: ["Lato", "Helvetica", "Arial", "sans-serif"],
+  bodyFontFamily: ["Lato", "Helvetica", "Arial", "sans-serif"],
   overrideThemeStyles: () => ({
     a: {
       color: "#008ecf",
@@ -14,7 +14,7 @@ const typography = new Typography({
     },
     p: {
       marginBottom: "0.75rem",
-    }
+    },
   }),
 })
 
@@ -27,4 +27,4 @@ export default typography
 export const rhythm = typography.rhythm
 export const scale = typography.scale
 
-export const BLOG_PATH = "/decompile"
+export const BLOG_PATH = ""
