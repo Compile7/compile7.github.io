@@ -1,5 +1,10 @@
 [
   {
+    "id": "Raghunath Reddy",
+    "bio": "Raghunath is a technical content writer with a graduate degree in computer science. He is also a Conversion Rate Optimization (CRO) enthusiast and enjoys studying the English language.",
+    "image": "assets/authors/RaghunathReddy.jpg"
+  },
+  {
     "id": "Gaurav Bewal",
     "bio": "Gaurav Bewal is an Automation Engineer always ready to grab the opportunity to learn new things. He has working knowledge in Selenium-Java, Cucumber-Java, Nodejs-Nightwatch, Mocha-Chai, Appium, and many more. Apart from this, he loves music and playing all type of sports.",
     "image": "assets/authors/GauravBewal.png"
