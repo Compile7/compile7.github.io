@@ -88,3 +88,32 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     })
   }
 }
+
+exports.createResolvers = ({ createResolvers }) => {
+  const resolvers = {
+    MarkdownRemark: {
+      relatedPosts: {
+        type: ["MarkdownRemark"],
+        resolve: (source, args, context, info) => {
+          return context.nodeModel.runQuery({
+            query: {
+              filter: {
+                id: {
+                  ne: source.id,
+                },
+                frontmatter: {
+                  tags: {
+                    in: source.frontmatter.tags,
+                  },
+                },
+              },
+            },
+            type: "MarkdownRemark",
+          })
+        },
+      },
+    },
+  }
+
+  createResolvers(resolvers)
+}

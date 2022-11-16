@@ -14,6 +14,10 @@ import * as styles from "../../templates/templates.module.scss"
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
   const img = post.frontmatter.coverImage
+  const author = post.frontmatter.author
+  const githubUrl = author.github
+    ? `https://github.com/${author.github}.png?size=100`
+    : `https://ui-avatars.com/api/?name=${author.jsonId}&size=100`
   return (
     <Layout location={location}>
       <SEO
@@ -27,8 +31,8 @@ const BlogPostTemplate = ({ data, location }) => {
       />
       <article className={styles.postContainer}>
         <header className={styles.header}>
-          <div class={`${styles.headerContainer} container`}>
-            <div class={styles.headerContent}>
+          <div className={`${styles.headerContainer} container`}>
+            <div className={styles.headerContent}>
               {post.frontmatter.tags && (
                 <ul>
                   {post.frontmatter.tags.map(t => (
@@ -43,12 +47,14 @@ const BlogPostTemplate = ({ data, location }) => {
                   ))}
                 </ul>
               )}
-              <h1 class={styles.title}>{post.frontmatter.title}</h1>
+              <h1 className={styles.title}>{post.frontmatter.title}</h1>
               <div className={styles.meta}>
                 <time datetime={post.frontmatter.date}>
                   {post.frontmatter.date}
                 </time>
-                <span className={styles.readingTime}>{post.timeToRead} min read</span>
+                <span className={styles.readingTime}>
+                  {post.timeToRead} min read
+                </span>
               </div>
               <Bio author={post.frontmatter.author} />
             </div>
@@ -68,10 +74,63 @@ const BlogPostTemplate = ({ data, location }) => {
             </div>
           </div>
         </header>
-        <div
-          className={styles.canvas}
-          dangerouslySetInnerHTML={{ __html: post.html }}
-        />
+        <div className={`d-flex flex-wrap`}>
+          <div className={styles.canvas}>
+            <div dangerouslySetInnerHTML={{ __html: post.html }} />
+            <div
+              className={`${styles.author} d-flex`}
+              style={{ paddingTop: "2em" }}
+            >
+              <div
+                className={styles.authorImage}
+                style={{ padding: "0 2em 2em 2em" }}
+              >
+                <Link to={`${BLOG_PATH}/author/${kebabCase(author.jsonId)}/`}>
+                  {author.image ? (
+                    <GatsbyImage
+                      image={author.image.childImageSharp.gatsbyImageData}
+                      alt={author.jsonId}
+                      className={`circle extra-large p-2`}
+                      loading="lazy"
+                    />
+                  ) : (
+                    <img
+                      className={`circle extra-large`}
+                      src={githubUrl}
+                      alt={author.jsonId}
+                    />
+                  )}
+                </Link>
+              </div>
+              <div className={`${styles.aboutAuthor} pt-5`}>
+                <div className={styles.aboutAuthorInner}>
+                  <h3 style={{ margin: 0, marginBottom: 5 }}>
+                    Written by&nbsp;
+                    <Link to={`${BLOG_PATH}/author/${kebabCase(author.jsonId)}/`}>
+                      <i>{author.jsonId}</i>
+                    </Link>
+                  </h3>
+                  <p style={{ fontSize: 18 }}>{author.bio}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {post.relatedPosts.length ? (
+            <div style={{ width: "25%" }}>
+              <h3>Related Posts</h3>
+              <ul>
+                {post.relatedPosts.map((p, i) => (
+                  <li>
+                    <Link to={BLOG_PATH + p.fields.slug} rel="prev">
+                      {p.frontmatter.title}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ) : null}
+        </div>
       </article>
     </Layout>
   )
@@ -89,6 +148,14 @@ export const pageQuery = graphql`
       fields {
         slug
       }
+      relatedPosts {
+        frontmatter {
+          title
+        }
+        fields {
+          slug
+        }
+      }
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
@@ -103,7 +170,7 @@ export const pageQuery = graphql`
           bio
           image {
             childImageSharp {
-              gatsbyImageData(width: 50, height: 50, layout: FIXED)
+              gatsbyImageData(width: 100, height: 100, layout: FIXED)
             }
           }
           github
