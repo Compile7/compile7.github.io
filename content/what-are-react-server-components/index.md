@@ -1,7 +1,6 @@
 ---
 title: "Introduction to React Server Components"
 date: "2022-11-03"
-category: "React"
 coverImage: react-server-component.png
 tags:
   - "React"
