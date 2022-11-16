@@ -8,7 +8,6 @@
     "url": "https://github.com/gatsbyjs/gatsby/issues"
   },
   "dependencies": {
-    "@fontsource/lato": "^4.5.10",
     "@gatsby-contrib/gatsby-plugin-elasticlunr-search": "^3.0.2",
     "gatsby": "^4.24.0",
     "gatsby-plugin-feed": "^4.24.0",
@@ -36,11 +35,7 @@
     "react-helmet": "^5.2.1",
     "react-typography": "^0.16.20",
     "sass-loader": "^7.3.1",
-    "typeface-merriweather": "0.0.72",
-    "typeface-montserrat": "0.0.75",
-    "typeface-nunito": "^1.1.13",
-    "typography": "^0.16.21",
-    "typography-theme-wordpress-2016": "^0.16.19"
+    "typography": "^0.16.21"
   },
   "devDependencies": {
     "gh-pages": "^4.0.0",

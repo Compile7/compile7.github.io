@@ -2,8 +2,8 @@ import Typography from "typography"
 
 const typography = new Typography({
   baseFontSize: "18px",
-  headerFontFamily: ["Roboto Serif", "Helvetica", "Arial", "sans-serif"],
-  bodyFontFamily: ["Roboto Serif", "Helvetica", "Arial", "sans-serif"],
+  headerFontFamily: ["Roboto", "Helvetica", "Arial", "sans-serif"],
+  bodyFontFamily: ["Roboto", "Helvetica", "Arial", "sans-serif"],
   overrideThemeStyles: () => ({
     a: {
       color: "#008ecf",

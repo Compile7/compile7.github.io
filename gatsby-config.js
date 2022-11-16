@@ -86,7 +86,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [`Roboto Serif\:300,400,400i,700`],
+        fonts: [`Roboto\:300,400,400i,700`],
       },
     },
     `gatsby-plugin-sitemap`,

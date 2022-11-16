@@ -106,8 +106,10 @@ const BlogPostTemplate = ({ data, location }) => {
                 <div className={styles.aboutAuthorInner}>
                   <h3 style={{ margin: 0, marginBottom: 5 }}>
                     Written by&nbsp;
-                    <Link to={`${BLOG_PATH}/author/${kebabCase(author.jsonId)}/`}>
-                      <i>{author.jsonId}</i>
+                    <Link
+                      to={`${BLOG_PATH}/author/${kebabCase(author.jsonId)}/`}
+                    >
+                      <i style={{ color: "#008ecf" }}>{author.jsonId}</i>
                     </Link>
                   </h3>
                   <p style={{ fontSize: 18 }}>{author.bio}</p>
