@@ -3,9 +3,9 @@ require("dotenv").config({ path: `${__dirname}/.env` })
 module.exports = {
   siteMetadata: {
     title: `C7 Blog | A Place for Developers to Learn and Contribute`,
-    description: `Compile7 is a developer platform by developers.`,
+    description: `Compile7 Blog is a place for developers to learn and contribute. We publish interesting dev blogs and tutorials. Compile7 is an open source project on GitHub and is maintained by developers.`,
     siteUrl: `https://compile7.org`,
-    keywords: `Compile7, Decompile, Developers, Blog for developers, Learn, Contribute, Opensource, Community, Programming, Technology, Free learning, Engineering, Free for developers, Learn to code, Learn for free, Learn new things, Find,Connect, Build, Join a developer community today, software development, rails, javascript, ruby`,
+    keywords: `Compile7, Decompile, Developers, Blog for Developers, Coding, Contribute, Open Source, Dev Community, Programming, Engineering, Join a developer community today, Node, Git, JavaScript, React`,
   },
   plugins: [
     `gatsby-transformer-json`,
