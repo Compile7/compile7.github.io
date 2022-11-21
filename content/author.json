@@ -1,8 +1,14 @@
 [
   {
+    "id": "Mayank Agarwal",
+    "bio": "Mayank is a Software developer at LoginRadius. He graduated with a Bachelor of Technology degree in Computer Science. He loves playing cricket, watching TV series, and listening to music.",
+    "github": "mayankagrwal"
+  },
+  {
     "id": "Raghunath Reddy",
     "bio": "Raghunath is a technical content writer with a graduate degree in computer science. He is also a Conversion Rate Optimization (CRO) enthusiast and enjoys studying the English language.",
     "image": "assets/authors/RaghunathReddy.jpg"
+    "github": "raghunath-r-a"
   },
   {
     "id": "Gaurav Bewal",
