@@ -6,6 +6,7 @@ module.exports = {
     description: `Compile7 Blog is a place for developers to learn and contribute. We publish interesting dev blogs and tutorials. Compile7 is an open source project on GitHub and is maintained by developers.`,
     siteUrl: `https://compile7.org`,
     keywords: `Compile7, Decompile, Developers, Blog for Developers, Coding, Contribute, Open Source, Dev Community, Programming, Engineering, Join a developer community today, Node, Git, JavaScript, React`,
+    image: `/default-image.png`,
   },
   plugins: [
     `gatsby-transformer-json`,
@@ -86,7 +87,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [`Roboto\:300,400,400i,700`],
+        fonts: [`Lato\:300,400,400i,700`],
       },
     },
     `gatsby-plugin-sitemap`,

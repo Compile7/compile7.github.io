@@ -13,6 +13,7 @@ const SEO = ({ title, description, lang, meta, image, pathname, article }) => {
             description
             keywords
             siteUrl
+            defaultImage: image
           }
         }
       }
@@ -21,7 +22,7 @@ const SEO = ({ title, description, lang, meta, image, pathname, article }) => {
 
   const metaDescription = description || site.siteMetadata.description
   const metaTitle = title || site.siteMetadata.title
-  const img = image ? `${site.siteMetadata.siteUrl}${image}` : ""
+  const img = image ? `${site.siteMetadata.siteUrl}${image}` : site.siteMetadata.defaultImage
   const url = pathname
     ? `${site.siteMetadata.siteUrl}${pathname}`
     : site.siteMetadata.siteUrl
