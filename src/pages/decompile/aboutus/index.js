@@ -9,7 +9,7 @@ const AboutUs = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <SEO title="About Us" />
+      <SEO title="About Us" pathname={location.pathname} />
       <h1>About Us</h1>
       <p>
         Compile7 Blog is a place for developers to learn and contribute. We also

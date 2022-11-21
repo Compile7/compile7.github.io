@@ -21,31 +21,23 @@ const SEO = ({ title, description, lang, meta, image, pathname, article }) => {
 
   const metaDescription = description || site.siteMetadata.description
   const metaTitle = title || site.siteMetadata.title
-  const img = `${site.siteMetadata.siteUrl}${image}`
-  const url = `${site.siteMetadata.siteUrl}${pathname}`
+  const img = image ? `${site.siteMetadata.siteUrl}${image}` : ""
+  const url = pathname
+    ? `${site.siteMetadata.siteUrl}${pathname}`
+    : site.siteMetadata.siteUrl
 
   return (
     <Helmet
       htmlAttributes={{
         lang,
       }}
-      link={
-        article
-          ? [
-              {
-                rel: "canonical",
-                hreflang: "en",
-                href: url,
-              },
-            ]
-          : [
-              {
-                rel: "canonical",
-                hreflang: "en",
-                href: `${url}${pathname || "/"}`,
-              },
-            ]
-      }
+      link={[
+        {
+          rel: "canonical",
+          hreflang: "en",
+          href: url,
+        },
+      ]}
       title={metaTitle}
       meta={[
         {
