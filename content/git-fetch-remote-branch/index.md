@@ -72,5 +72,5 @@ Git is a way to track code for different modifications. It stores all the variou
 
 If you want to learn more about Git, have a look at the following guides:
 
-- a quick guide on [how to use git cherry pick](/git-cherry-pick/), and
+- a quick guide on [how to use git cherry pick](https://blog.loginradius.com/engineering/git-cherry-pick/), and
 - how you can [automate your Git workflows with Hooks](https://compile7.org/decompile/how-to-automate-workflows-with-git-hooks/)

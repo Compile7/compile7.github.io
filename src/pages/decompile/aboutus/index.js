@@ -56,7 +56,7 @@ const AboutUs = ({ data, location }) => {
       <p>
         Refer to the{" "}
         <Link
-          to="https://github.com/Compile7/compile7.github.io/blob/dev/CONTRIBUTING.md"
+          to="https://github.com/Compile7/compile7.github.io/blob/main/CONTRIBUTING.md"
           target={"_blank"}
         >
           CONTRIBUTING GUIDE
