@@ -33,21 +33,29 @@ exports.createPages = async ({ graphql, actions }) => {
   }
 
   // Create blog posts pages.
-  const postsPerPage = 9
-  const total = result.data.allMarkdownRemark.totalCount
-  const numPages = Math.ceil(total / postsPerPage)
-  Array.from({ length: numPages }).forEach((_, i) => {
-    createPage({
-      path: i === 0 ? `${BLOG_PATH}` : `${BLOG_PATH}${i + 1}`,
-      component: path.resolve(`./src/templates/post-list.js`),
-      context: {
-        limit: postsPerPage,
-        skip: i * postsPerPage,
-        currentPage: i + 1,
-        numPages: numPages,
-      },
-    })
-  })
+  // const postsPerPage = 9
+  // const total = result.data.allMarkdownRemark.totalCount
+  // const numPages = Math.ceil(total / postsPerPage)
+  // Array.from({ length: numPages }).forEach((_, i) => {
+  //   createPage({
+  //     path: i === 0 ? `${BLOG_PATH}` : `${BLOG_PATH}${i + 1}`,
+  //     component: path.resolve(`./src/templates/post-list.js`),
+  //     context: {
+  //       limit: postsPerPage,
+  //       skip: i * postsPerPage,
+  //       currentPage: i + 1,
+  //       numPages: numPages,
+  //     },
+  //   })
+  // })
+
+  // Create blog posts pages.
+  // const total = result.data.allMarkdownRemark.totalCount
+  // createPage({
+  //   path: BLOG_PATH,
+  //   component: path.resolve(`./src/templates/post-list.js`),
+  // })
+
   // Extract tag data from query
   const categories = result.data.allMarkdownRemark.group
   // Make tag pages
