@@ -26,7 +26,7 @@ const BlogPostTemplate = ({ data, location }) => {
         image={
           img ? img.childImageSharp.gatsbyImageData.images.fallback.src : ""
         }
-        pathname={location.pathname}
+        pathname={post.fields.slug}
         article
       />
       <article className={styles.postContainer}>
@@ -77,14 +77,8 @@ const BlogPostTemplate = ({ data, location }) => {
         <div className={`d-flex flex-wrap`}>
           <div className={styles.canvas}>
             <div dangerouslySetInnerHTML={{ __html: post.html }} />
-            <div
-              className={`${styles.author} d-flex`}
-              style={{ paddingTop: "2em" }}
-            >
-              <div
-                className={styles.authorImage}
-                style={{ padding: "0 2em 2em 2em" }}
-              >
+            <div className={`${styles.detailAuthor} d-flex`}>
+              <div className={styles.authorImage}>
                 <Link to={`${BLOG_PATH}/author/${kebabCase(author.jsonId)}/`}>
                   {author.image ? (
                     <GatsbyImage
@@ -104,22 +98,22 @@ const BlogPostTemplate = ({ data, location }) => {
               </div>
               <div className={`${styles.aboutAuthor} pt-5`}>
                 <div className={styles.aboutAuthorInner}>
-                  <h3 style={{ margin: 0, marginBottom: 5 }}>
+                  <h3>
                     Written by&nbsp;
                     <Link
                       to={`${BLOG_PATH}/author/${kebabCase(author.jsonId)}/`}
                     >
-                      <i style={{ color: "#008ecf" }}>{author.jsonId}</i>
+                      <i>{author.jsonId}</i>
                     </Link>
                   </h3>
-                  <p style={{ fontSize: 18 }}>{author.bio}</p>
+                  <p>{author.bio}</p>
                 </div>
               </div>
             </div>
           </div>
 
           {post.relatedPosts.length ? (
-            <div style={{ width: "25%" }}>
+            <div className={styles.relatedPost}>
               <h3>Related Posts</h3>
               <ul>
                 {post.relatedPosts.map((p, i) => (

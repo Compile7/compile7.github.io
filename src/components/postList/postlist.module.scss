@@ -1,3 +1,4 @@
+@import "../../styles/variables.scss";
 .post-list {
   display: grid;
   justify-content: space-between;
@@ -84,6 +85,33 @@
       left: -9px;
       top: 9px;
       background-color: #636363;
+    }
+  }
+}
+.load-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem 0;
+  button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e3e5e7;
+    gap: 6px;
+    padding: 6px 16px;
+    font-size: 17px;
+    border-radius: 2px;
+    transition: all 0.2s ease-in-out;
+    svg {
+      transition: all 0.2s ease-in-out;
+    }
+    &:hover {
+      color: $white;
+      background-color: #2c4bff;
+      svg {
+        stroke: $white;
+      }
     }
   }
 }

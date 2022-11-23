@@ -42,30 +42,9 @@ export default ({
                 <GatsbyImage
                   image={image.childImageSharp.gatsbyImageData}
                   alt={jsonId}
-                  style={{
-                    marginRight: rhythm(1 / 2),
-                    marginBottom: 0,
-                    minWidth: 50,
-                    borderRadius: `100%`,
-                  }}
-                  imgStyle={{
-                    borderRadius: `50%`,
-                  }}
                 />
               ) : (
-                <img
-                  style={{
-                    marginRight: rhythm(1 / 2),
-                    marginBottom: 0,
-                    minWidth: 50,
-                    borderRadius: `100%`,
-                  }}
-                  imgStyle={{
-                    borderRadius: `50%`,
-                  }}
-                  src={imgSrc}
-                  alt={jsonId}
-                />
+                <img src={imgSrc} alt={jsonId} />
               )}
             </div>
             <div class={styles.aboutAuthor}>
