@@ -71,7 +71,7 @@ To create a GitHub Local setup, you need to install Visual Studio Code and Git o
 
 11. Another pop-up will appear to ask for your permission (log in) to authorize Visual Studio Code to access the GitHub repository. Click the **Continue** button and enter GitHub’s username & password.
 
-   ![ GitHub setup success in VS Code](./success-git-setup.png)
+    ![ GitHub setup success in VS Code](./success-git-setup.png)
 
 
 12. Now, clone the repository and try looking for your branches and project repository in the search bar of the VS Code. 
