@@ -26,7 +26,7 @@ const BlogPostTemplate = ({ data, location }) => {
         image={
           img ? img.childImageSharp.gatsbyImageData.images.fallback.src : ""
         }
-        pathname={post.fields.slug}
+        pathname={location.pathname}
         article
       />
       <article className={styles.postContainer}>
