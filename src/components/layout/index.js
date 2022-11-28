@@ -37,7 +37,7 @@ const Layout = ({ children, showPinned }) => {
                 </li>
                 <li>
                   <Link
-                    to="https://docs.google.com/forms/d/e/1FAIpQLSeqRCoeZReLJcVlbYdz0YxKRr0WKultDeZ-FXbRIm-bc5Vb-Q/viewform"
+                    to="https://docs.google.com/forms/d/e/1FAIpQLSdiveXRxd5EfESvqCizKrKv1Qr01YuhEL_FdBOSWOZD1B0SUQ/viewform"
                     target="_blank"
                   >
                     Contact us
