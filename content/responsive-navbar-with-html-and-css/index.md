@@ -5,7 +5,7 @@ coverImage: responsive-navbar-with-html-and-css.png
 tags:
   - "HTML"
   - "CSS"
-description: "In this tutorial, you'll learn how to create a responsive navigation with barebones HTML and CSS."
+description: "In this tutorial, you'll learn how to create a responsive navigation bar with barebones HTML and CSS."
 author: "Hitesh Kumawat"
 ---
 Let's use HTML and CSS to create a responsive navbar.
