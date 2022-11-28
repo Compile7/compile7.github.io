@@ -1,19 +1,20 @@
 ---
-title: "How to set up Git on Windows"
-date: "2022-11-23"
-coverImage: git-fetch-remote-branch.png
+title: "How to Set Up Git Locally on Windows with VS Code"
+date: "2022-11-28"
+coverImage: set-up-git-locally.png
 tags:
   - "Git"
-description: "Setting up GitHub on Windows is a way to easily make changes in your code or developer documents via your local machine and then committing them to the desired repository. This blog is for both semi-technical and technical audiences to help set them Git on their local machine using VS Code. "
+description: "Setting up Git on Windows is a way to easily make changes in your code or developer documents via your local machine and then commit them to the desired repository. This blog is for both semi-technical and technical audiences to help set them Git on their local machine using VS Code. "
 author: "Archna Yadav"
 ---
   
 The blog has two sections:
-- The first section explains [how to download and install both VS Code and Git, and then how to integrate Git with VS Code](#download-install-and-integrate-vs-code-and-git
-)
-- The second section explains [how to connect a GitHub account with VS Code and clone the desired repository, for making and committing changes to the repository](#connect-with-github-account-and-clone-repository).
 
-## Download Install and Integrate VS Code and Git
+- The first section explains [how to download and install both VS Code and Git and then how to integrate Git with VS Code](#download-install-and-integrate-vs-code-and-git
+)
+- The second section explains [how to connect a GitHub account with VS Code and clone the desired repository for making and committing changes to the repository](#connect-with-github-account-and-clone-repository).
+
+## Download, Install, and Integrate VS Code and Git
 
 To create a GitHub Local setup, you need to install Visual Studio Code and Git on your system. Follow these steps to set up your Git locally.
 > **Prerequisite:** You must have a GitHub account. Create an [GitHub Account](https://github.com/) if you don’t have it yet.
@@ -39,7 +40,7 @@ To create a GitHub Local setup, you need to install Visual Studio Code and Git o
 
    ![Connect GitHub using SSH Key](./ssh-key.png)
 
-3. Now go to C:/ drive>Users>Your System Name>.ssh>id_ed25519.pub and copy the SSH key from here.
+3. Now go to `C:/drive>Users>Your System Name>.ssh>id_ed25519.pub` and copy the SSH key from here.
 
 4. Open your GitHub account, where you are already signed in, and go to **Settings**:
 
@@ -53,7 +54,7 @@ To create a GitHub Local setup, you need to install Visual Studio Code and Git o
 
    ![ GitHub add SSH key](./new-ssh-key.png)
 
-   > **Note:**  It can take some time to load the page. Also, it might ask you to re-authenticate yourself on GitHub by entering the account password again.
+   > **Note:**  It can take time to load the page. Also, it might ask you to re-authenticate yourself on GitHub by entering the account password again.
 
 7. Now go back to the command prompt and type:
 
@@ -82,7 +83,7 @@ To create a GitHub Local setup, you need to install Visual Studio Code and Git o
 
     It will clone all the data from the GitHub repository to your local drive location.
 
-14. Go back to your GitHub account, select the repository that you have just cloned using VS Code, and click the Code > SSH > Copy button to copy/clone the repository.
+14. Go back to your GitHub account, select the repository you have just cloned using VS Code, and click the Code > SSH > Copy button to copy/clone the repository.
 
     ![Clone GitHub repo via SSH](./github-code-clone.png)
 
