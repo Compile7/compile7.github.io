@@ -91,9 +91,16 @@ module.exports = {
       },
     },
     `gatsby-plugin-sitemap`,
+    {
+      resolve: "gatsby-plugin-robots-txt",
+      options: {
+        host: "https://compile7.org",
+        sitemap: "https://compile7.org/sitemap/sitemap-index.xml",
+        policy: [{ userAgent: "Googlebot", allow: "/" }],
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
-  ],
-  pathPrefix: `/decompile/blog`,
+  ]
 }
