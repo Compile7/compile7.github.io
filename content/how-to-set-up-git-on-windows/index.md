@@ -10,8 +10,7 @@ author: "Archna Yadav"
   
 The blog has two sections:
 
-- The first section explains [how to download and install both VS Code and Git and then how to integrate Git with VS Code](#download-install-and-integrate-vs-code-and-git
-)
+- The first section explains [how to download and install both VS Code and Git and then how to integrate Git with VS Code](#download-install-and-integrate-vs-code-and-git)
 - The second section explains [how to connect a GitHub account with VS Code and clone the desired repository for making and committing changes to the repository](#connect-with-github-account-and-clone-repository).
 
 ## Download, Install, and Integrate VS Code and Git
