@@ -4,7 +4,7 @@ date: "2022-11-24"
 coverImage: fix-react-memory-leaks.png
 tags:
   - "React"
-description: "React memory leaks affect the peformance of your apps. Read more to understand memory leaks in React and learn three different methods for fixing memory leaks."
+description: "React memory leaks affect the performance of your apps. Read more to understand memory leaks in React and learn three different methods for fixing memory leaks."
 author: "Versha Gupta"
 ---
 
