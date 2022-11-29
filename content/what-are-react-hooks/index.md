@@ -1,62 +1,55 @@
 ---
-title: "What are react hooks"
-date: "2022-11-28"
+title: "Introduction to React Hooks"
+date: "2022-11-29"
 category: "React"
-coverImage: reacthooks.jpg
+coverImage: react-hooks.png
 tags:
   - "React"
-  - "Hooks"
-description: "Build complex react components in easier way with react hooks."
+description: "You'll learn how to build complex React components easily with React Hooks."
 author: "Abhimanyu Singh Rathore"
 ---
 
 ## Overview
 
-React Hooks is used to utilise state and side effects of React function components.
+React Hooks are used to utilize the state and side effects of React function components.
 
-Let suppose there is a case where you need to toggle the text color on some event and business logic & UI goes in **Class Component** and that goes lengthy and complex.
+Suppose you need to toggle the text color on some event. And business logic & UI go in *Class Component*. This makes it lengthy and complex to make changes.
 
-If you are using react, then this can be easily handled by hooks.
+If you are using React, you can easily handle this with Hooks.
 
+## What are React Hooks?
 
-## What are Hooks?
+Hooks are introduced in React version 16.8, which allow you to 'hook into' a React function's lifecycle or state.
 
- Hooks introduced in React version 16.8, Hooks actually allows you to 'hook into' react function's lifecycle or state.
+And Hooks work without classes.
 
- Hooks work without classes.
+You can watch and read more about the Hooks proposal in [Dan Abramov](https://twitter.com/dan_abramov)'s [ReactConf 2018 keynote](https://medium.com/@dan_abramov/making-sense-of-react-hooks-fdbde8803889).
 
+The key takeaway from the conference:
 
-
-You can watch and read more about hooks proposal in [Dan Abramov](https://twitter.com/dan_abramov)'s   [ReactConf 2018 keynote](https://medium.com/@dan_abramov/making-sense-of-react-hooks-fdbde8803889).
-
-The key takeaway from above conference :
-
-> If the react community welcomes **hooks**, it will make writing applications a lot easier without switching between classes, HOC, render props, functions etc.
+> If the react community welcomes **Hooks**, it will make writing applications much easier without switching between classes, HOC, render props, functions, etc.
 
 ## Benefits of React Hooks
 
-Reach hooks does the enablement of attaching local state to functional components instead **class component**. 
+Reach Hooks enable attaching local state to functional components instead of the *class component*. 
 
+### Advantages
 
-### Advantages :
+- More readable
+- Write less code
+- Very optimized components
+- Makes complex components easier
+- Handling of logic & events within functional components
+- Better performance of functional components
 
--   More Readable
--   Write less Code.
--   Very Optimized components
--   Makes complex components easier 
--   Handling logics & events within functional components.
--   Better Performance of Functional Components
+## Practical Approach
+You can create React components in two ways: either `function` or `class`; in most cases, it's easy to confuse them with both.
 
-### Practical Approach
+Let's start with a basic class component and turn it into a function with Hooks. Let's see how it goes...
 
-As we know we can create React components via 2 ways either **function** or **class**, in most cases we get confusion in both.
+### Hook-less Component: Class Component
 
-Will start with a basic class component and then we turn it into a function with hooks, let see how it goes.
-
-#### Hook less Component : Class Component
-
-
-```
+```js
 import React, { Component } from "react";
 class Message extends Component {
   state = {
@@ -72,9 +65,9 @@ class Message extends Component {
 export default Message; 
 ```
 
-#### Hook Component : Functional Component
+### Hook Component: Functional Component
 
-```
+```js
 import React, { useState } from "react";
 export default () => {
   const [text, setText] = useState("");
@@ -89,8 +82,7 @@ export default () => {
 };
 ```
 
-> if you still not clear you can try to play this snippet, which will clear all your doubts.
-
+> if you're not clear yet, you can try to play the above snippet, which helps clear your doubts.
 
 ## React Hooks 
 
@@ -98,6 +90,7 @@ export default () => {
  - useEffect()
  - useState()
  - useContext()
+
 ### Additional Hooks
  - useReducer()
  - useMemo()
@@ -107,21 +100,19 @@ export default () => {
  - useRef()
  - useLayoutEffect()
 
-In this blog I will go through basic hooks, let's understand with examples.
-
-
+This tutorial goes through basic Hooks; let's understand them with examples.
 
 ### useEffect()
 
-React `useEffect()` can be used in any of below lifecycle of component
+You can use React `useEffect()` in any of the following lifecycles of a component:
 
-1.  componentWillUnmount
-2.  componentDidMount
-3.  componentDidUpdate
+1. componentWillUnmount
+2. componentDidMount
+3. componentDidUpdate
 
-The below example will change the message after 1 second once it is mounted.
+The following example changes the message after a second once it is mounted.
 
-```
+```js
 import React, { useState, useEffect } from "react";
 
 const App = () => {
@@ -141,12 +132,11 @@ const App = () => {
 export default App;
 ```
 
-So if you execute the above example, you will find that  `console.log` printed twice. because `useEffect` get into action if `state` or `props`changes this works as the same `componentDidUpdate` in class components.
+So, if you execute the above example, you find that `console.log` is printed twice. This is because `useEffect` gets into action if `state` or `props` changes. It works as same as `componentDidUpdate` in class components.
 
-Now as a solution we can pass **(\[\]) Empty array ** as argument in useEffect hooks
+As a solution, you can pass `(\[\]) empty array` as an argument in `useEffect` Hooks:
 
-
-```
+```js
   useEffect(() => {
     console.log("Now useEffect hook triggered");
 
@@ -156,20 +146,12 @@ Now as a solution we can pass **(\[\]) Empty array ** as argument in useEffect h
   }, []);
 ```
 
+This means it will not retrigger; you can pass a variable if you want to control it as per variable value changes.
 
-
-Now this means, it will not retrigger, we can pass a variable if we want to control as per variable value changes.
-
-For eg : `[mymessage]` here hook will trigger on the change of this variable only.
-
-
-
-
-
+E.g.: `[mymessage]` — here, the Hook triggers only this variable changes.
 
 ### useState()
-
-```
+```js
 import React, { useState } from 'react';
 
 const App = () => {
@@ -181,7 +163,7 @@ const App = () => {
 export default App;
 ```
 
-Like in **class component** we have `constructor()` to set initial value to state like below example, useState does the same thing to set `Hi` Value in mymessage.
+Like in *class component*, you have `constructor()` to set the initial value to state, like the following example. `useState` does the same thing to set the `Hi` value in `mymessage`.
 
 
 ```
@@ -194,23 +176,20 @@ this.state = {
 }
 ```
 
-
-If you want to check out hooks in more detail , you can check the [in depth explanation](https://reactjs.org/docs/hooks-reference.html) in the React documentation.
+If you want to check out Hooks in more detail, you can [check the in-depth explanation of React Hooks in the React documentation](https://reactjs.org/docs/hooks-reference.html).
 
 ### Hooks Rules 
 
+1. You should call Hooks at the beginning or top level, not inside a condition, loop, nested function, etc.
 
-1. Hooks should be called at the very beginning or top level, not inside condition or loops or nested function etc.
+2. Do not use Hooks in regular JavaScript functions; you can only call in a React function or a custom Hook.
 
-2.  Do not use hooks in regular javascript functions; it can be called only in  **React Function** or **Custom Hooks**.
-
-
-> We can use [eslint-plugin-react-hooks](https://www.npmjs.com/package/eslint-plugin-react-hooks) this eslint plugin that ensures the above two rules.
+> You can use [eslint-plugin-react-hooks](https://www.npmjs.com/package/eslint-plugin-react-hooks), which helps ensure the above two rules.
 
 ## Conclusion
 
-So in this blog we have understood how we can use react hooks to control state without using class components.
+So, in this blog, you have understood how you can use React Hooks to control the state without using class components.
 
-Hope you like the blog, Happy Reading !
+I hope you like the blog, Happy Reading!
 
 
