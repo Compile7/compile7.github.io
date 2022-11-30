@@ -110,6 +110,21 @@ const BlogPostTemplate = ({ data, location }) => {
                 </div>
               </div>
             </div>
+            <div
+              className="d-flex"
+              style={{ justifyContent: "space-between", paddingTop: "3em" }}
+            >
+              {post.frontmatter.previous && (
+                <Link to={BLOG_PATH + "/" + post.frontmatter.previous}>
+                  <p>{"Previous"}</p>
+                </Link>
+              )}
+              {post.frontmatter.next && (
+                <Link to={BLOG_PATH + "/" + post.frontmatter.next}>
+                  <p>{"Next"}</p>
+                </Link>
+              )}
+            </div>
           </div>
 
           {post.relatedPosts.length ? (
@@ -172,6 +187,8 @@ export const pageQuery = graphql`
           github
         }
         tags
+        previous
+        next
       }
     }
   }
