@@ -7,6 +7,8 @@ tags:
   - "Async"
 description: "Learn fundamental concepts that JavaScript relies on to handle asynchronous operations. These concepts include Callbacks, Promises, and using Async and Await to handle deferred operations."
 author: "Ankit Singh"
+previous: /quick-5-minute-guide-on-nginx-access-and-error-logs
+next: /how-to-fix-memory-leaks-in-react
 ---
 
 This blog explains the fundamental concepts that JavaScript relies on to handle asynchronous operations. These concepts include the following to manage deferred operations in JavaScript:
