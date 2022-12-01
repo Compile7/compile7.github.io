@@ -77,6 +77,21 @@ const BlogPostTemplate = ({ data, location }) => {
         <div className={`d-flex flex-wrap`}>
           <div className={styles.canvas}>
             <div dangerouslySetInnerHTML={{ __html: post.html }} />
+            <div
+              className="d-flex"
+              style={{ justifyContent: "space-between", paddingTop: "3em" }}
+            >
+              {post.frontmatter.previous && (
+                <Link to={BLOG_PATH + "/" + post.frontmatter.previous}>
+                  <p>{post.frontmatter.prevLabel || "Previous"}</p>
+                </Link>
+              )}
+              {post.frontmatter.next && (
+                <Link to={BLOG_PATH + "/" + post.frontmatter.next}>
+                  <p>{post.frontmatter.nextLabel || "Next"}</p>
+                </Link>
+              )}
+            </div>
             <div className={`${styles.detailAuthor} d-flex`}>
               <div className={styles.authorImage}>
                 <Link to={`${BLOG_PATH}/author/${kebabCase(author.jsonId)}/`}>
@@ -109,21 +124,6 @@ const BlogPostTemplate = ({ data, location }) => {
                   <p>{author.bio}</p>
                 </div>
               </div>
-            </div>
-            <div
-              className="d-flex"
-              style={{ justifyContent: "space-between", paddingTop: "3em" }}
-            >
-              {post.frontmatter.previous && (
-                <Link to={BLOG_PATH + "/" + post.frontmatter.previous}>
-                  <p>{"Previous"}</p>
-                </Link>
-              )}
-              {post.frontmatter.next && (
-                <Link to={BLOG_PATH + "/" + post.frontmatter.next}>
-                  <p>{"Next"}</p>
-                </Link>
-              )}
             </div>
           </div>
 
@@ -189,6 +189,8 @@ export const pageQuery = graphql`
         tags
         previous
         next
+        prevLabel
+        nextLabel
       }
     }
   }
