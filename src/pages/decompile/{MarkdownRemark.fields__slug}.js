@@ -77,18 +77,51 @@ const BlogPostTemplate = ({ data, location }) => {
         <div className={`d-flex flex-wrap`}>
           <div className={styles.canvas}>
             <div dangerouslySetInnerHTML={{ __html: post.html }} />
-            <div
-              className="d-flex"
-              style={{ justifyContent: "space-between", paddingTop: "3em" }}
-            >
+            <div className="page__nav-wrap">
               {post.frontmatter.previous && (
-                <Link to={BLOG_PATH + "/" + post.frontmatter.previous}>
-                  <p>{post.frontmatter.prevLabel || "Previous"}</p>
+                <Link
+                  className="page__nav page__nav_prev"
+                  to={BLOG_PATH + "/" + post.frontmatter.previous}
+                  title={post.frontmatter.prevLabel || "Previous"}
+                >
+                  <svg
+                    width="48"
+                    height="49"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M15 18L9 12L15 6"
+                      stroke="#757a7e"
+                      stroke-width="1"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
                 </Link>
               )}
               {post.frontmatter.next && (
-                <Link to={BLOG_PATH + "/" + post.frontmatter.next}>
-                  <p>{post.frontmatter.nextLabel || "Next"}</p>
+                <Link
+                  className="page__nav page__nav_next"
+                  to={BLOG_PATH + "/" + post.frontmatter.next}
+                  title={post.frontmatter.nextLabel || "Next"}
+                >
+                  <svg
+                    width="48"
+                    height="49"
+                    viewBox="0 0 24 25"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9 18.5L15 12.5L9 6.5"
+                      stroke="#757a7e"
+                      stroke-width="1"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
                 </Link>
               )}
             </div>

@@ -51,8 +51,14 @@
 }
 .detail-author {
   margin-top: 3em;
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
   .author-image {
     margin-right: 24px;
+    @media (max-width: 768px) {
+      margin: 0 0 24px 0;
+    }
     & > div {
       margin-right: 0 !important;
     }
@@ -61,6 +67,9 @@
     max-width: 768px;
     width: calc(100% - 124px);
     margin: 0 auto;
+    @media (max-width: 768px) {
+      width: 100%;
+    }
     h3 {
       margin-bottom: 8px;
     }
@@ -79,8 +88,14 @@
 
 .post-container {
   padding: 8vmin 0;
+  @media (max-width: 768px) {
+    padding: 0 0 8vmin 0;
+  }
   .header {
     padding: 0 3vw 8vmin;
+    @media (max-width: 768px) {
+      padding: 0 0 8vmin;
+    }
     color: #231f20;
     &-container {
       position: relative;
@@ -88,6 +103,9 @@
       align-items: center;
       padding-bottom: 8vmin;
       border-bottom: 1px solid #e0e0e0;
+      @media (max-width: 768px) {
+        flex-direction: column-reverse;
+      }
     }
     &-content {
       flex: 1 1 45%;
@@ -162,6 +180,9 @@
     &-image {
       flex: 1 1 50%;
       margin: 0 0 0 6vmin;
+      @media (max-width: 768px) {
+        margin: 0 0 6vmin 0;
+      }
       img {
         width: 100%;
         max-height: 450px;
@@ -169,6 +190,11 @@
         object-fit: cover;
         overflow: hidden;
       }
+    }
+  }
+  .canvas-wrap {
+    @media (min-width: 769px) {
+      display: flex;
     }
   }
   .canvas {

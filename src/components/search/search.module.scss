@@ -74,14 +74,10 @@
   .search-form {
     top: 0;
     right: 0;
-    width: calc(100% - 85px);
-  }
-}
-@media screen and (max-width: 480px) {
-  .search-form {
     width: 100%;
   }
 }
+
 .search-form > input.search-form-input {
   width: 474px;
   height: 60px;
