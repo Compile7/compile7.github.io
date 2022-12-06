@@ -1,5 +1,10 @@
 [
   {
+    "id": "Puneet Singh",
+    "bio": "He is curious about this world and how it works. Whenever he learns something new, he loves to blog about it and share what he knows.",
+    "github": "puneetsingh24"
+  },
+  {
     "id": "Aman Agrawal",
     "bio": "Aman is an experienced software developer who is keen to learn and work on new technologies. He also likes to blog about frontend development and new technologies and frameworks he has been learning.",
     "github": "aman-agrwl"
