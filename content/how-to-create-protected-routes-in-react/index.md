@@ -195,3 +195,5 @@ element={
 />
 ```
 That's it on creating protected routes. You can now access the Private page only if you are logged in. If you try to navigate to the Private page without logging in you will be redirected to the Landing page.
+
+[Project files](https://github.com/Compile7/compile7-blog-samples/tree/main/how-to-create-protected-routes)Feel free to clone and run it in your local system to learn more about it.
