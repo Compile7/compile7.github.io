@@ -50,8 +50,8 @@ h1 {
 }
 h2 {
   margin-bottom: 12px;
-  font-size: 32px;
-  line-height: 40px;
+  font-size: 28px;
+  line-height: 36px;
 }
 h3 {
   margin-bottom: 12px;
@@ -176,6 +176,9 @@ ul {
 }
 .d-flex {
   display: flex;
+}
+.flex-wrap {
+  flex-wrap: wrap;
 }
 .align-items-center {
   align-items: center;
@@ -442,5 +445,11 @@ blockquote {
     &:hover {
       background-color: $gray-light;
     }
+  }
+}
+p {
+  pre[class*="language-"],
+  code[class*="language-"] {
+    white-space: normal;
   }
 }
