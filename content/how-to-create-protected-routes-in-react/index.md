@@ -1,37 +1,41 @@
 ---
-title: "How to create protected routes in React"
-date: "2022-12-05"
+title: "How to Create Protected Routes in React"
+date: "2022-12-12"
+coverImage: protected-routes-in-react.png
 tags:
   - "React"
-description: "Lets learn how to create protected routes in react using this blog with an example "
+  - "Authentication"
+description: "In this tutorial, you'll learn how to create protected routes in React only to allow access to authenticated users for private paths and pages."
 author: "Shammir Baig"
+nextLabel: How to Learn Programming/Coding?
+next: how-to-learn-programming
 ---
 
-# How to create protected routes in React
+Protected routes allow users to access a specific set of routes or pages only if they satisfy the initial conditions (e.g., Authenticated or not). If they do not meet requirements, they are redirected to a generic page, and access won't be granted.
 
+Let's see how to create Protected Routes in React with an example.
 
-Protected routes allows users to access those routes or pages only if they satisfy the prior conditions(ex:Authenticated or not),if not they are redirected to the page which wish them to be redirected.
+## Getting Started
 
-
-Lets see how to create Protected Routes in react with an example
-
-## Getting Started:
-
-Use create-react-app to get a bootstrapped simple React application
+Use `create-react-app` to get a bootstrapped simple React application:
 
 ```sh
 npx create-react-app protect-routes
 ```
- Navigate to the folder you created by :
+
+Navigate to the folder you created as follows:
  
 ```sh
 cd protect-routes
 ```
-To start the React Application
+
+Start the React application:
+
 ```sh
 npm start
 ```
-Now,clean the App.js which returns a simple “Hello World” which makes sure that everything is running correctly.
+
+Now, clean `App.js`, which returns a simple “Hello World” to ensure that everything is running correctly.
 
 ```sh
 function App() {
@@ -40,26 +44,27 @@ return <div><h1>Hello World</h1></div>;
 export default App;
 ```
 
+## Set Up the React Router
 
-
-## Setting up the React-router 
-
-React-router is used for navigation inside our project.
+`react-router` is used for navigation inside your project.
 
 ```sh
 npm install react-router-dom
 ```
 
-For demonstration,Lets create three pages :
-
+For demonstration, let's create three pages:
 
 - Landing Page 
-- Public Page(Which is visible to everyone)
-- Private Page (which is visible to only authenticated users)
-- Navbar component to navigate to above pages
+- Public Page (which is visible to everyone)
+- Private Page (which is only visible to authenticated users)
+- Navbar component to navigate to the above pages
 
-Create a file named Navbar.js in src folder,which should look like this:
-- "Link" in React-router is used to create navigation path to various 
+> **Note:** [How to Build a Responsive Navbar with HTML and CSS](https://compile7.org/decompile/responsive-navbar-with-html-and-css/)
+
+Create a file named `Navbar.js` in the `src` folder, as follows:
+
+"Link" in `react-router` creates a navigation path to various routes.
+
 ```js
 import React from "React";
 import {Link} from "react-router-dom";
@@ -75,12 +80,11 @@ return (
 export default Navbar;
 ```
 
-## Coming to App.js
+## Set Up `App.js`
 
-Create the routes inside the App.js matching them in the Navbar.js.
+Create the routes inside the `App.js` matching them in the `Navbar.js`.
 
-Your App.js should look like this after creating the matching routes
-
+Your `App.js` shall be as follows after creating the matching routes:
 
 ```js
 import React from "React";
@@ -103,9 +107,11 @@ return (
 }
 export default App;
 ```
-Now lets create the components which we have referenced in app.js
 
-In LandingPage.js:
+Now, let's create the components that you have referenced in `app.js`:
+
+In `LandingPage.js`:
+
 ```js
 import React from "React";
 const LandingPage = () => {
@@ -114,7 +120,8 @@ return <h1>Landing page</h1>;
 export default LandingPage;
 ```
 
-In Public.js:
+In `Public.js`:
+
 ```js
 import React from "React";
 const Public= () => {
@@ -122,7 +129,9 @@ return <h1>Public page</h1>;
 };
 export default Public;
 ```
-In Private.js:
+
+In `Private.js`:
+
 ```js
 import React from "React";
 const Private= () => {
@@ -131,11 +140,15 @@ return <h1>Private page</h1>;
 export default Private;
 ```
 
-## Creating Protected Routes
+## Create Protected Routes
 
-As we know that Landing Page and Public Page are public which means that anyone can access them ,but private page is accessible to the persons who are authenticated .Lets make a simple Authentication system .
+As you know, Landing Page and Public Page are public, meaning anyone can access them.
 
-In App.js,do the following modifications:
+But, Private Page is only accessible to authenticated users.
+
+Let's create a simple Authentication system.
+
+In `App.js`, do the following modifications:
 
 ```js
 import react from "React";
@@ -169,9 +182,10 @@ return (
 export default App;
 ```
 
-- Here the login button updates the status whether the user is loggedin or not.
+Here, the login button updates the status of whether the user is logged in or not.
 
-In src folder create a file named "Protect.js"
+In the `src` folder, create a file named `Protect.js`:
+
 ```js
 import React from "React";
 import { Navigate } from "react-router-dom";
@@ -183,7 +197,9 @@ return children;
 };
 export default Protect;
 ```
-Lets use this Protect component in the App.js,modify the private route as following:
+
+Let's use this `Protect` component in `App.js` to modify the private route as follows:
+
 ```js
 <Route
 path="/private"
@@ -194,6 +210,10 @@ element={
 }
 />
 ```
-That's it on creating protected routes. You can now access the Private page only if you are logged in. If you try to navigate to the Private page without logging in you will be redirected to the Landing page.
 
-[Project Link](https://github.com/Compile7/compile7-blog-samples/tree/main/how-to-create-protected-routes)  Feel free to clone and run it in your local system to learn more about it.
+That's it! You have created the protected routes. 
+
+## Conclusion
+You can now access the Private Page only if you are logged in. If you try navigating the Private Page without logging in, you will be redirected to the Landing Page.
+
+You can [find the complete code used in this tutorial on GitHub](https://github.com/Compile7/compile7-blog-samples/tree/main/how-to-create-protected-routes). Feel free to clone and run it on your local machine to learn more.
