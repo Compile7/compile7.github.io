@@ -8,6 +8,10 @@ tags:
   - "GDPR"
 description: "Every thing you need to know about strict and optional cookes including the cookie laws and general GDPR cookie banner mistakes."
 author: "Archna Yadav"
+prevLabel: Email Delivery 101 for Developers
+previous: how-to-stop-business-emails-from-landing-in-spam
+nextLabel: A Guide to Setup Multi-Author Blog using Gatsby
+next: guide-to-setup-mulitauthor-blog-using-gatsby
 ---
 # Complete Guide to Strict and Optional Cookies with Cookie Consent Law
 

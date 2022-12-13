@@ -6,6 +6,10 @@ tags:
   - "React"
 description: "React Server Components is under research and development at the moment, and soon a stable version may be released. In this article, you can briefly understand React Server Components and how to use them."
 author: "Versha Gupta"
+prevLabel: What is Destructuring in Typescript?
+previous: what-is-destructuring-in-typescript
+nextLabel: How to Automate Workflows with Git Hooks
+next: how-to-automate-workflows-with-git-hooks
 ---
 
 React Server Components allow you to write the React component in a way that it gets rendered on the server side, and the primary purpose of server-side rendering is to improve the React application performance.

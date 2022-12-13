@@ -7,6 +7,10 @@ tags:
   - "nvm"
 description: "In this blog, you'll learn how to run multiple Node.js versions in your local machine with Node Version Manager (nvm)."
 author: "Mayank Agarwal"
+prevLabel: Your Guide to HTTP Authorization Header
+previous: authorization-request-headers-explained
+nextLabel: How to Fetch a Remote Branch Using Git
+next: git-fetch-remote-branch
 ---
 
 While working on multiple Node.js projects, you might need to run different projects with different Node.js versions. Or, for legacy Node.js projects, you might require an older version, and the others might need a new version. And to check out the new features of Node.js, you need to install the latest version.

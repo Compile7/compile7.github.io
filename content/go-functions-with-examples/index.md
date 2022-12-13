@@ -7,6 +7,10 @@ tags:
   - "Functions"
 description: "A brief introduction to functions in Go and how you can use them in your Go programs."
 author: "Vijay Singh Shekhawat"
+prevLabel: How to Write Test Cases for Registration and Login Page
+previous: test-cases-for-registration-and-login-page
+nextLabel: What is Destructuring in Typescript?
+next: what-is-destructuring-in-typescript
 ---
 
 ## The Basics of Go Functions

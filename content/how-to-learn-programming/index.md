@@ -7,6 +7,8 @@ tags:
   - "Coding"
 description: "Programming is hard — it takes years to become good at it, and you should embrace continuous learning. Plus, it demands commitment, perseverance, and willingness to ask for help."
 author: "Raghunath Reddy"
+prevLabel: How to Create Protected Routes in React
+previous: how-to-create-protected-routes-in-react
 nextLabel: Introduction to Go Environment Variables
 next: environment-variables-in-golang
 ---

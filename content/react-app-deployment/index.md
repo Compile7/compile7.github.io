@@ -7,6 +7,8 @@ tags:
   - "PM2"
 description: "Are you a React developer? This tutorial teaches how to deploy your React apps with pm2 and serve."
 author: "Aman Agrawal"
+prevLabel: Introduction to Go Environment Variables
+previous: environment-variables-in-golang
 nextLabel: How to Do Password Hashing in Node.js with Bcrypt
 next: hashing-user-passwords-using-bcryptjs
 ---

@@ -6,6 +6,8 @@ tags:
   - "Go"
 description: "Learn about environment variables and different ways to use them in your Golang applications."
 author: "Puneet Singh"
+prevLabel: How to Learn Programming/Coding?
+previous: how-to-learn-programming
 nextLabel: How to Deploy a React App Using PM2 and Serve
 next: react-app-deployment
 ---

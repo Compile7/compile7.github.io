@@ -7,6 +7,10 @@ tags:
   - "React"
 description: "You'll learn how to build complex React components easily with React Hooks."
 author: "Abhimanyu Singh Rathore"
+prevLabel: How to Do Password Hashing in Node.js with Bcrypt
+previous: hashing-user-passwords-using-bcryptjs
+nextLabel: How to Set Up Git Locally on Windows with VS Code
+next: how-to-set-up-git-on-windows
 ---
 
 ## Overview

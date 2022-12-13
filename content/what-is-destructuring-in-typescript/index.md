@@ -7,6 +7,10 @@ tags:
   - "Destructuring"
 description: "Everything you need to know about Destructuring in TypeScript. How to destructure an object and an array in TypeScript"
 author: "Mohammed Modi"
+prevLabel: Go Functions Explained with Examples
+previous: go-functions-with-examples
+nextLabel: Introduction to React Server Components
+next: what-are-react-server-components
 ---
 
 The literal meaning of Destructuring is de-structuring i.e., breaking up the structure. Destructuring in typescript is very similar to the concept of destructing in JavaScript.

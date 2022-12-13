@@ -6,6 +6,10 @@ tags:
   - "React"
 description: "React memory leaks affect the performance of your apps. Read more to understand memory leaks in React and learn three different methods for fixing memory leaks."
 author: "Versha Gupta"
+prevLabel: Callback vs. Promises vs. Async/Await
+previous: callback-vs-promises-vs-async-await
+nextLabel: Your Guide to HTTP Authorization Header
+next: authorization-request-headers-explained
 ---
 
 A memory leak is a commonly faced issue when developing React applications. It causes many problems, including:
