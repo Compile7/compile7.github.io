@@ -6,6 +6,10 @@ tags:
   - "Git"
 description: "Setting up Git on Windows is a way to easily make changes in your code or developer documents via your local machine and then commit them to the desired repository. This blog is for both semi-technical and technical audiences to help set them Git on their local machine using VS Code. "
 author: "Archna Yadav"
+prevLabel: Introduction to React Hooks
+previous: what-are-react-hooks
+nextLabel: How to Build a Responsive Navbar with HTML and CSS
+next: responsive-navbar-with-html-and-css
 ---
   
 The blog has two sections:

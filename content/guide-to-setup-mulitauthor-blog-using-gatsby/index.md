@@ -7,6 +7,8 @@ tags:
   - "multi-author"
 description: "If you have followed the gatsby-starter-blog and configured your first blog site using gatsby, and you might get a requirement for adding the multi-author support then checkout this post."
 author: "Mohammed Modi"
+prevLabel: Complete Guide to Strict and Optional Cookies with Cookie Consent Law
+previous: guide-to-strict-and-optional-cookies-and-cookie-consent-law
 ---
 
 If you have followed the [gatsby-starter-blog](https://www.gatsbyjs.com/starters/gatsbyjs/gatsby-starter-blog/) and configured your first blog site using gatsby, and you might get a requirement for adding the multi-author support due to one of the following reasons.

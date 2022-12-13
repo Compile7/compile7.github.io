@@ -8,6 +8,10 @@ tags:
  - Authentication
 description: "In this tutorial, you'll build a simple Ts.Ed API and learn how to protect it from unauthorized users with JWT Authentication."
 author: "Ekekenta Odionyenfe Clinton"
+prevLabel: How to Automate Workflows with Git Hooks
+previous: how-to-automate-workflows-with-git-hooks
+nextLabel: Email Delivery 101 for Developers
+next: how-to-stop-business-emails-from-landing-in-spam
 ---
 
 ## Introduction

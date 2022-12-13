@@ -8,6 +8,10 @@ tags:
   - "Automation"
 description: "As a developer, you mostly work with Git to collaborate and contribute. Learn more about how you can automate your workflows within Git scope with Git Hooks."
 author: "Abhimanyu Singh Rathore"
+prevLabel: Introduction to React Server Components
+previous: what-are-react-server-components
+nextLabel: How to Protect Ts.Ed API with JWT Authentication
+next: how-to-protect-tsed-api-with-jwt-authentication
 ---
 
 ## What Are Hooks in Git?

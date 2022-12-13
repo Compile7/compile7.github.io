@@ -7,6 +7,10 @@ tags:
   - "Authorization"
 description: "Learn about the Authorization request header and how to use it for various HTTP authentications — e.g., JWT, OAuth, Basic Auth, etc."
 author: "Ankit Singh"
+prevLabel: How to Fix Memory Leaks in React
+previous: how-to-fix-memory-leaks-in-react
+nextLabel: How to Install Multiple Node.js Versions On the Same Machine
+next: run-multiple-nodejs-versions-on-the-same-machine
 ---
 
 In this blog, you'll learn about the following:

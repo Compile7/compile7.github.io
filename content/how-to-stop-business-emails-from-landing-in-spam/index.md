@@ -7,6 +7,10 @@ tags:
   - "Email Delivery"
 description: "Are you worried about your business emails landing in spam? Read this article to learn how to improve email deliverability by understanding BIMI, SPF, DKIM, and DMARC."
 author: "Deepak Gupta"
+prevLabel: How to Protect Ts.Ed API with JWT Authentication
+previous: how-to-protect-tsed-api-with-jwt-authentication
+nextLabel: Complete Guide to Strict and Optional Cookies with Cookie Consent Law
+next: guide-to-strict-and-optional-cookies-and-cookie-consent-law
 ---
 
 Are you a developer responsible for email delivery and constantly worried about emails being delivered to users’ spam folders or attackers launching man-in-the-middle attacks against your emails?

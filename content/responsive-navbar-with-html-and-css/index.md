@@ -7,7 +7,12 @@ tags:
   - "CSS"
 description: "In this tutorial, you'll learn how to create a responsive navigation bar with barebones HTML and CSS."
 author: "Hitesh Kumawat"
+prevLabel: How to Set Up Git Locally on Windows with VS Code
+previous: how-to-set-up-git-on-windows
+nextLabel: Learn Everything About Nginx Logs in 5 Minutes
+next: quick-5-minute-guide-on-nginx-access-and-error-logs
 ---
+
 Let's use HTML and CSS to create a responsive navbar.
 
 ## Introduction: What is a Navbar?

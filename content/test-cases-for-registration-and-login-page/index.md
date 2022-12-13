@@ -7,6 +7,10 @@ tags:
   - "QA"
 description: "Here is a set of test cases for Login and Registration Pages to test and ensure functional quality."
 author: "Gaurav Bewal"
+prevLabel: How to Fetch a Remote Branch Using Git
+previous: git-fetch-remote-branch
+nextLabel: Go Functions Explained with Examples
+next: go-functions-with-examples
 ---
 
 Writing test cases is an essential task for a tester in application testing. It requires experience and a keen eye for detail to build scenarios, meaning that an application tester needs to focus on creating a set of variables or conditions that will help them determine whether the software meets requirements and functions flawlessly.

@@ -7,6 +7,10 @@ tags:
   - "Bcrypt"
 description: "Storing plain text passwords is a disastrous security practice. You can overcome it with password hashing, which you'll learn in this tutorial for your Node.js projects."
 author: "Hridayesh Sharma"
+prevLabel: How to Deploy a React App Using PM2 and Serve
+previous: react-app-deployment
+nextLabel: Introduction to React Hooks
+next: what-are-react-hooks
 ---
 
 Imagine a scenario where you store all the user passwords in plain text in your database, i.e., passwords are stored in the database without any modification.

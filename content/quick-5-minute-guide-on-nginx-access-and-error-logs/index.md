@@ -7,6 +7,10 @@ tags:
   - "Logs"
 description: "In this article, you'll learn about Nginx logs, such as error and access logs. Also, you'll learn how to format them as needed."
 author: "Vijay Singh Shekhawat"
+prevLabel: How to Build a Responsive Navbar with HTML and CSS
+previous: responsive-navbar-with-html-and-css
+nextLabel: Callback vs. Promises vs. Async/Await
+next: callback-vs-promises-vs-async-await
 ---
 
 NGINX is an open-source web server and application server that helps you build a faster, scalable, secure, and reliable service.

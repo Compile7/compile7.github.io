@@ -6,6 +6,10 @@ tags:
   - "Git"
 description: "The Git remote branch is a way to access the independent work of a co-worker. Find out how to fetch a remote branch using git in this article."
 author: "Versha Gupta"
+prevLabel: How to Install Multiple Node.js Versions On the Same Machine
+previous: run-multiple-nodejs-versions-on-the-same-machine
+nextLabel: How to Write Test Cases for Registration and Login Page
+next: test-cases-for-registration-and-login-page
 ---
 
 As a developer, you commonly work with Git. And you need to understand how [to work with Git](https://www.loginradius.com/blog/engineering/github-api/) and the different possibilities of working with repositories and code in Git (such as managing the size of your reports, etc.).
