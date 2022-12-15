@@ -81,7 +81,7 @@ const BlogPostTemplate = ({ data, location }) => {
               {post.frontmatter.previous && (
                 <Link
                   className="page__nav page__nav_prev"
-                  to={BLOG_PATH + "/" + post.frontmatter.previous}
+                  to={BLOG_PATH + "/" + post.frontmatter.previous + "/"}
                   title={post.frontmatter.prevLabel || "Previous"}
                 >
                   <svg
@@ -104,7 +104,7 @@ const BlogPostTemplate = ({ data, location }) => {
               {post.frontmatter.next && (
                 <Link
                   className="page__nav page__nav_next"
-                  to={BLOG_PATH + "/" + post.frontmatter.next}
+                  to={BLOG_PATH + "/" + post.frontmatter.next + "/"}
                   title={post.frontmatter.nextLabel || "Next"}
                 >
                   <svg
@@ -178,7 +178,7 @@ const BlogPostTemplate = ({ data, location }) => {
         <section>
           <div>
             <div className={`${styles.footerTop} grid-33`}>
-              <div className={styles.block}>
+              {/* <div className={styles.block}>
                 <h4>Did this doc help you?</h4>
                 <ul>
                   <li className="{styles.up}">
@@ -224,7 +224,7 @@ const BlogPostTemplate = ({ data, location }) => {
                     </Link>
                   </li>
                 </ul>
-              </div>
+              </div> */}
               <div className={styles.block}>
                 <h4>Need help?</h4>
                 <Link
@@ -240,7 +240,10 @@ const BlogPostTemplate = ({ data, location }) => {
                   All Compile7 docs are open source. See something that's wrong
                   or unclear? Submit a pull request
                 </p>
-                <Link target="_blank" to="/">
+                <Link
+                  target="_blank"
+                  to={`https://github.com/Compile7/compile7.github.io/blob/main/content${post.fields.slug}/index.md`}
+                >
                   Make a Contribution
                 </Link>
               </div>
