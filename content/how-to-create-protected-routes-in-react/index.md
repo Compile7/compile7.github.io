@@ -7,6 +7,8 @@ tags:
   - "Authentication"
 description: "In this tutorial, you'll learn how to create protected routes in React only to allow access to authenticated users for private paths and pages."
 author: "Shammir Baig"
+prevLabel: How to Organize Your CSS Codebase
+previous: how-to-organize-your-css-codebase
 nextLabel: How to Learn Programming/Coding?
 next: how-to-learn-programming
 ---
