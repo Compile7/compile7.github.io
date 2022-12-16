@@ -175,10 +175,15 @@ const BlogPostTemplate = ({ data, location }) => {
             </div>
           ) : null}
         </div>
-        <section>
-          <div>
-            <div className={`${styles.footerTop} grid-33`}>
-              {/* <div className={styles.block}>
+      </article>
+      <div
+        className={
+          post.relatedPosts.length == 1
+            ? `${styles.footerTop} grid-33`
+            : `${styles.footerTop} grid-33 no-sidebar`
+        }
+      >
+        {/* <div className={styles.block}>
                 <h4>Did this doc help you?</h4>
                 <ul>
                   <li className="{styles.up}">
@@ -225,32 +230,29 @@ const BlogPostTemplate = ({ data, location }) => {
                   </li>
                 </ul>
               </div> */}
-              <div className={styles.block}>
-                <h4>Need help?</h4>
-                <Link
-                  to="https://docs.google.com/forms/d/e/1FAIpQLSdiveXRxd5EfESvqCizKrKv1Qr01YuhEL_FdBOSWOZD1B0SUQ/viewform"
-                  target="_blank"
-                >
-                  Contact us
-                </Link>
-              </div>
-              <div className={styles.block}>
-                <h4>Help us make these docs great!</h4>
-                <p>
-                  All Compile7 docs are open source. See something that's wrong
-                  or unclear? Submit a pull request
-                </p>
-                <Link
-                  target="_blank"
-                  to={`https://github.com/Compile7/compile7.github.io/blob/main/content${post.fields.slug}/index.md`}
-                >
-                  Make a Contribution
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
-      </article>
+        <div className={styles.block}>
+          <h4>Need help?</h4>
+          <Link
+            to="https://docs.google.com/forms/d/e/1FAIpQLSdiveXRxd5EfESvqCizKrKv1Qr01YuhEL_FdBOSWOZD1B0SUQ/viewform"
+            target="_blank"
+          >
+            Contact us
+          </Link>
+        </div>
+        <div className={styles.block}>
+          <h4>Help us make these docs great!</h4>
+          <p>
+            All Compile7 docs are open source. See something that's wrong or
+            unclear? Submit a pull request
+          </p>
+          <Link
+            target="_blank"
+            to={`https://github.com/Compile7/compile7.github.io/blob/main/content${post.fields.slug}/index.md`}
+          >
+            Make a Contribution
+          </Link>
+        </div>
+      </div>
     </Layout>
   )
 }

@@ -195,8 +195,9 @@
     }
   }
   .canvas {
-    max-width: 720px;
-    margin: auto;
+    flex: 1;
+    max-width: 848px;
+    margin-inline: auto;
     ul {
       padding: 0 0 0 24px;
       margin-left: 0;
@@ -229,7 +230,13 @@
   }
 }
 .related-post {
-  width: 25%;
+  flex: 0 0 calc(30% - 56px);
+  @media (min-width: 768px) {
+    position: sticky;
+    top: 56px;
+    height: fit-content;
+    margin-left: 56px;
+  }
   @media (max-width: 768px) {
     width: 100%;
     margin-top: 56px;
@@ -251,6 +258,15 @@
   margin-top: 8vmin;
   padding: 8vmin 0 0;
   border-top: 1px solid #e0e0e0;
+  display: flex;
+  max-width: calc(848px - 56px);
+  @media (max-width: 768px) {
+    flex-direction: column;
+    margin-top: 2vmin;
+  }
+  & > div {
+    flex: 1;
+  }
   @media (max-width: 768px) {
     gap: 32px;
   }
