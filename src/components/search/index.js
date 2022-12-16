@@ -10,11 +10,11 @@ export default class Search extends Component {
   constructor(props) {
     super(props)
     this.textInput = React.createRef()
-    this._toggleSearch = this._toggleSearch.bind(this)
+    //this._toggleSearch = this._toggleSearch.bind(this)
     this.state = {
       query: ``,
       results: [],
-      toggleOpen: null,
+      toggleOpen: true,
     }
   }
 
@@ -51,19 +51,19 @@ export default class Search extends Component {
     const query = this.state.query
     navigate(`${BLOG_PATH}/search?query=${query}`)
     this.setState({
-      toggleOpen: false,
+      toggleOpen: true,
       results: [],
       query: "",
     })
   }
 
-  componentDidMount() {
-    document.body.addEventListener("click", this.bodyClickHandler)
-  }
+  // componentDidMount() {
+  //   document.body.addEventListener("click", this.bodyClickHandler)
+  // }
 
-  componentWillUnmount() {
-    document.body.removeEventListener("click", this.bodyClickHandler)
-  }
+  // componentWillUnmount() {
+  //   document.body.removeEventListener("click", this.bodyClickHandler)
+  // }
 
   render() {
     const { results, toggleOpen, query } = this.state
@@ -72,15 +72,15 @@ export default class Search extends Component {
         <a
           className={`${searchStyle.btnSearch} ${this.props.customClass}`}
           tabIndex={0}
-          onClick={e => {
-            if (query === "") {
-              this._toggleSearch()
-            } else {
-              this.handleSubmit(e)
-            }
-          }}
-          onMouseOver={() => (this._shouldClose = false)}
-          onMouseLeave={() => (this._shouldClose = true)}
+          // onClick={e => {
+          //   if (query === "") {
+          //     this._toggleSearch()
+          //   } else {
+          //     this.handleSubmit(e)
+          //   }
+          // }}
+          // onMouseOver={() => (this._shouldClose = false)}
+          // onMouseLeave={() => (this._shouldClose = true)}
         >
           <div
             className={`${searchStyle.megaMenuSearchDarkIcon} ${

@@ -2,7 +2,7 @@
 .btn-search {
   display: block;
   position: absolute;
-  right: 0;
+  right: 4vmin;
   width: 85px;
   background-image: url("data:image/svg+xml,%3Csvg width='27' height='27' viewBox='0 0 27 27' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.69569 18.3914C14.4982 18.3914 18.3914 14.4982 18.3914 9.69569C18.3914 4.89319 14.4982 1 9.69569 1C4.89319 1 1 4.89319 1 9.69569C1 14.4982 4.89319 18.3914 9.69569 18.3914Z' stroke='%231c2b33' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M15.8479 15.8477L26.0001 25.9999' stroke='%231c2b33' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
   background-repeat: no-repeat;
@@ -13,11 +13,13 @@
   transition: all 0.3ms ease-in-out;
   @media (max-width: 768px) {
     height: 90px;
+    top: 100px;
   }
   @media (max-width: 480px) {
     height: 65px;
     background-size: 20px;
     width: 64px;
+    top: 74px;
   }
   &.deactive {
     @media (max-width: 768px) {
@@ -52,7 +54,7 @@
   -webkit-clip-path: circle(2.7% at 89.6% 47%);
   top: 18px;
   z-index: 20;
-  right: 0;
+  right: 4vmin;
   box-shadow: 0 0px 2px 0 rgba(60, 64, 67, 0.3), 0 0px 3px 1px rgba(60, 64, 67, 0.15);
   @media (max-width: 768px) {
     height: 90px;
@@ -72,9 +74,15 @@
 }
 @media screen and (max-width: 768px) {
   .search-form {
-    top: 0;
-    right: 0;
-    width: 100%;
+    top: 100px;
+    right: 4vmin;
+    width: calc(100% - 8vmin);
+    left: 4vmin;
+  }
+}
+@media (max-width: 480px) {
+  .search-form {
+    top: 74px;
   }
 }
 
@@ -310,7 +318,7 @@
   background: $white;
   border: 0;
   box-shadow: 0 2px 2px 0 rgba(60, 64, 67, 0.3), 0 3px 3px 1px rgba(60, 64, 67, 0.15);
-  right: 0;
+  right: 4vmin;
   display: flex;
   flex-direction: column;
   color: $white;
@@ -319,12 +327,12 @@
     width: calc(100% - 65%);
   }
   @media (max-width: 768px) {
-    width: calc(100% - 85px);
-    top: 90px;
+    top: 190px;
+    width: calc(100% - 8vmin);
+    left: 4vmin;
   }
   @media (max-width: 480px) {
-    top: 65px;
-    width: 100%;
+    top: 139px;
   }
   li {
     border-bottom: 1px solid #e3e5e7;

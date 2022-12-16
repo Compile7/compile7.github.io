@@ -87,12 +87,9 @@
 }
 
 .post-container {
-  padding: 8vmin 0;
-  @media (max-width: 768px) {
-    padding: 0 0 8vmin 0;
-  }
+  padding: 0 0 4vmin 0;
   .header {
-    padding: 0 3vw 8vmin;
+    padding: 0 0 8vmin;
     @media (max-width: 768px) {
       padding: 0 0 8vmin;
     }
@@ -198,8 +195,9 @@
     }
   }
   .canvas {
-    max-width: 720px;
-    margin: auto;
+    flex: 1;
+    max-width: 848px;
+    margin-inline: auto;
     ul {
       padding: 0 0 0 24px;
       margin-left: 0;
@@ -232,8 +230,123 @@
   }
 }
 .related-post {
-  width: 25%;
+  flex: 0 0 calc(30% - 56px);
+  @media (min-width: 768px) {
+    position: sticky;
+    top: 56px;
+    height: fit-content;
+    margin-left: 56px;
+  }
+  @media (max-width: 768px) {
+    width: 100%;
+    margin-top: 56px;
+  }
+  h3 {
+    padding-bottom: 12px;
+  }
   ul {
     padding-left: 20px;
+    li {
+      a {
+        font-size: 17px;
+      }
+    }
+  }
+}
+
+.footer-top {
+  margin-top: 8vmin;
+  padding: 8vmin 0 0;
+  border-top: 1px solid #e0e0e0;
+  display: flex;
+  max-width: calc(848px - 56px);
+  @media (max-width: 768px) {
+    flex-direction: column;
+    margin-top: 2vmin;
+  }
+  & > div {
+    flex: 1;
+  }
+  @media (max-width: 768px) {
+    gap: 32px;
+  }
+  .block {
+    ul {
+      list-style-type: none;
+      display: flex;
+      gap: 12px;
+      li {
+        margin-bottom: 0;
+        a {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          font-size: 16px;
+          color: #465a69;
+          border: 1px solid #e0e0e0;
+          padding: 4px 8px;
+          border-radius: 4px;
+        }
+      }
+    }
+    a {
+      font-size: 17px;
+      transition: all 0.2s ease-in-out;
+      &:hover {
+        svg {
+          .st0 {
+            fill: #008000;
+            stroke: #008000;
+          }
+          .st1 {
+            fill: #ff0000;
+            stroke: #ff0000;
+          }
+        }
+      }
+    }
+    svg {
+      width: 20px;
+      height: 20px;
+      .st0 {
+        fill: #465a69;
+        stroke: #465a69;
+        stroke-width: 8;
+        stroke-miterlimit: 10;
+        transition: all 0.2s ease-in-out;
+      }
+      .st1 {
+        fill: #465a69;
+        stroke: #465a69;
+        stroke-width: 8;
+        stroke-miterlimit: 10;
+        transition: all 0.2s ease-in-out;
+      }
+    }
+    p {
+      color: #465a69;
+      font-size: 17px;
+      line-height: 124%;
+      margin-bottom: 16px;
+    }
+    &:last-child {
+      a {
+        display: inline-block;
+        padding: 12px 16px;
+        color: hsla(0, 0%, 0%, 0.8);
+        text-decoration: none;
+        line-height: 1;
+        letter-spacing: 0.3px;
+        font-weight: 500;
+        background-color: #e3e5e7;
+        font-size: 17px;
+        border-radius: 2px;
+        transition: all 0.2s ease-in-out;
+        &:hover {
+          color: #ffffff;
+          background-color: #2c4bff;
+        }
+      }
+    }
   }
 }
