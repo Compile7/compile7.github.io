@@ -12,7 +12,7 @@ const CategoryTemplate = ({ pageContext, data, location }) => {
   const img = data.allMarkdownRemark.edges[0].node.frontmatter.coverImage
 
   return (
-    <Layout location={location} title={siteTitle} showPinned>
+    <Layout location={location} title={siteTitle}>
       <SEO
         title={`${category} - Tag | C7 Blog`}
         description={`Posts related to ${category}`}
