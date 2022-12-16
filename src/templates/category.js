@@ -18,6 +18,10 @@ const CategoryTemplate = ({ pageContext, data, location }) => {
         description={`Posts related to ${category}`}
         image={img ? img.childImageSharp.gatsbyImageData.images.fallback.src : ""}
         pathname={location.pathname}
+        meta={{
+          name: "googlebot",
+          content: "noindex"
+        }}
       />
       <TagMenu group={data.allMarkdownRemark.group} />
       <PostList posts={posts} />

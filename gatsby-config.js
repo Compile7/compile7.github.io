@@ -90,7 +90,12 @@ module.exports = {
         fonts: [`Lato\:300,400,400i,700`],
       },
     },
-    `gatsby-plugin-sitemap`,
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        excludes: ["/decompile/tags/**"],
+      },
+    },
     {
       resolve: "gatsby-plugin-robots-txt",
       options: {
@@ -102,5 +107,5 @@ module.exports = {
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
-  ]
+  ],
 }
