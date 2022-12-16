@@ -1,5 +1,5 @@
 ---
-title: "How to Learn Programming/Coding?"
+title: "A Non-Programmer's View on Learning Coding"
 date: "2022-12-08"
 coverImage: learn-coding.png
 tags:
