@@ -19,15 +19,20 @@ const Header = () => {
           <nav>
             <div className="head-inner">
               <div className="head-brand">
-                <a className="head-logo" href="/">
-                  Compile7
-                </a>
-                <span>|</span>
-                <Link to={BLOG_PATH} className="head-blog-name">
-                  Blog
-                </Link>
-                <Search searchIndex={data.siteSearchIndex.index} />
+                <div className="logo">
+                  <a className="head-logo" href="/">
+                    Compile7
+                  </a>
+                  <span>|</span>
+                  <Link to={BLOG_PATH} className="head-blog-name">
+                    Blog
+                  </Link>
+                </div>
+                <div className="navigation">
+                  <Link to={`${BLOG_PATH}/memes/`}>Memes</Link>
+                </div>
               </div>
+              <Search searchIndex={data.siteSearchIndex.index} />
             </div>
           </nav>
         )}

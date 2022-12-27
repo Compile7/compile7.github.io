@@ -68,7 +68,7 @@ export default class Search extends Component {
   render() {
     const { results, toggleOpen, query } = this.state
     return (
-      <>
+      <div className={searchStyle.searchWrap}>
         <a
           className={`${searchStyle.btnSearch} ${this.props.customClass}`}
           tabIndex={0}
@@ -106,6 +106,7 @@ export default class Search extends Component {
           onMouseLeave={() => (this._shouldClose = true)}
         >
           <input
+            placeholder="Serach"
             id="search"
             type="text"
             className={`${searchStyle.searchFormInput}  ${
@@ -145,7 +146,7 @@ export default class Search extends Component {
             </li>
           </ul>
         ) : null}
-      </>
+      </div>
     )
   }
   getOrCreateIndex = () => this.index || Index.load(this.props.searchIndex)
