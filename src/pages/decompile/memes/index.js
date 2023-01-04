@@ -12,7 +12,7 @@ import Layout from "../../../components/layout"
 import SEO from "../../../components/seo"
 import * as styles from "./memepage.module.scss"
 const AboutUs = ({ data, location }) => {
-  const edges = data.allImageSharp.edges || []
+  const edges = data.allFile.edges || []
   return (
     <Layout>
       <SEO title="Memes" pathname={location.pathname} />
@@ -26,7 +26,7 @@ const AboutUs = ({ data, location }) => {
         </div>
         <div className={styles.container}>
           {edges.map(edge => {
-            const memeImg = edge.node.gatsbyImageData
+            const memeImg = edge.node.childImageSharp.gatsbyImageData
             return (
               <div className={styles.item}>
                 <div className={styles.shareWidget}>
@@ -113,10 +113,12 @@ export default AboutUs
 
 export const pageQuery = graphql`
   query {
-    allImageSharp(filter: { fixed: { src: { regex: "/(meme).+/" } } }) {
+    allFile(filter: { sourceInstanceName: { eq: "memes" } }) {
       edges {
         node {
-          gatsbyImageData(placeholder: BLURRED)
+          childImageSharp {
+            gatsbyImageData
+          }
         }
       }
     }
