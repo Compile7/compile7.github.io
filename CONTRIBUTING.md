@@ -12,13 +12,13 @@
 
 This is a rough outline of what a contributor's workflow looks like:
 
-- Create a separate branch from `dev` branch to base your work.
+- Create a separate branch from `main` branch to base your work.
 - Make commits of logical units.
 - Make sure your commit messages are in the proper format (see below).
 - Push your changes to a topic branch in your fork of the repository.
 - Make sure to proofread the content before submitting.
 - Submit a pull request to the original repository.
-- **Please ensure that you raise a PR against `dev` branch BUT NOT `main`.**
+- **Please ensure that you raise a PR against `main` branch and not any other branch.**
 
 #### Commit Messages
 
