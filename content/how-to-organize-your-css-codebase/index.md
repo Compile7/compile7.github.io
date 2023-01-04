@@ -6,8 +6,8 @@ tags:
   - "CSS"
 description: "In this tutorial, you'll learn how to segregate, manage, and organize your CSS code in a better manner using code segmentation through files and folders."
 author: "Hitesh Kumawat"
-prevLabel: Compile7 Blog 
-previous: 
+prevLabel: How to Programmatically Navigate with React Router
+previous: how-to-programmatically-navigate-with-react-router
 nextLabel: How to Create Protected Routes in React
 next: how-to-create-protected-routes-in-react
 ---
