@@ -106,7 +106,7 @@ Nginx Default access log configuration:
 ```js
 http {
     server {
-         /path/to/log_file/nginx-access.log combined;
+         access_log /path/to/log_file/nginx-access.log combined;
         ...
     }
 }
