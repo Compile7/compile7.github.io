@@ -18,10 +18,10 @@ const AboutUs = ({ data, location }) => {
       <SEO title="Memes" pathname={location.pathname} />
       <div className={styles.memePage}>
         <div className={styles.pageHeader}>
-          <h2>Memes page</h2>
+          <h2>Memes</h2>
           <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry.
+            Memes created, shared, and enjoyed by developers. Hotlinking is
+            fine..!
           </p>
         </div>
         <div className={styles.container}>
@@ -29,7 +29,7 @@ const AboutUs = ({ data, location }) => {
             const memeImg = edge.node.childImageSharp.gatsbyImageData
             return (
               <div className={styles.item}>
-                <div className={styles.shareWidget}>
+                {/* <div className={styles.shareWidget}>
                   <input type="checkbox" />
                   <div className={styles.button}>
                     <svg
@@ -98,7 +98,7 @@ const AboutUs = ({ data, location }) => {
                       </a>
                     </li>
                   </ul>
-                </div>
+                </div> */}
                 <GatsbyImage image={memeImg} alt={"meme1"} />
               </div>
             )

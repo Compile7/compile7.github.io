@@ -1,3 +1,4 @@
+@import "../../styles/variables.scss";
 .head {
   position: relative;
   background: inherit;
@@ -20,6 +21,9 @@
     a {
       font-size: 16px;
       font-weight: 600;
+      &:hover {
+        color: $blue-bright;
+      }
     }
   }
   &-inner {
@@ -62,7 +66,7 @@
   }
 
   a {
-    color: inherit;
+    color: $black;
     text-decoration: none;
   }
   span {
