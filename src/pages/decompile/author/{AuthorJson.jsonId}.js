@@ -53,7 +53,7 @@ export default ({
             <div class={styles.aboutAuthor}>
               <h3>{jsonId}</h3>
               <p>{bio}</p>
-              <div class="author-social-icon">
+              <div class={styles.authorSocialIcon}>
                 <ul>
                   {github && (
                     <li>
