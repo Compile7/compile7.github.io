@@ -216,6 +216,9 @@ export const pageQuery = graphql`
         }
       }
       github
+      stackoverflow
+      linkedin
+      twitter
     }
   }
 `
