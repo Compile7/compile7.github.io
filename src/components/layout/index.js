@@ -1,19 +1,21 @@
 import { Link } from "gatsby"
-import React, { useEffect, useRef } from "react"
+import React, { useEffect } from "react"
 
 import { BLOG_PATH } from "../../utils/typography"
 import Header from "../header"
 import PinnedCard from "../pinnedCard"
 import * as styles from "./layout.module.scss"
 const Layout = ({ children, showPinned }) => {
-  const scriptEl = useRef(null)
   useEffect(() => {
-    const addThisScript = document.createElement("script")
-    addThisScript.id = "addthisScript"
-    addThisScript.src =
-      "//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-63689e864b6ef172"
-    addThisScript.type = "text/javascript"
-    scriptEl.current.appendChild(addThisScript)
+    const existingScript = document.getElementById("addthisScript")
+    if (!existingScript) {
+      const addThisScript = document.createElement("script")
+      addThisScript.id = "addthisScript"
+      addThisScript.src =
+        "//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-63689e864b6ef172"
+      addThisScript.type = "text/javascript"
+      document.body.appendChild(script)
+    }
   }, [])
   return (
     <>
