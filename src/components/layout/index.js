@@ -14,7 +14,7 @@ const Layout = ({ children, showPinned }) => {
       addThisScript.src =
         "//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-63689e864b6ef172"
       addThisScript.type = "text/javascript"
-      document.body.appendChild(script)
+      document.body.appendChild(addThisScript)
     }
   }, [])
   return (
