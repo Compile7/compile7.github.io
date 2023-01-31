@@ -26,7 +26,7 @@ const Layout = ({ children, showPinned }) => {
             <div className={styles.footerLink}>
               <ul>
                 <li>
-                  <Link to={`${BLOG_PATH}/aboutus/`}>About Compile7</Link>
+                  <Link to={`${BLOG_PATH}/about-us/`}>About Compile7</Link>
                 </li>
                 <li>
                   <Link
