@@ -1,4 +1,4 @@
-import { graphql, Script } from "gatsby"
+import { graphql } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
 import React from "react"
 
@@ -29,11 +29,6 @@ const AboutUs = ({ data, location }) => {
           })}
         </div>
       </div>
-      {/* Addthis script */}
-      <Script
-        type="text/javascript"
-        src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-63689e864b6ef172"
-      ></Script>
     </Layout>
   )
 }
