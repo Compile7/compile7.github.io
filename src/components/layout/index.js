@@ -1,5 +1,5 @@
 import { Link } from "gatsby"
-import React, { useEffect } from "react"
+import React, { useEffect, useRef } from "react"
 
 import { BLOG_PATH } from "../../utils/typography"
 import Header from "../header"
