@@ -70,6 +70,8 @@ While this is not an exhaustive list, these blogs offer good value for your time
 
 Think we’re missing a super cool developer blog or publications?
 
-Let us know. And we’ll be happy to review and consider adding that to this list. (For this, we’ll soon share a link so you can submit the blog/publication details.)
+Let us know. And we’ll be happy to review and consider adding that to this list. 
+
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfOazZHPEC1mf_W5yP4AQhb9GBE8a-4T5PFVzh2IMncLKTBpA/viewform?embedded=true" width="400" height="600" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe> <br/> <br/>
 
 Happy Reading :)
