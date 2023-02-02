@@ -6,8 +6,8 @@ tags:
   - "CSS"
 description: "Learn how to use CSS media queries to apply different CSS styles to multiple devices based on attributes like screen size, resolution, and color depth."
 author: "Hitesh Kumawat"
-prevLabel: Compile7 Blog
-previous: 
+prevLabel: How to Develop Responsive Websites
+previous: develop-responsive-websites
 nextLabel: Understanding Unique Keys for Array Child Elements in React
 next: understanding-unique-keys-for-array-child-elements-in-react
 ---

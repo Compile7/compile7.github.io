@@ -6,8 +6,8 @@ tags:
   - "React"
 description: "Learn how to properly assign unique keys to array child elements in React to ensure efficient updates & avoid common errors."
 author: "Abhimanyu Singh Rathore"
-prevLabel: Compile7 Blog
-previous: 
+prevLabel: A Beginner’s Guide to CSS Media Queries
+previous: introduction-to-css-media-queries
 nextLabel: How to Programmatically Navigate with React Router
 next: how-to-programmatically-navigate-with-react-router
 ---

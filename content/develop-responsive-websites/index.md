@@ -4,10 +4,11 @@ date: "2023-01-20"
 coverImage: develop-responsive-websites.png
 tags:
   - "CSS"
+  - "HTML"
 description: "Create adaptable websites for different screen sizes for optimal viewing using flexible grids, images, and CSS media queries, among others."
 author: "Hitesh Kumawat"
-prevLabel: Compile7 Blog
-previous: 
+prevLabel: Top Developer Blogs You Should Read
+previous: top-developer-blogs-you-should-read
 nextLabel: A Beginner’s Guide to CSS Media Queries
 next: introduction-to-css-media-queries
 ---
