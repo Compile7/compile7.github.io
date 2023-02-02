@@ -38,7 +38,7 @@ Before moving on, you shall have a fair understanding of the following:
 
 Make sure you have the following installed on your system to move forward with the tutorial:
 
-- [Node.js](https://nodejs.org/en/) and [npm](https://nodejs.org/en/knowledge/getting-started/npm/what-is-npm/)
+- [Node.js](https://nodejs.org/en/) and [npm](https://docs.npmjs.com/about-npm)
 - [MongoDB](https://mongodb.com)
 
 

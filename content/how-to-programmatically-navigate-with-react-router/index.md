@@ -6,8 +6,8 @@ tags:
   - "React"
 description: "Want to implement programmatic navigation in your React applications for better UX? This tutorial helps you implement programmatic navigation with React Router."
 author: "Versha Gupta"
-prevLabel: Compile7 Blog
-previous: 
+prevLabel: Understanding Unique Keys for Array Child Elements in React
+previous: understanding-unique-keys-for-array-child-elements-in-react
 nextLabel: How to Organize Your CSS Codebase
 next: how-to-organize-your-css-codebase
 ---
