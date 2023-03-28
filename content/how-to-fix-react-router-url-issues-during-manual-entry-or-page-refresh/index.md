@@ -9,8 +9,8 @@ description: "In this tutorial, you'll learn how to fix React-Router URL refresh
 author: "Abhimanyu Singh Rathore"
 prevLabel: 
 previous: 
-nextLabel: How to Develop Responsive Websites
-next: develop-responsive-websites
+nextLabel: How to Build a Responsive Dashboard Layout with CSS Grid
+next: build-a-responsive-dashboard-layout-with-css-grid
 ---
 
 Ever faced a blank screen or 404 error when refreshing a page in your app powered with React Router? It occurs when the URL doesn't match any routes in your app.
@@ -54,17 +54,17 @@ function About() {
 export default App;
 ```
 
-With the HashRouter, your URLs will look something like http://localhost:3000/#/about rather thab http://localhost:3000/about.
+With the HashRouter, your URLs will look like http://localhost:3000/#/about rather than http://localhost:3000/about.
 
 So, when you refresh the page or manually a URL, the request goes to the server. It then returns the same HTML and JavaScript files. The router can then use the hash value to determine the correct location within the single-page application.
 
-As a result, the hash value in the URL may not be as visually appealing as a traditional URL without a hash. But this is largely a cosmetic issue and doesn't affect how your application functions.
+As a result, the hash value in the URL may not be as visually appealing as a traditional URL without a hash. But this is a cosmetic issue that doesn't affect your application's functionality.
 
 Furthermore, the HashRouter may not be suitable for all use cases. For example, if you're building a public-facing website that needs search engine crawling and indexing, the HashRouter might not produce good SEO results. In such cases, better to use the BrowserRouter with a server-side solution to handle refresh and manual URL scenarios.
 
 ## Conclusion
-The HashRouter is a great solution for fixing React-Router URL issues when refreshing or entering them manually. It's easy to set up and use, and it provides a seamless user experience.
+The HashRouter is a great solution for fixing React-Router URL issues when refreshing or entering them manually. It's easy to set up and use and provides a seamless user experience.
 
-Just be mindful of the trade-offs and consider your specific use case before deciding.
+Just be mindful of the trade-offs and consider your use case before deciding.
 
 For more information on using the HashRouter with React-Router, check out the official documentation: https://reacttraining.com/react-router/web/api/HashRouter.
