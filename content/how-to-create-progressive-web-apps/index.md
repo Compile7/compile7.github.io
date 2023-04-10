@@ -1,49 +1,59 @@
 ---
 title: "How to Build Progressive Web Apps"
-date: "2023-03-31"
-coverImage: how-to-build-progressive-web-apps.png
+date: "2023-04-10"
+coverImage: how-to-build-progressive-web-apps.jpg
 tags:
   - "React"
-  - "HTML"
-  - "CSS"
-  - "JavaScript"
-description: "Welcome to our blog dedicated to all things Progressive Web Apps! Here, we explore the latest trends, best practices, and cutting-edge techniques for building fast, reliable, and engaging web experiences that work seamlessly across all devices and platforms. "
+  - "PWA"
+description: "Step-by-step, you'll learn how to create a React app and make it a PWA."
 author: "Bhupendra Singh Chauhan"
 prevLabel: 
 previous: 
-nextLabel:
-next: 
+nextLabel: Top 10 YouTube Channels for Aspiring Developers
+next: best-youtube-channels-for-aspiring-developers
 ---
 
-Progressive Web Apps (PWA) are becoming increasingly popular for their ease of use and compatibility across multiple platforms. In this blog, we'll walk you through the process of creating a GiveItAway app without a payment gateway using React, and show you how to make it a PWA.
+Progressive Web Apps (PWA) are becoming more popular due to ease of use and multi-platform compatibility.
 
-To get started, make sure you have Node.js installed on your system. We'll be using create-react-app in our project, so open up your terminal and run the following command:
+So, in this blog, you'll learn how to create a GiveItAway app without a payment gateway using React and how to make it a PWA.
 
-```
+To get started, ensure Node.js is installed on your system. And you'll use `create-react-app` in your project. 
+
+In your terminal, run the following command:
+
+```c
 npx create-react-app GiveItAway-app
 ```
-This will create a new React project in a folder called 'GiveItAway-app'.
 
-Next, navigate into the project folder by running:
+It creates a new React project in a folder called 'GiveItAway-app'.
 
-```
+Next, navigate to the project folder:
+
+```c
 cd GiveItAway-app
 ```
-Once you're in the project folder, you can open it in your code editor of choice. We'll be using Visual Studio Code in this tutorial, but feel free to use whichever editor you prefer.
 
-Before we start writing any code, let's install the necessary dependencies for our PWA. Run the following command in your terminal:
+Once you're in the project folder, open it in your code editor of choice.
 
-```
+We use Visual Studio Code in this tutorial but feel free to use whichever editor you prefer.
+
+Before writing code, let's install the necessary dependencies for your PWA. Run the following command in your terminal:
+
+```c
 npm install --save-dev webpack-pwa-manifest workbox-webpack-plugin
-
 ```
-The webpack-pwa-manifest package will generate a manifest file for our PWA, which is required by modern browsers to display our app as a standalone application. The workbox-webpack-plugin package will help us cache our app's assets for offline use.
 
-Now that we have our dependencies installed, let's start writing some code!
+The `webpack-pwa-manifest` package generates a manifest file for your PWA, which modern browsers require to display your app as a standalone application.
 
-First, let's create a simple header component that will display the name of our GiveItAway app. Create a new file called Header.js in the src/components folder and add the following code:
+The `workbox-webpack-plugin` package helps to cache the app's assets for offline use.
 
-```
+As dependencies are installed, let's start writing some code!
+
+First, let's create a simple header component that displays the name of your GiveItAway app.
+
+Create a new file called `Header.js` in the `src/components` folder and add the following code:
+
+```js
 import React from 'react';
 
 const Header = () => {
@@ -56,11 +66,14 @@ const Header = () => {
 
 export default Header;
 ```
-This component simply renders a header tag with the name of our app.
 
-Next, let's create a component to display a list of charities. Create a new file called CharityList.js in the src/components folder and add the following code:
+This component renders a header tag with the name of your app.
 
-```
+Next, let's create a component to display a list of charities.
+
+Create a new file called `CharityList.js` in the `src/components` folder and add the following code:
+
+```js
 import React from 'react';
 
 const charities = [
@@ -100,11 +113,14 @@ const CharityList = () => {
 
 export default CharityList;
 ```
-This component defines an array of charity objects, and then maps over them to render a list of charities. Each charity object has an id, name, description, and image.
 
-Now let's create a simple layout for our app. Create a new file called App.js in the src folder and add the following code:
+This component defines an array of charity objects and maps over them to render a list of charities. Each charity object has an id, name, description, and image.
 
-```
+Let's create a simple layout for your app.
+
+Create a new file called `App.js` in the `src` folder and add the following code:
+
+```js
 import React from 'react';
 import Header from './components/Header';
 import CharityList from './components/CharityList';
@@ -123,11 +139,13 @@ const App = () => {
 export default App;
 ```
 
-This component simply renders our Header component and our CharityList component.
+This component renders your Header component and your CharityList component.
 
-Before we turn our app into a PWA, let's add some styles to make it look a bit nicer. Create a new file called App.css in the src folder and add the following code:
+Before you turn the app into a PWA, let's add some styles to make it look nicer.
 
-```
+Create a new file called `App.css` in the `src` folder and add the following code:
+
+```css
 body {
 margin: 0;
 font-family: Arial, sans-serif;
@@ -163,11 +181,15 @@ margin-right: 20px;
 
 ```
 
-This CSS file styles the body, header, list, and list items of our app.
+This CSS file styles the app's body, header, list, and list items.
 
-Now that our app is looking good, let's turn it into a PWA. First, we need to create a manifest file. Create a new file called manifest.json in the public folder and add the following code:
+Now that the app looks good, let's turn it into a PWA.
 
-```
+First, you need to create a manifest file.
+
+Create a new file called `manifest.json` in the public folder and add the following code:
+
+```js
 {
 "name": "GiveItAway App",
 "short_name": "GiveItAway",
@@ -193,18 +215,21 @@ Now that our app is looking good, let's turn it into a PWA. First, we need to cr
 
 This manifest file defines the name, short name, description, icons, start URL, display mode, background color, and theme color for our PWA.
 
-Next, we need to tell our app to use this manifest file. Open the public/index.html file and add the following code to the head section:
+Next, you need to tell the app to use this manifest file.
 
-```
+Open `public/index.html` and add the following code to the head section:
+
+```js
 <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
 ```
-This will tell the browser to load our manifest file.
 
-Finally, we need to add some caching logic to our app so that it can work offline. 
+This will tell the browser to load the manifest file.
 
-create and Open sw.js file and add the following code :
+Finally, you shall add some caching logic to the app so that it can work offline. 
 
-```
+Create and open the `sw.js` file and add the following code:
+
+```js
 export default function swDevfunc() {
   let swUrl = `${process.env.PUBLIC_URL}/sw.js`;
   navigator.serviceWorker.register(swUrl).then((response)=>{
@@ -212,8 +237,9 @@ export default function swDevfunc() {
 }
 ```
 
-Import this sw in index.js and call after rendring the app
-```
+Import this `sw.js` in `index.js` and call it after rendering the app:
+
+```js
 import swDevfunc from './sw'
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -224,15 +250,21 @@ root.render(
 
 swDevfunc()
 ```
-This will generate a service worker for our app that will cache our assets and allow us to work offline.
 
-That's it! We've successfully created a GiveItAway app without a payment gateway and turned it into a PWA. You can view the complete code for this project on GitHub: https://github.com/username/GiveItAway-app
+This will generate a service worker for the app that caches the assets and allows it to work offline.
 
-To run the app, simply run the following command in your terminal:
+That's it! You've successfully created a GiveItAway app without a payment gateway and turned it into a PWA.
 
-```
+To run the app, run the following command:
+
+```js
 npm start
 ```
-This will start the development server and open the app in your browser.
 
-In conclusion, building a PWA app using React is a simple and straightforward process. By following the steps outlined in this blog post, you can create a fully functional app that works offline and can be installed on any device. If you have any questions or comments, feel free to reach out to us. Happy coding!
+It starts the development server and opens the app in your browser.
+
+## Conclusion
+
+Building a PWA app using React is a simple process. By following the steps outlined in this blog post, you can create a fully functional app that works offline that can be installed on any device.
+
+Happy coding!
