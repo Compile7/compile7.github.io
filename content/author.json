@@ -1,5 +1,12 @@
 [
   {
+    "id": "Naman Agarwal",
+    "bio": "He is a passionate software developer who loves to develop server-side applications in Node.js and Go lang. He is open to new technologies and always think out of the box to develop new & innovative ideas.",
+    "github": "Naman-Agarwal-SE",
+    "image": "assets/authors/NamanAgarwal.jpeg",
+    "linkedin": "namanagarwal1998"
+  },
+  {
     "id": "Bhupendra Singh Chauhan",
     "bio": "He is a passionate software developer who loves to code Python, React, and Go applications. And he believes in continuous learning and making improvements anywhere he can.",
     "github": "Bhupendra9414"
