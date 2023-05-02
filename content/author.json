@@ -1,5 +1,10 @@
 [
   {
+    "id": "Pawan Dixit",
+    "bio": "He is passionate about quality analysis and automation and utilizes tools such as Mocha, Nightwatch, Cucumber, and Node.js. Additionally, he is ISTQB certified and can serve as a Scrum Master when needed.",
+    "github": "PawanDixit23"
+  },
+  {
     "id": "Nathan Nguyen",
     "bio": "With a deep interest in creating user-facing applications, he spends a lot of his time with web and mobile technology stacks, off and on the job, looking to build applications that are ever more intuitive and helpful to end users. And he loves food, travel, photography, and video games.",
     "github": "nathannguyenn"
