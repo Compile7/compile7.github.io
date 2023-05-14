@@ -1,7 +1,7 @@
 ---
 title: "How Event Loop Works in Node.js"
 date: "2023-05-10"
-coverImage: eventloop.png
+coverImage: cover.png
 tags:
   - "Node.js"
   - "Async"
@@ -26,7 +26,7 @@ Asynchronous programming refers to the code that doesn't execute in order. These
 
 ## How Code Runs Inside Node.js 
 
-![node.js environment](node_environment.png)
+![node.js environment](async-execution.png)
 
 The first and fifth statements in the code are synchronous, while the file read operation is asynchronous.
 
@@ -38,7 +38,7 @@ After that, whenever the call stack gets empty, the event loop passes the callba
 
 ### How does Event Loop Handles Asynchronous Operations/Code?
 
-![Event loop phases](event_loop_phases.png)
+![Event loop phases](event-loop.png)
 
 There are five phases in an event loop, and every phase has its callback queue to handle asynchronous operations.
 
