@@ -1,7 +1,7 @@
 ---
 title: "How Event Loop Works in Node.js"
-date: "2023-05-10"
-coverImage: cover.png
+date: "2023-05-15"
+coverImage: event-loops-explained.jpg
 tags:
   - "Node.js"
   - "Async"
