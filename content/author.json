@@ -1,8 +1,16 @@
 [
   {
+    "id": "Naman Agarwal",
+    "bio": "He is a passionate software developer who loves to develop server-side applications in Node.js and Go lang. He is open to new technologies and always think out of the box to develop new & innovative ideas.",
+    "github": "Naman-Agarwal-SE",
+    "image": "assets/authors/NamanAgarwal.jpeg",
+    "linkedin": "namanagarwal1998"
+  },
+  {
     "id": "Pawan Dixit",
     "bio": "He is passionate about quality analysis and automation and utilizes tools such as Mocha, Nightwatch, Cucumber, and Node.js. Additionally, he is ISTQB certified and can serve as a Scrum Master when needed.",
     "github": "PawanDixit23"
+
   },
   {
     "id": "Nathan Nguyen",
