@@ -8,8 +8,8 @@ tags:
   - "libuv"
 description: "Learn everything about how event loops work asynchronously in Node.js"
 author: "Naman Agarwal"
-prevLabel: 
-previous: 
+prevLabel: 9 Cool GitHub Repositories for Developers 
+previous: 9-github-repos-for-developers
 nextLabel: Introduction to GitHub Workflow
 next: github-workflow
 ---

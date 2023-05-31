@@ -7,8 +7,8 @@ tags:
   - "Development"
 description: "Discover the top 10 YouTube channels for learning programming, covering languages, frameworks, and tools for beginners and aspiring developers."
 author: "Raghunath Reddy"
-prevLabel: 
-previous: 
+prevLabel: How to Build Progressive Web Apps
+previous: how-to-create-progressive-web-apps
 nextLabel: Why React-Router URLs Fail During Manual Entry or Page Refresh
 next: how-to-fix-react-router-url-issues-during-manual-entry-or-page-refresh
 ---

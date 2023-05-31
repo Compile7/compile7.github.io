@@ -7,8 +7,8 @@ tags:
   - "GitHub"
 description: "Learn how GitHub's Workflow feature can help you manage and automate your Git projects."
 author: "Pawan Dixit"
-prevLabel: 
-previous: 
+prevLabel: How Event Loop Works in Node.js
+previous: how-event-loop-works-in-nodejs
 nextLabel: Hello World, from Cut Genius
 next: cut-genius
 ---
