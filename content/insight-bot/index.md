@@ -6,7 +6,7 @@ tags:
   - "AI"
   - "Open Source"
 description: "This blog explores how we built AI InsightBot which returns customer insights based on natural language queries."
-author: "Abhimanyu Singh Rathore"
+author: "Azharuddin Mohammad"
 prevLabel: 
 previous: 
 nextLabel: 9 Cool GitHub Repositories for Developers
