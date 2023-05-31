@@ -7,8 +7,8 @@ tags:
   - "PWA"
 description: "Step-by-step, you'll learn how to create a React app and make it a PWA."
 author: "Bhupendra Singh Chauhan"
-prevLabel: 
-previous: 
+prevLabel: Hello World, from Cut Genius
+previous: cut-genius
 nextLabel: Top 10 YouTube Channels for Aspiring Developers
 next: best-youtube-channels-for-aspiring-developers
 ---

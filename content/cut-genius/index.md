@@ -6,8 +6,8 @@ tags:
   - "Open Source"
 description: "Meet Cut Genius: an open-source cutting stock optimization web app for DIY enthusiasts & manufacturers. Save time and materials & join our growing community!"
 author: "Nathan Nguyen"
-prevLabel: 
-previous: 
+prevLabel: Introduction to GitHub Workflow
+previous: github-workflow
 nextLabel: How to Build Progressive Web Apps
 next: how-to-create-progressive-web-apps
 ---

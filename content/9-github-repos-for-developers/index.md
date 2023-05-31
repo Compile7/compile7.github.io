@@ -8,8 +8,8 @@ tags:
 
 description: "A handpicked collection of GitHub repositories to help you learn and get involved with the wider open source community."
 author: "Raghunath Reddy"
-prevLabel: 
-previous: 
+prevLabel: Unleashing the Power of AI InsightBot
+previous: insight-bot
 nextLabel: How Event Loop Works in Node.js
 next: how-event-loop-works-in-nodejs
 ---

@@ -7,8 +7,8 @@ tags:
   - "Development"
 description: "A list of carefully handpicked developer publications providing insightful thoughts, opinions, and knowledge"
 author: "Raghunath Reddy"
-prevLabel: Compile7 Blog
-previous: 
+prevLabel: How to Build a Responsive Dashboard Layout with CSS Grid
+previous: build-a-responsive-dashboard-layout-with-css-grid
 nextLabel: How to Develop Responsive Websites
 next: develop-responsive-websites
 ---

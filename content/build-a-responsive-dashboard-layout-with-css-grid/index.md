@@ -7,8 +7,8 @@ tags:
   - "HTML"
 description: "In this tutorial, you'll learn CSS Grid, and how you can use it to develop responsive dashboard layouts."
 author: "Hitesh Kumawat"
-prevLabel: 
-previous: 
+prevLabel: Why React-Router URLs Fail During Manual Entry or Page Refresh
+previous: how-to-fix-react-router-url-issues-during-manual-entry-or-page-refresh
 nextLabel: Top Developer Blogs You Should Read
 next: top-developer-blogs-you-should-read
 ---

@@ -7,8 +7,8 @@ tags:
   - "Router"
 description: "In this tutorial, you'll learn how to fix React-Router URL refresh issue using HashRouter."
 author: "Abhimanyu Singh Rathore"
-prevLabel: 
-previous: 
+prevLabel: Top 10 YouTube Channels for Aspiring Developers
+previous: best-youtube-channels-for-aspiring-developers
 nextLabel: How to Build a Responsive Dashboard Layout with CSS Grid
 next: build-a-responsive-dashboard-layout-with-css-grid
 ---
