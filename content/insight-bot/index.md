@@ -1,11 +1,11 @@
 ---
-title: "Unleashing the Power of InsightBot: Our Journey"
+title: "Unleashing the Power of AI InsightBot: Our Journey"
 date: "2023-05-30"
 coverImage: insight-bot-analytics.jpg
 tags:
   - "AI"
   - "Open Source"
-description: "This blog explores how we built InsightBot which returns customer insights based on natural language queries."
+description: "This blog explores how we built AI InsightBot which returns customer insights based on natural language queries."
 author: "Abhimanyu Singh Rathore"
 prevLabel: 
 previous: 
