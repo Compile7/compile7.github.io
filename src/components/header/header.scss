@@ -13,16 +13,38 @@
     position: relative;
     display: flex;
     min-height: 96px;
-    @media (max-width: 767px) {
+    @media (max-width: 1023px) {
       padding: 4vmin;
     }
   }
   .navigation {
-    a {
-      font-size: 16px;
-      font-weight: 600;
-      &:hover {
-        color: $blue-bright;
+    ul {
+      display: flex;
+      margin: 0;
+      padding: 0;
+      li {
+        list-style: none;
+        margin: 0;
+        &:not(:last-child) {
+          a {
+            border-right: 1px solid $black;
+          }
+        }
+        a {
+          font-size: 16px;
+          font-weight: 600;
+          padding: 0 16px;
+          &:hover {
+            color: $blue-bright;
+          }
+        }
+        @media (max-width: 1023px) {
+          &:first-child {
+            a {
+              padding-left: 0;
+            }
+          }
+        }
       }
     }
   }
@@ -31,17 +53,22 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
-    @media (max-width: 767px) {
+    @media (max-width: 1023px) {
       flex-direction: column;
-      gap: 12px;
+      gap: 16px;
     }
   }
   &-brand {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    @media (min-width: 768px) {
+    @media (min-width: 1023px) {
       width: calc(100% - 377px);
+    }
+    @media (max-width: 1023px) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 4px;
     }
     .logo {
       display: flex;

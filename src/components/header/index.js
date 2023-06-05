@@ -29,7 +29,18 @@ const Header = () => {
                   </Link>
                 </div>
                 <div className="navigation">
-                  <Link to={`${BLOG_PATH}/memes/`}>Memes</Link>
+                  <ul>
+                    <li>
+                      {" "}
+                      <Link to="https://compile7.org/decompile/join-our-open-source-community-and-empower-developers-worldwide/">
+                        Contribute to Open Source
+                      </Link>
+                    </li>
+                    <li>
+                      {" "}
+                      <Link to={`${BLOG_PATH}/memes/`}>Memes</Link>
+                    </li>
+                  </ul>
                 </div>
               </div>
               <Search searchIndex={data.siteSearchIndex.index} />

@@ -3,7 +3,7 @@
   position: relative;
   display: flex;
   align-items: center;
-  @media (min-width: 768px) {
+  @media (min-width: 1023px) {
     margin-left: 24px;
     width: 377px;
   }
@@ -23,7 +23,7 @@
   transition: all 0.3ms ease-in-out;
 
   &.deactive {
-    @media (max-width: 768px) {
+    @media (max-width: 1023px) {
       display: none;
       transition: all 0.3ms ease-in-out;
     }
@@ -46,7 +46,7 @@
   border: none;
   background-color: $white;
   color: $gray-darkest;
-  @media (max-width: 767px) {
+  @media (max-width: 1023px) {
     width: 100%;
   }
   &::placeholder {
@@ -81,7 +81,7 @@
   color: $white;
   border-top: 1px solid #e3e5e7;
   margin: 0;
-  @media (max-width: 767px) {
+  @media (max-width: 1023px) {
     top: 100%;
   }
   li {
