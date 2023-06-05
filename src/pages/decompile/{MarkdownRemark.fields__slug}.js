@@ -240,14 +240,15 @@ const BlogPostTemplate = ({ data, location }) => {
           </Link>
         </div>
         <div className={styles.block}>
-          <h4>Help us make these docs great!</h4>
+          <h4>Contribute to Open Source</h4>
           <p>
-            All Compile7 docs are open source. See something that's wrong or
-            unclear? Submit a pull request
+            Share your knowledge and know-how to help developers grow and make
+            open source awesome!
           </p>
           <Link
             target="_blank"
-            to={`https://github.com/Compile7/compile7.github.io/blob/main/content${post.fields.slug}/index.md`}
+            to="https://compile7.org/decompile/join-our-open-source-community-and-empower-developers-worldwide/"
+            // to={`https://github.com/Compile7/compile7.github.io/blob/main/content${post.fields.slug}/index.md`}
           >
             Make a Contribution
           </Link>
