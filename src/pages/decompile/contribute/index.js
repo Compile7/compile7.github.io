@@ -1,3 +1,5 @@
+import React from "react"
+
 import Layout from "../../../components/layout"
 import SEO from "../../../components/seo"
 import * as styles from "./contribute.module.scss"
@@ -6,7 +8,6 @@ import Hero from "../../../assets/img/hero.png"
 import ContributeKnowledge from "../../../assets/img/contribute-knowledge.png"
 import WhyC7 from "../../../assets/img/why-compile7.png"
 import HowToStart from "../../../assets/img/how-to-start.png"
-import React from "react"
 
 const Contribute = () => {
   return (
