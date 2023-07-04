@@ -1,0 +1,50 @@
+.contribute-page {
+    & > div {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        justify-content: space-between;
+    }
+    &.even {
+        & > div {
+            flex-direction: row;
+        }
+    }
+    &.odd {
+        & > div {
+            flex-direction: row-reverse;
+        }
+    }
+    .card-image {
+        padding: 32px;
+        border-radius: 8px;
+        border: 1px solid #e3e5e7;
+        img {
+            max-width: 100%;
+        }
+    }
+    .btn-with-icon {
+        display: flex;
+        padding: 15px 24px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        border-radius: 2px;
+        background: #008ecf;
+        color: #fff;
+    }
+    .cta {
+        border-radius: 8px;
+        border: 1px solid #e3e5e7;
+        background: #f8f9fb;
+        padding: 56px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 32px;
+        h2 {
+            margin: 0 0 12px 0;
+        }
+    }
+}
