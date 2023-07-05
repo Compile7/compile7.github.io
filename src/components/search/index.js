@@ -106,7 +106,7 @@ export default class Search extends Component {
           onMouseLeave={() => (this._shouldClose = true)}
         >
           <input
-            placeholder="Serach"
+            placeholder="Search"
             id="search"
             type="text"
             className={`${searchStyle.searchFormInput}  ${

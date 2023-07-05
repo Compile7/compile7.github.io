@@ -39,10 +39,7 @@ const Layout = ({ children, showPinned }) => {
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    target="_blank"
-                    to="https://compile7.org/decompile/join-our-open-source-community-and-empower-developers-worldwide/"
-                  >
+                  <Link to="https://compile7.org/decompile/contribute/">
                     Contribute
                   </Link>
                 </li>

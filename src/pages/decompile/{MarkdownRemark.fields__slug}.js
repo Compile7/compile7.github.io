@@ -245,11 +245,7 @@ const BlogPostTemplate = ({ data, location }) => {
             Share your knowledge and know-how to help developers grow and make
             open source awesome!
           </p>
-          <Link
-            target="_blank"
-            to="https://compile7.org/decompile/join-our-open-source-community-and-empower-developers-worldwide/"
-            // to={`https://github.com/Compile7/compile7.github.io/blob/main/content${post.fields.slug}/index.md`}
-          >
+          <Link to="https://compile7.org/decompile/contribute/">
             Make a Contribution
           </Link>
         </div>

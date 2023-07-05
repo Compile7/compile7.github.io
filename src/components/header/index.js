@@ -32,7 +32,7 @@ const Header = () => {
                   <ul>
                     <li>
                       {" "}
-                      <Link to="https://compile7.org/decompile/join-our-open-source-community-and-empower-developers-worldwide/">
+                      <Link to="https://compile7.org/decompile/contribute/">
                         Contribute to Open Source
                       </Link>
                     </li>

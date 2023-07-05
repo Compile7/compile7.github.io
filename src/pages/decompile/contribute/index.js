@@ -82,20 +82,6 @@ const Contribute = ({ location }) => {
                 serving developers worldwide with interesting tutorials and
                 expert opinions, eventually helping them grow and improve.
               </p>
-              <div className={styles.ghostBtn}>
-                <a
-                  href="https://github.com/Compile7/compile7.github.io/blob/main/GUIDELINES.md"
-                  target="_blank"
-                >
-                  Guidelines
-                </a>
-                <a
-                  href="https://github.com/Compile7/compile7.github.io/blob/main/CONTRIBUTING.md"
-                  target="_blank"
-                >
-                  Contribute
-                </a>
-              </div>
             </div>
           </div>
         </section>
