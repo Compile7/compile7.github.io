@@ -13,9 +13,6 @@
         gap: 24px;
         justify-content: space-between;
         display: flex;
-        @media (max-width: 1023px) {
-            flex-direction: column;
-        }
     }
     &.even {
         & > div {
@@ -25,9 +22,6 @@
     &.odd {
         & > div {
             flex-direction: row-reverse;
-            @media (max-width: 1023px) {
-                flex-direction: column;
-            }
         }
     }
     .card-image {
@@ -72,6 +66,13 @@
     }
     .pinnedwrap {
         border-bottom: 1px solid #e3e5e7;
+        .pinned-image {
+            img {
+                @media (max-width: 1023px) {
+                    max-height: 198px;
+                }
+            }
+        }
     }
     .pinnedwrap,
     .contribute-section {
@@ -79,6 +80,9 @@
             display: flex;
             gap: 24px;
             align-items: center;
+            @media (max-width: 1023px) {
+                flex-direction: column;
+            }
             & > div {
                 width: calc(50% - 12px);
                 @media (max-width: 1023px) {
@@ -99,6 +103,9 @@
         &.odd {
             & > div {
                 flex-direction: row-reverse;
+                @media (max-width: 1023px) {
+                    flex-direction: column;
+                }
             }
         }
         p {
@@ -107,6 +114,9 @@
         .card-image {
             img {
                 max-height: 298px;
+                @media (max-width: 1023px) {
+                    max-height: 198px;
+                }
             }
         }
         ol {
@@ -120,17 +130,6 @@
                 &:last-child {
                     margin-bottom: 0;
                 }
-            }
-        }
-    }
-    .ghost-btn {
-        margin-top: 32px;
-        display: flex;
-        gap: 32px;
-        a {
-            text-decoration: underline;
-            &:hover {
-                color: #007fba;
             }
         }
     }
