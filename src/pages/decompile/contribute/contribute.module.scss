@@ -1,9 +1,21 @@
 .contribute-page {
+    h1,
+    h2 {
+        text-wrap: balance;
+    }
+    section {
+        & > div {
+            padding: 0;
+        }
+    }
     & > div {
-        display: flex;
         align-items: center;
         gap: 24px;
         justify-content: space-between;
+        display: flex;
+        @media (max-width: 1023px) {
+            flex-direction: column;
+        }
     }
     &.even {
         & > div {
@@ -13,6 +25,9 @@
     &.odd {
         & > div {
             flex-direction: row-reverse;
+            @media (max-width: 1023px) {
+                flex-direction: column;
+            }
         }
     }
     .card-image {
@@ -25,13 +40,17 @@
     }
     .btn-with-icon {
         display: flex;
-        padding: 15px 24px;
+        padding: 11px 24px;
         justify-content: center;
         align-items: center;
         gap: 10px;
         border-radius: 2px;
         background: #008ecf;
         color: #fff;
+        width: fit-content;
+        &:hover {
+            background-color: #007fba;
+        }
     }
     .cta {
         border-radius: 8px;
@@ -43,8 +62,76 @@
         justify-content: center;
         align-items: center;
         gap: 32px;
+        text-align: center;
         h2 {
             margin: 0 0 12px 0;
+        }
+        p {
+            margin-bottom: 0;
+        }
+    }
+    .pinnedwrap {
+        border-bottom: 1px solid #e3e5e7;
+    }
+    .pinnedwrap,
+    .contribute-section {
+        & > div {
+            display: flex;
+            gap: 24px;
+            align-items: center;
+            & > div {
+                width: calc(50% - 12px);
+                @media (max-width: 1023px) {
+                    width: 100%;
+                }
+            }
+            .pinned-image,
+            .card-image {
+                padding: 32px;
+                border-radius: 8px;
+                border: 1px solid #e3e5e7;
+                display: grid;
+                place-content: center;
+            }
+        }
+    }
+    .contribute-section {
+        &.odd {
+            & > div {
+                flex-direction: row-reverse;
+            }
+        }
+        p {
+            margin-bottom: 0;
+        }
+        .card-image {
+            img {
+                max-height: 298px;
+            }
+        }
+        ol {
+            padding: 0 0 0 18px;
+            margin: 0;
+            li {
+                line-height: 32px;
+                &:not(:last-child) {
+                    margin-bottom: 16px;
+                }
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+    .ghost-btn {
+        margin-top: 32px;
+        display: flex;
+        gap: 32px;
+        a {
+            text-decoration: underline;
+            &:hover {
+                color: #007fba;
+            }
         }
     }
 }
