@@ -10,7 +10,7 @@ import ContributeKnowledge from "../../../assets/img/contribute-knowledge.png"
 import WhyC7 from "../../../assets/img/why-compile7.png"
 import HowToStart from "../../../assets/img/how-to-start.png"
 
-const Contribute = () => {
+const Contribute = ({ location }) => {
   return (
     <Layout>
       <SEO title="Contribute" pathname={location.pathname} />
