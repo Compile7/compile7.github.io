@@ -32,13 +32,13 @@ const Header = () => {
                   <ul>
                     <li>
                       {" "}
-                      <Link to="https://compile7.org/decompile/contribute/">
-                        Contribute to Open Source
-                      </Link>
+                      <Link to={`${BLOG_PATH}/memes/`}>Memes</Link>
                     </li>
                     <li>
                       {" "}
-                      <Link to={`${BLOG_PATH}/memes/`}>Memes</Link>
+                      <Link to="https://gracker.ai/">
+                        Organic Growth for Cybersecurity Companies
+                      </Link>
                     </li>
                   </ul>
                 </div>
