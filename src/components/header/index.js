@@ -37,7 +37,13 @@ const Header = () => {
                     <li>
                       {" "}
                       <Link to="https://gracker.ai/">
-                        Organic Growth for Cybersecurity Companies
+                        GrackerAI
+                      </Link>
+                    </li>
+                    <li>
+                      {" "}
+                      <Link to="https://enterpriseready.compile7.org/">
+                        Enterpriseready Tools
                       </Link>
                     </li>
                   </ul>
