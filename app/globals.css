@@ -1,0 +1,232 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 221.2 83.2% 53.3%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 221.2 83.2% 53.3%;
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Explosion particle styles */
+.explosion-particle {
+  position: absolute;
+  border-radius: 50%;
+  background-color: hsl(var(--primary));
+  pointer-events: none;
+}
+
+/* Prevent scrollbar jumps during animation */
+body.breaking-animation {
+  overflow: hidden;
+}
+
+/* Add some physics-based animation properties */
+.breaking {
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+}
+
+/* Blog post content styles */
+.prose {
+  font-size: 1.125rem;
+  line-height: 1.75;
+  color: #374151;
+}
+
+.prose h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 1.5em;
+  line-height: 1.2;
+  color: #111827;
+}
+
+.prose h2 {
+  font-size: 1.875rem;
+  font-weight: 600;
+  margin-top: 2em;
+  margin-bottom: 1em;
+  line-height: 1.3333;
+  color: #111827;
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 0.5em;
+}
+
+.prose h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 1.6em;
+  margin-bottom: 0.8em;
+  line-height: 1.3333;
+  color: #111827;
+}
+
+.prose h4 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-top: 1.5em;
+  margin-bottom: 0.8em;
+  line-height: 1.4;
+  color: #111827;
+}
+
+.prose p {
+  margin-top: 1.25em;
+  margin-bottom: 1.25em;
+}
+
+.prose a {
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.prose strong {
+  font-weight: 600;
+  color: #111827;
+}
+
+.prose ul {
+  margin-top: 1.25em;
+  margin-bottom: 1.25em;
+  list-style-type: disc;
+  padding-left: 1.625em;
+}
+
+.prose ol {
+  margin-top: 1.25em;
+  margin-bottom: 1.25em;
+  list-style-type: decimal;
+  padding-left: 1.625em;
+}
+
+.prose li {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  padding-left: 0.375em;
+}
+
+.prose blockquote {
+  font-style: italic;
+  border-left: 4px solid #e5e7eb;
+  padding-left: 1em;
+  color: #4b5563;
+  margin: 1.6em 0;
+  quotes: "\201C""\201D""\2018""\2019";
+}
+
+.prose blockquote p:first-of-type::before {
+  content: open-quote;
+}
+
+.prose blockquote p:last-of-type::after {
+  content: close-quote;
+}
+
+.prose code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.875em;
+  font-weight: 500;
+  background-color: #f3f4f6;
+  padding: 0.2em 0.4em;
+  border-radius: 0.25em;
+  color: #111827;
+}
+
+.prose pre {
+  background-color: #1f2937;
+  border-radius: 0.5rem;
+  color: #e5e7eb;
+  font-size: 0.875em;
+  line-height: 1.7142857;
+  margin: 1.7142857em 0;
+  overflow-x: auto;
+  padding: 1.1428571em 1.5714286em;
+}
+
+.prose pre code {
+  background-color: transparent;
+  border-width: 0;
+  border-radius: 0;
+  padding: 0;
+  color: inherit;
+  font-size: inherit;
+  font-weight: 400;
+  line-height: inherit;
+}
+
+.prose img {
+  margin: 2em auto;
+  border-radius: 0.5rem;
+}
+
+.prose figure {
+  margin: 2em 0;
+}
+
+.prose figure figcaption {
+  font-size: 0.875em;
+  line-height: 1.4285714;
+  margin-top: 0.8571429em;
+  color: #6b7280;
+  text-align: center;
+}
+
+.prose hr {
+  border-color: #e5e7eb;
+  margin: 3em 0;
+}
+
+.prose table {
+  width: 100%;
+  table-layout: auto;
+  text-align: left;
+  margin: 2em 0;
+  border-collapse: collapse;
+}
+
+.prose table thead {
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.prose table th {
+  font-weight: 600;
+  padding: 0.75em;
+  color: #111827;
+}
+
+.prose table td {
+  padding: 0.75em;
+  border-bottom: 1px solid #e5e7eb;
+}
+

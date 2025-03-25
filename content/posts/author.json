@@ -1,0 +1,115 @@
+[
+  {
+    "id": "Azharuddin Mohammad",
+    "bio": "He is passionate about business management and naturally inclined to interact with people and devise effective solutions. He is skilled with various technologies and tools, including Excel, MySQL, Google Analytics, Power BI, Jira, Figma, and Notion. In his free time, he volunteers at Robin Hood Army and explores new places while expanding his knowledge of various tools and techniques.",
+    "github": "azharuddin-hyd",
+    "linkedin": "azharuddin-m"
+  },
+  {
+    "id": "Naman Agarwal",
+    "bio": "He is a passionate software developer who loves to develop server-side applications in Node.js and Go lang. He is open to new technologies and always think out of the box to develop new & innovative ideas.",
+    "github": "Naman-Agarwal-SE",
+    "image": "content/posts/assets/authors/NamanAgarwal.jpeg",
+    "linkedin": "namanagarwal1998"
+  },
+  {
+    "id": "Pawan Dixit",
+    "bio": "He is passionate about quality analysis and automation and utilizes tools such as Mocha, Nightwatch, Cucumber, and Node.js. Additionally, he is ISTQB certified and can serve as a Scrum Master when needed.",
+    "github": "PawanDixit23"
+
+  },
+  {
+    "id": "Nathan Nguyen",
+    "bio": "With a deep interest in creating user-facing applications, he spends a lot of his time with web and mobile technology stacks, off and on the job, looking to build applications that are ever more intuitive and helpful to end users. And he loves food, travel, photography, and video games.",
+    "github": "nathannguyenn"
+  },
+  {
+    "id": "Bhupendra Singh Chauhan",
+    "bio": "He is a passionate software developer who loves to code Python, React, and Go applications. And he believes in continuous learning and making improvements anywhere he can.",
+    "github": "Bhupendra9414"
+  },
+  {
+    "id": "Puneet Singh",
+    "bio": "He is curious about this world and how it works. Whenever he learns something new, he loves to blog about it and share what he knows.",
+    "github": "puneetsingh24"
+  },
+  {
+    "id": "Aman Agrawal",
+    "bio": "Aman is an experienced software developer who is keen to learn and work on new technologies. He also likes to blog about frontend development and new technologies and frameworks he has been learning.",
+    "github": "aman-agrwl"
+  },
+  {
+    "id": "Hridayesh Sharma",
+    "bio": "Hridayesh Sharma is a Software Engineer who is interested in how the web works and developer tools that make working with the web easier.",
+    "github": "vyasriday"
+  },
+  {
+    "id": "Hitesh Kumawat",
+    "bio": "Hitesh deeply cares about creating world-class, functional, and beautiful products and web that help people make a difference. He can be as involved in a project as needed — from the seed of the idea to design, creative direction, system design, and even the front-end and WordPress build.",
+    "github": "Hiteshkumawat"
+  },
+  {
+    "id": "Ankit Singh",
+    "bio": "He is a curious developer who likes to think deeply about the world around him. He loves to blog about things he is learning and explores new technologies from time to time.",
+    "github": "Imankitt"
+  },
+  {
+    "id": "Mayank Agarwal",
+    "bio": "Mayank is a Software developer at LoginRadius. He graduated with a Bachelor of Technology degree in Computer Science. He loves playing cricket, watching TV series, and listening to music.",
+    "github": "mayankagrwal"
+  },
+  {
+    "id": "Raghunath Reddy",
+    "bio": "Raghunath is a technical content writer with a graduate degree in computer science. He is also a Conversion Rate Optimization (CRO) enthusiast and enjoys studying the English language.",
+    "image": "content/posts/assets/authors/RaghunathReddy.jpg",
+    "github": "raghunath-r-a"
+  },
+  {
+    "id": "Gaurav Bewal",
+    "bio": "Gaurav Bewal is an Automation Engineer always ready to grab the opportunity to learn new things. He has working knowledge in Selenium-Java, Cucumber-Java, Nodejs-Nightwatch, Mocha-Chai, Appium, and many more. Apart from this, he loves music and playing all type of sports.",
+    "image": "content/posts/assets/authors/GauravBewal.png"
+  },
+  {
+    "id": "Vijay Singh Shekhawat",
+    "bio": "He is the Lead Product Architect @LoginRadius. He loves working with technology and building something new. He is also a breakthrough thinker, DevOps guy, and cybersecurity enthusiast.",
+    "image": "content/posts/assets/authors/VijaySingh.png"
+  },
+  {
+    "id": "Ekekenta Odionyenfe Clinton",
+    "bio": "He is a full-stack web application developer, software engineer, and technical writer, currently living in Nigeria, Portharcourt. He has an HND in Computer Science from Federal Polytechnic Nekede. His primary focus and inspiration for his studies is web development. In his free time, he studies human psychology and writes technical tutorials.",
+    "github": "icode247"
+  },
+  {
+    "id": "Deepak Gupta",
+    "bio": "Deepak is the CTO and co-founder of LoginRadius, a rapidly-expanding Customer Identity Management provider. He's dedicated to innovating the LoginRadius platform. He loves foosball and winning poker games!",
+    "image": "content/posts/assets/authors/DeepakGupta.png"
+  },
+  {
+    "id": "Mohammed Modi",
+    "bio": "Working in LoginRadius as a Developer Advocate, Passionate about coding. I grab every chance I get to travel, learn and create.",
+    "github": "mohammed786",
+    "stackoverflow": "5688477",
+    "linkedin": "mohammed-modi-2016307a",
+    "twitter": "momscoolguy"
+  },
+  {
+    "id": "Archna Yadav",
+    "bio": "Researcher, analyst and technical writer with a zeal to learn everyday. Empathic, enjoys mad dances and used to be a poet.",
+    "image": "content/posts/assets/authors/ArchnaYadav.jpg"
+  },
+  {
+    "id": "Versha Gupta",
+    "bio": "She is a software enthusiast, avid contributor, and regular blog writer. She loves to cook, savours street food, and enjoys music.",
+    "image": "content/posts/assets/authors/versha.png"
+  },
+  {
+    "id": "Abhimanyu Singh Rathore",
+    "bio": "Technical/Logical person who believe in god not in religions, live in materialistic world but believe in minimilism, Love to cook but not to waste, want to sit alone but need everyone around, he is right but wrong too.",
+    "image": "content/posts/assets/authors/AbhimanyuSinghRathore.jpg"
+  },
+  {
+    "id": "Shammir Baig",
+    "bio": "He is a software engineer who enjoys learning new things about programming and building web apps. He also loves playing cricket and enjoys listening to music.",
+    "github": "shammirbaig"
+  }
+]
