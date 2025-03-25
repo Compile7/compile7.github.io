@@ -1,7 +1,12 @@
 import Link from "next/link"
 import { ArrowLeft, Code, Users, Lightbulb, Heart, Github } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { Header } from "@/components/header"
+import { constructMetadata } from '@/components/meta'
+
+export const metadata = constructMetadata({
+  title: 'About Us | Compile7',
+  description: 'Learn about Compile7, a non-profit organization dedicated to creating open-source tools that simplify complex tasks for developers.',
+})
 
 export default function AboutPage() {
   // Team members data

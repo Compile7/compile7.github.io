@@ -1,11 +1,24 @@
 import { getPostBySlug } from "@/lib/mdx"
 import { notFound } from "next/navigation"
 import { MDXRemote } from "next-mdx-remote/rsc"
-import Image from "next/image"
 import Link from "next/link"
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { dracula } from 'react-syntax-highlighter/dist/esm/styles/prism'
 import { createAuthorSlug } from '@/lib/utils'
+import { constructMetadata } from '@/components/meta'
+
+export async function generateMetadata({ params }: Props) {
+  const post = await getPostBySlug(params.slug)
+  
+  if (!post) {
+    return constructMetadata()
+  }
+
+  return constructMetadata({
+    title: `${post.title} | Compile7`,
+    description: post.description || post.excerpt || undefined,
+  })
+}
 
 const components = {
   pre: ({ children }: { children: any }) => <div className="not-prose">{children}</div>,
