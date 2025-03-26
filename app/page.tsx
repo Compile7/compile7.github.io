@@ -6,6 +6,9 @@ import { DinoGame } from "@/components/dino-game"
 import { ProjectsSection } from "@/components/projects-section"
 import { CheatCode } from "@/components/cheat-code"
 import { Header } from "@/components/header"
+import { constructMetadata } from '@/components/meta'
+
+export const metadata = constructMetadata()
 
 export default function Home() {
   // Project data

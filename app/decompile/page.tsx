@@ -2,6 +2,12 @@ import { Header } from "@/components/header";
 import { getPaginatedPosts } from "@/lib/mdx";
 import Link from "next/link";
 import Image from "next/image";
+import { constructMetadata } from '@/components/meta'
+
+export const metadata = constructMetadata({
+  title: 'Blog | Compile7',
+  description: 'Read our latest articles about development, open source, and developer tools.',
+})
 
 interface Props {
   searchParams: { [key: string]: string | string[] | undefined }
