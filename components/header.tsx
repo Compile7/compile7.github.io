@@ -11,8 +11,8 @@ export function Header() {
         <span className="text-2xl font-semibold text-gray-800">Compile7</span>
       </Link>
       <nav className="flex gap-6">
-        <Link href="/" className="text-gray-800 hover:text-primary">
-          Home
+        <Link href="/saml" className="text-gray-800 hover:text-primary">
+          SAML
         </Link>
         <Link href="/about" className="text-gray-800 hover:text-primary">
           About

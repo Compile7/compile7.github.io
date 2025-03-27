@@ -1,39 +1,46 @@
-import type React from "react"
-import "@/app/globals.css"
-import { Inter } from "next/font/google"
-import { ThemeProvider } from "@/components/theme-provider"
-import Script from 'next/script'
-import './globals.css'
-import { Header } from "@/components/header"
-import { CheatCode } from "@/components/cheat-code"
+import type React from "react";
+import "@/app/globals.css";
+import { Inter } from "next/font/google";
+import { ThemeProvider } from "@/components/theme-provider";
+import Script from "next/script";
+import "./globals.css";
+import { Header } from "@/components/header";
+import { CheatCode } from "@/components/cheat-code";
+import { headers } from "next/headers";
 
-const inter = Inter({ subsets: ["latin"] })
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Compile7 - Developer Community",
   description: "Non-profit organization developing tools for developers",
   openGraph: {
-    title: 'Compile7 - Developer Community',
-    description: 'Non-profit organization developing tools for developers',
-    images: [{
-      url: '/og.svg',
-      width: 1200,
-      height: 630,
-    }],
+    title: "Compile7 - Developer Community",
+    description: "Non-profit organization developing tools for developers",
+    images: [
+      {
+        url: "/og.svg",
+        width: 1200,
+        height: 630,
+      },
+    ],
   },
   twitter: {
-    card: 'summary_large_image',
-    title: 'Compile7 - Developer Community',
-    description: 'Non-profit organization developing tools for developers',
-    images: ['/og.svg'],
-  }
-}
+    card: "summary_large_image",
+    title: "Compile7 - Developer Community",
+    description: "Non-profit organization developing tools for developers",
+    images: ["/og.svg"],
+  },
+};
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
+  const headersList = headers();
+  const pathname = headersList.get("x-current-path") || "";
+  const isSamlPath = pathname.startsWith("/saml");
+
   return (
     <html lang="en">
       <head>
@@ -56,29 +63,27 @@ export default function RootLayout({
         />
       </head>
       <body className={inter.className}>
-        <ThemeProvider attribute="class" defaultTheme="light">
-          {/* Header */} 
-          <Header />
-
-          {/* Cheat Code Handler */}
-          <CheatCode />
-
-          {children}
-
-          {/* Footer */}
-          <footer className="py-6 bg-white border-t">
-            <div className="container mx-auto px-4 text-center text-gray-600 text-sm">
-              <p>© {new Date().getFullYear()} Compile7. A non-profit organization for developers.</p>
-              <p className="mt-2 text-xs text-gray-400">Psst! Try pressing Command + E for a surprise</p>
-            </div>
-          </footer>
-        </ThemeProvider>
+        {isSamlPath ? (
+          children
+        ) : (
+          <ThemeProvider attribute="class" defaultTheme="light">
+            <Header />
+            <CheatCode />
+            {children}
+            <footer className="py-6 bg-white border-t">
+              <div className="container mx-auto px-4 text-center text-gray-600 text-sm">
+                <p>
+                  © {new Date().getFullYear()} Compile7. A non-profit
+                  organization for developers.
+                </p>
+                <p className="mt-2 text-xs text-gray-400">
+                  Psst! Try pressing Command + E for a surprise
+                </p>
+              </div>
+            </footer>
+          </ThemeProvider>
+        )}
       </body>
     </html>
-  )
+  );
 }
-
-
-
-
-
