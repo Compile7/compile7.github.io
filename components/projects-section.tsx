@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import { ShieldCheck, Key, CheckSquare, Boxes, Building2, KeyRound, FileCheck, Shield, Terminal } from "lucide-react"
+import { Boxes, ShieldCheck, Key, CheckSquare, Building2, KeyRound, FileCheck, Shield, Terminal } from "lucide-react"
 import { motion } from "framer-motion"
 import type { JSX } from "react"
 
@@ -10,31 +10,30 @@ interface Project {
   title: string
   description: string
   link: string
-  icon?: string
+  icon: string
 }
 
 interface ProjectsSectionProps {
   projects: Project[]
 }
 
-// Map project titles to icons
-const getIconForProject = (title: string) => {
-  const iconMap: Record<string, JSX.Element> = {
-    "SAML Tester": <ShieldCheck className="h-8 w-8" />,
-    "JWT Validator": <Key className="h-8 w-8" />,
-    "JWT Checklist": <CheckSquare className="h-8 w-8" />,
-    "Kode Jungle": <Boxes className="h-8 w-8" />,
-    "Enterprise Ready": <Building2 className="h-8 w-8" />,
-    "Enterprise SSO Examples": <KeyRound className="h-8 w-8" />,
-    "Consent Management": <FileCheck className="h-8 w-8" />,
-    "SAML Toolset": <Shield className="h-8 w-8" />,
-    "OIDC Playground": <Terminal className="h-8 w-8" />,
+export function ProjectsSection({ projects }: ProjectsSectionProps) {
+  const getIconForProject = (iconName: string) => {
+    const iconMap: Record<string, JSX.Element> = {
+      ShieldCheck: <ShieldCheck className="h-8 w-8" />,
+      Key: <Key className="h-8 w-8" />,
+      CheckSquare: <CheckSquare className="h-8 w-8" />,
+      Boxes: <Boxes className="h-8 w-8" />,
+      Building2: <Building2 className="h-8 w-8" />,
+      KeyRound: <KeyRound className="h-8 w-8" />,
+      FileCheck: <FileCheck className="h-8 w-8" />,
+      Shield: <Shield className="h-8 w-8" />,
+      Terminal: <Terminal className="h-8 w-8" />,
+    }
+
+    return iconMap[iconName] || <Boxes className="h-8 w-8" />
   }
 
-  return iconMap[title] || <Boxes className="h-8 w-8" />
-}
-
-export function ProjectsSection({ projects }: ProjectsSectionProps) {
   // Animation variants for staggered animations
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -95,7 +94,9 @@ export function ProjectsSection({ projects }: ProjectsSectionProps) {
 
               <div className="p-8">
                 <div className="flex items-start justify-between mb-6">
-                  <div className="p-3 rounded-lg bg-blue-50 text-blue-500">{getIconForProject(project.title)}</div>
+                  <div className="p-3 rounded-lg bg-blue-50 text-blue-500">
+                    {getIconForProject(project.icon)}
+                  </div>
 
                   {/* Featured badge for first 3 projects */}
                   {index < 3 && (
