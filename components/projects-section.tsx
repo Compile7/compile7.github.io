@@ -81,9 +81,9 @@ export function ProjectsSection({ projects, categoryOrder }: ProjectsSectionProp
     <section className="py-12 relative">
       <div className="container mx-auto px-4">
         <div className="text-center mb-8">
-          <h2 className="text-3xl font-bold mb-2 text-gray-800">
-            Our Developer Tools
-          </h2>
+        <h2 className="text-2xl font-semibold text-zinc-800 mb-10 text-center">
+              <span className="inline-block px-3 py-1 rounded-md" style={{ backgroundColor: "rgb(253, 224, 71)" }}>Our Projects</span>
+            </h2>
           <p className="text-gray-600 mb-6">
             Powerful, open tools built by developers, for developers
           </p>
@@ -133,6 +133,8 @@ export function ProjectsSection({ projects, categoryOrder }: ProjectsSectionProp
 
               <Link
                 href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-blue-500 hover:text-blue-600 flex items-center text-sm font-medium"
               >
                 View

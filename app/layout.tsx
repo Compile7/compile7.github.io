@@ -8,7 +8,11 @@ import { Header } from "@/components/header";
 import { CheatCode } from "@/components/cheat-code";
 import { headers } from "next/headers";
 
-const inter = Inter({ subsets: ["latin"] });
+// Using Inter with all weights for more design flexibility
+const inter = Inter({ 
+  subsets: ["latin"],
+  variable: "--font-inter",
+});
 
 export const metadata = {
   title: "Compile7 - Developer Community",
@@ -42,7 +46,7 @@ export default function RootLayout({
   const isSamlPath = pathname.startsWith("/saml");
 
   return (
-    <html lang="en">
+    <html lang="en" className={inter.variable}>
       <head>
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <Script
@@ -62,7 +66,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={inter.className}>
+      <body className="antialiased text-zinc-800 bg-zinc-50">
         {isSamlPath ? (
           children
         ) : (
@@ -70,14 +74,13 @@ export default function RootLayout({
             <Header />
             <CheatCode />
             {children}
-            <footer className="py-6 bg-white border-t">
-              <div className="container mx-auto px-4 text-center text-gray-600 text-sm">
-                <p>
-                  © {new Date().getFullYear()} Compile7. A non-profit
-                  organization for developers.
+            <footer className="py-8 bg-white border-t border-zinc-200">
+              <div className="container mx-auto px-4 text-center max-w-3xl">
+                <p className="text-zinc-600 text-sm">
+                  © {new Date().getFullYear()} Compile7 • A <span className="px-1 rounded" style={{ backgroundColor: "rgb(253, 224, 71)" }}>non-profit organization</span> for developers
                 </p>
-                <p className="mt-2 text-xs text-gray-400">
-                  Psst! Try pressing Command + E for a surprise
+                <p className="mt-3 text-xs text-zinc-400">
+                  Psst! Try pressing <span className="px-1 rounded font-medium" style={{ backgroundColor: "rgb(253, 224, 71)" }}>Command + E</span> for a surprise
                 </p>
               </div>
             </footer>

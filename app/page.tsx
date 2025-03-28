@@ -53,7 +53,7 @@ export default function Home() {
       description: "Inspiration to how to add Login with SSO",
       link: "https://github.com/Compile7/enterprise-sso-examples",
       icon: "KeyRound",
-      category: "Other"
+      category: "EnterpriseReady"
     },
     {
       title: "Consent Management",
@@ -88,32 +88,39 @@ export default function Home() {
   const categoryOrder = ["All", "SAML", "OIDC", "JWT", "EnterpriseReady", "Other"]
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col bg-zinc-50">
       {/* Hero Section */}
       <main className="flex-1">
-        <section className="py-20 text-center">
-          <div className="container mx-auto px-4">
-            <div className="flex justify-center mb-6">
-              <Code className="w-12 h-12 text-primary" />
-            </div>
-            <h1 className="text-5xl md:text-6xl font-bold text-gray-800 mb-4">Developer Community</h1>
-            <p className="text-xl text-gray-600 mb-8">For developer by developers!</p>
+        <section className="py-24 text-center">
+          <div className="container mx-auto px-4 max-w-3xl">
+            <Code className="w-10 h-10 text-primary mx-auto mb-6 opacity-80" />
+            <h1 className="text-4xl md:text-5xl font-bold text-zinc-800 mb-3 tracking-tight">
+              Developer <span className="inline-block px-2 rounded-sm" style={{ backgroundColor: "rgb(253, 224, 71)" }}>Community</span>
+            </h1>
+            <p className="text-lg text-zinc-600 mb-10">For developers, by developers</p>
 
-            <Button asChild className="rounded-full px-8 py-6">
+            <Button asChild variant="outline" className="rounded-md px-6 py-2 transition-colors border-zinc-300 group hover:border-zinc-400" 
+                   style={{ ":hover": { backgroundColor: "rgba(253, 224, 71, 0.2)" } }}>
               <Link href="/decompile" className="flex items-center gap-2">
                 Read Blogs
-                <span className="ml-1">→</span>
+                <span aria-hidden="true" className="group-hover:text-zinc-700">→</span>
               </Link>
             </Button>
           </div>
         </section>
 
         {/* Projects Section */}
-        <ProjectsSection projects={projects} categoryOrder={categoryOrder} />
+        <section className="py-16 bg-white border-t border-b border-zinc-200">
+          <div className="container mx-auto px-4 max-w-5xl">
+            
+            <ProjectsSection projects={projects} categoryOrder={categoryOrder} />
+          </div>
+        </section>
 
         {/* Dino Game Section */}
-        <section className="py-16 bg-white">
-          <div className="container mx-auto px-4 text-center">
+        <section className="py-16 bg-zinc-50">
+          <div className="container mx-auto px-4 text-center max-w-3xl">
+            
             <DinoGame />
           </div>
         </section>
