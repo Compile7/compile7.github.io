@@ -319,7 +319,9 @@ export function DinoGame() {
 
   return (
     <div className="flex flex-col items-center">
-      <h2 className="text-3xl font-bold mb-6">Take a Break!</h2>
+     <h2 className="text-2xl font-semibold text-zinc-800 mb-8">
+              <span className="inline-block px-3 py-1 rounded-md" style={{ backgroundColor: "rgb(253, 224, 71)" }}>Take a Break</span>
+            </h2>
       <p className="text-gray-600 mb-6">Press Space or Up Arrow to jump. Avoid the obstacles!</p>
 
       <div className="relative border border-gray-300 rounded-lg overflow-hidden shadow-md">

@@ -9,7 +9,7 @@ export default function Home() {
       <div className="flex flex-col items-center justify-center space-y-4 text-center py-12">
         <div className="space-y-2">
           <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl">
-            SAML Documentation Portal
+            SAML Documentation
           </h1>
           <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl dark:text-gray-400">
             Your comprehensive guide to Security Assertion Markup Language (SAML)
@@ -20,9 +20,6 @@ export default function Home() {
             <Link href="/saml/docs/introduction">
               Get Started <ArrowRight className="ml-2 h-4 w-4" />
             </Link>
-          </Button>
-          <Button variant="outline" asChild>
-            <Link href="/saml/docs/examples">View Examples</Link>
           </Button>
         </div>
       </div>
@@ -41,7 +38,7 @@ export default function Home() {
           </CardContent>
           <CardFooter>
             <Button variant="ghost" asChild className="w-full">
-              <Link href="/saml/docs/fundamentals">
+              <Link href="/saml/docs/fundamentals/key-concepts">
                 Learn Fundamentals <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>
@@ -61,7 +58,7 @@ export default function Home() {
           </CardContent>
           <CardFooter>
             <Button variant="ghost" asChild className="w-full">
-              <Link href="/saml/docs/technical-details">
+              <Link href="/saml/docs/technical/components">
                 Explore Technical Details <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>
@@ -81,7 +78,7 @@ export default function Home() {
           </CardContent>
           <CardFooter>
             <Button variant="ghost" asChild className="w-full">
-              <Link href="/saml/docs/implementation">
+              <Link href="/saml/docs/implementation/getting-started">
                 View Implementation Guides <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>
@@ -102,7 +99,7 @@ export default function Home() {
           </CardContent>
           <CardFooter>
             <Button variant="ghost" asChild className="w-full">
-              <Link href="/saml/docs/security">
+              <Link href="/saml/docs/security/best-practices">
                 Learn Security Practices <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>
