@@ -4,7 +4,8 @@ import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { cn } from "@/lib/utils"
 
-const sidebarItems = [
+// Export sidebarItems so it can be imported by sitemap.ts
+export const sidebarItems = [
   {
     title: "Getting Started",
     items: [
