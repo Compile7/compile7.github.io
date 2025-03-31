@@ -2,9 +2,10 @@
 
 import { useState } from "react"
 import Link from "next/link"
-import { Boxes, ShieldCheck, Key, CheckSquare, Building2, KeyRound, FileCheck, Shield, Terminal } from "lucide-react"
+import { Boxes, ShieldCheck, Key, CheckSquare, Building2, KeyRound, FileCheck, Shield, Terminal, Code } from "lucide-react"
 import { motion } from "framer-motion"
 import type { JSX } from "react"
+import { FaWordpress } from "react-icons/fa"
 
 // Define a type for project data
 interface Project {
@@ -47,6 +48,8 @@ export function ProjectsSection({ projects, categoryOrder }: ProjectsSectionProp
       FileCheck: <FileCheck className="h-8 w-8" />,
       Shield: <Shield className="h-8 w-8" />,
       Terminal: <Terminal className="h-8 w-8" />,
+      Wordpress: <FaWordpress className="h-8 w-8" />,
+      Code: <Code className="h-8 w-8" />,
     }
 
     return iconMap[iconName] || <Boxes className="h-8 w-8" />

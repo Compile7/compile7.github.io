@@ -35,10 +35,10 @@ export default function Home() {
       category: "JWT"
     },
     {
-      title: "Kode Jungle",
+      title: "KodeJungle",
       description: "All in one handy tools for developers",
       link: "https://kodejungle.org/",
-      icon: "Boxes",
+      icon: "Code",
       category: "Other"
     },
     {
@@ -82,6 +82,13 @@ export default function Home() {
       link: "https://oidc-tester.compile7.org/",
       icon: "Terminal",
       category: "OIDC"
+    },
+    {
+      title: "Markdown to WordPress",
+      description: "Convert Markdown to WordPress posts",
+      link: "https://md-to-wp.compile7.org/",
+      icon: "Wordpress",
+      category: "Other"
     },
   ]
 
