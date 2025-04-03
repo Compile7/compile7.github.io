@@ -63,13 +63,6 @@ export default function Home() {
       category: "Other"
     },
     {
-      title: "SAML Toolset",
-      description: "All in one SAML tools online",
-      link: "http://saml-validator.compile7.org/",
-      icon: "Shield",
-      category: "SAML"
-    },
-    {
       title: "OIDC Playground",
       description: "Playground for OpenID Connect",
       link: "https://oidc-playground.compile7.org/",
@@ -90,6 +83,13 @@ export default function Home() {
       icon: "Wordpress",
       category: "Other"
     },
+    {
+      title: "AI Password Generator",
+      description: "Generate strong passwords with AI",
+      link: "https://ai-password-generator.compile7.org/",
+      icon: "Terminal",
+      category: "Other"
+    }
   ]
 
   const categoryOrder = ["All", "SAML", "OIDC", "JWT", "EnterpriseReady", "Other"]
