@@ -89,6 +89,13 @@ export default function Home() {
       link: "https://ai-password-generator.compile7.org/",
       icon: "Terminal",
       category: "Other"
+    },
+    {
+      title: "Cookie Consent Manager",
+      description: "Manage cookie consent for your website",
+      link: "https://cookie-consent.compile7.org/",
+      icon: "FileCheck",
+      category: "Consent"
     }
   ]
 
